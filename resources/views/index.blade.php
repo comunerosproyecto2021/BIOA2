@@ -16,7 +16,7 @@
 
         <form>
             <div class="form-row">
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-6">
                     <label for="inputEmail4">Usuario</label>
                     <select id="inputState" class="form-control">
                         <option selected>Seleccione...</option>
@@ -24,7 +24,7 @@
                         <option>Técnico</option>
                     </select>
                 </div>
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-6">
                     <label for="inputPassword4">Tipo de mantenimiento</label>
                     <select id="inputState" class="form-control">
                         <option selected>Seleccione...</option>
@@ -34,7 +34,7 @@
                 </div>
             </div>
             <div class="form-row">
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-6">
                     <label for="inputAddress">Año</label>
                     <select id="inputState" class="form-control">
                         <option selected>Seleccione...</option>
@@ -42,26 +42,25 @@
                         <option>2018</option>
                     </select>
                 </div>
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-6">
                     <label for="inputAddress2">IPC</label>
                     <input disabled type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
                 </div>
             </div>
             <div class="form-row">
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-6">
                     <label for="inputCity">Nombre del equipo</label>
                     <input type="text" class="form-control" id="inputCity">
                 </div>
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-6">
                     <label for="inputState">Serial</label>
-                    <select id="inputState" class="form-control">
-                        <option selected>Choose...</option>
-                        <option>...</option>
-                    </select>
+                    <input type="text" class="form-control" id="inputCity">
                 </div>
                
             </div>
-            <button type="submit" class="btn btn-primary">Guardar</button>
+            <div class="form-group col-md-12">
+                <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
         </form>
     </div>
 </body>

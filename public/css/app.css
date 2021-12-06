@@ -11300,3 +11300,8 @@ textarea.form-control-lg {
 .form-row {
   display: flex;
 }
+
+.form-group {
+  /* Arriba | Derecha | Abajo | Izquierda */
+  margin: 0.8rem 0 0.8rem 0;
+}
