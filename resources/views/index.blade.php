@@ -5,15 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>BIOA2</title>
-
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 
 <body>
     <div class="container">
-
         <form>
             <div class="form-row">
                 <div class="form-group col-md-6">
@@ -44,7 +41,7 @@
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputAddress2">IPC</label>
-                    <input disabled type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                    <input disabled type="text" class="form-control" id="inputAddress2" placeholder="IPC">
                 </div>
             </div>
             <div class="form-row">
@@ -56,7 +53,6 @@
                     <label for="inputState">Serial</label>
                     <input type="text" class="form-control" id="inputCity">
                 </div>
-               
             </div>
             <div class="form-group col-md-12">
                 <button type="submit" class="btn btn-primary">Guardar</button>
