@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAniosTable extends Migration
+class CreatePerfilesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateAniosTable extends Migration
      */
     public function up()
     {
-        Schema::create('anios', function (Blueprint $table) {
-            $table->bigIncrements('id_anio');
-            $table->string('anio')->nullable();
+        Schema::create('perfiles', function (Blueprint $table) {
+            $table->bigIncrements('id_perfil');
+            $table->string('perfil')->nullable();
             $table->integer('orden')->nullable();
-            $table->string('ipc')->nullable();
             $table->integer('ind_activo')->length(1)->default(1);
         });
     }
@@ -29,6 +28,6 @@ class CreateAniosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('anios');
+        Schema::dropIfExists('perfiles');
     }
 }
