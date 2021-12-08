@@ -11334,6 +11334,10 @@ footer {
   margin-top: 100px;
 }
 
+.btn-primary {
+  width: 50%;
+}
+
 .error {
   border: 1px solid #c3423f !important;
 }
@@ -11357,5 +11361,9 @@ footer {
 
   .container {
     display: block;
+  }
+
+  .btn-primary {
+    width: 100%;
   }
 }

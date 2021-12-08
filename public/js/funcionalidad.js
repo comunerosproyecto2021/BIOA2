@@ -1,6 +1,7 @@
 const guardarInformacion = () => {
     if (validarFormulario()) {
-        console.log("Excelente");
+        datos={}
+        setAjax("", datos, "");
     } else {
         Swal.fire({
             title: "Error!",

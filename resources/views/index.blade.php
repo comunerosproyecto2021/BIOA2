@@ -11,7 +11,9 @@
     <script src="{{ asset('js/funcionalidad.js') }}" defer></script>
     <script src="{{ asset('js/jquery-3.6.0.min.js') }}" defer></script>
     <script src="{{ asset('js/sweetalert2@11.js') }}" defer></script>
-      
+    <script src="{{ asset('js/ajax.js') }}" defer></script>
+    
+    <meta name="csrf-token" content="{{ csrf_token() }}">  
 </head>
 
 <body>
