@@ -21,7 +21,7 @@
                 <div class="form-group col-md-6">
                     <label>Usuario</label>
                     <select id="slt_perfiles" class="form-control">
-                        <option selected>Seleccione...</option>
+                        <option selected value="">Seleccione...</option>
                         @foreach ($perfiles as $value)
                             <option value="{{ $value->id_perfil }}">{{ $value->perfil }}</option>
                          @endforeach
@@ -30,7 +30,7 @@
                 <div class="form-group col-md-6">
                     <label>Tipo de mantenimiento</label>
                     <select id="slt_tipos_mantenimientos" class="form-control">
-                        <option selected>Seleccione...</option>
+                        <option selected value="">Seleccione...</option>
                         @foreach ($tipos_mantenimientos as $value)
                             <option value="{{ $value->id_tipo }}">{{ $value->tipo_mantenimiento }}</option>
                         @endforeach
@@ -41,7 +41,7 @@
                 <div class="form-group col-md-6">
                     <label>Año</label>
                     <select id="slt_anios" class="form-control">
-                        <option selected>Seleccione...</option>
+                        <option selected value="">Seleccione...</option>
                         @foreach ($anios as $value)
                             <option value="{{ $value->anio }}">{{ $value->anio }}</option>
                         @endforeach
@@ -67,11 +67,11 @@
             </div>
         </form>
     </div>
-    <footer class="flex-shrink-0 py-4 bg-dark text-white-50">
+    <!--<footer class="flex-shrink-0 py-4 bg-dark text-white-50">
         <div class="text-center">
           <small>Copyright &copy; Todos los derechos reservados.</small>
         </div>
-      </footer>
+    </footer> -->
 </body>
 
 </html>
