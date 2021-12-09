@@ -49,4 +49,18 @@ class InicioController extends Controller
         }
     }
 
+    public function consultarValorManoObra(Request $request){
+
+        if ($request->ajax()) {
+            try {
+                $respuesta = "";// Anio::consultarIPC($request->input('perfil'));
+                return response()->json(['success' => true, 'message' => $respuesta]);
+                
+            } catch (\Illuminate\Database\QueryException $ex) {
+
+                return response()->json(['success' => false, 'message' => $ex->getMessage()]);
+            }
+        }
+    }
+    
 }

@@ -14,6 +14,7 @@ use App\Http\Controllers\InicioController;
 */
 Route::get('/', [InicioController::class, 'mostrarFormulario']);
 Route::post('/ipc', [InicioController::class, 'consultarIPC']);
+Route::post('/vlr_hora', [InicioController::class, 'consultarValorManoObra']);
 /*Route::get('/', function () {
     return view('index');
 });*/

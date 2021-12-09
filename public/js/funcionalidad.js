@@ -1,6 +1,6 @@
 const guardarInformacion = () => {
     if (validarFormulario()) {
-        datos={}
+        datos = {};
         setAjax("", datos, "");
     } else {
         Swal.fire({
@@ -79,23 +79,43 @@ const quitarClaseError = (elemento) => {
         .addClass("success-text");
 };
 
-
-const consultarIPC = () =>{
-
-    if($("#slt_anios").val() != ""){
-
-        let datos = { anio : $("#slt_anios").val()};
+const consultarIPC = () => {
+    if ($("#slt_anios").val() != "") {
+        let datos = { anio: $("#slt_anios").val() };
         setAjax(
             $("#hdd_ruta_consultar_ipc").val(),
             datos,
             "continuarConsultarIPC"
         );
-    
-      
     }
-}
+};
 
 const continuarConsultarIPC = (response) => {
     $("#txt_ipc").val("");
-    $("#txt_ipc").val(response.message[0]['ipc']+"%");
+    $("#txt_ipc").val(response.message[0]["ipc"] + "%");
+};
+
+const seleccionarTipoMantenimiento = () => {
+    $("#txt_tiempo_mantenimiento").prop("disabled", true); 
+    $("#txt_tiempo_mantenimiento").val("");
+    if ($("#slt_tipos_mantenimientos").val() == 1) {
+        //Correctivo
+        $("#txt_tiempo_mantenimiento").prop("disabled", false); 
+    } else if ($("#slt_tipos_mantenimientos").val() == 2) {
+        //Preventivo
+        $("#txt_tiempo_mantenimiento").val("2");
+    }
+};
+
+
+const consultarValorManoObra = () =>{
+    if ($("#slt_perfiles").val() != "") {
+        let datos = { perfil: $("#slt_perfiles").val() };
+        setAjax(
+            $("#").val(),
+            datos,
+            "continuarConsultarIPC"
+        );
+    }
+    
 }

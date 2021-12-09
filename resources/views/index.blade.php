@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,14 +15,15 @@
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
+
 <body>
     <div class="container">
         <form>
             <input type="hidden" name="hdd_ruta_consultar_ipc" id="hdd_ruta_consultar_ipc" value="{{ url('/ipc') }}">
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label>Usuario</label>
-                    <select id="slt_perfiles" class="form-control">
+                    <label>Encargado del mantenimiento</label>
+                    <select onchange="consultarValorManoObra()" id="slt_perfiles" class="form-control">
                         <option selected value="">Seleccione...</option>
                         @foreach ($perfiles as $value)
                             <option value="{{ $value->id_perfil }}">{{ $value->perfil }}</option>
@@ -29,13 +31,25 @@
                     </select>
                 </div>
                 <div class="form-group col-md-6">
+                    <label>Valor mano de obra por hora</label>
+                    <input disabled type="text" class="form-control" id="txt_valor_mano_obra">
+                </div>
+
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
                     <label>Tipo de mantenimiento</label>
-                    <select id="slt_tipos_mantenimientos" class="form-control">
+                    <select onchange="seleccionarTipoMantenimiento()" id="slt_tipos_mantenimientos"
+                        class="form-control">
                         <option selected value="">Seleccione...</option>
                         @foreach ($tipos_mantenimientos as $value)
                             <option value="{{ $value->id_tipo }}">{{ $value->tipo_mantenimiento }}</option>
                         @endforeach
                     </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Tiempo de mantenimiento <i>(horas)</i></label>
+                    <input disabled type="text" class="form-control" id="txt_tiempo_mantenimiento">
                 </div>
             </div>
             <div class="form-row">
@@ -61,6 +75,28 @@
                 <div class="form-group col-md-6">
                     <label>Serial</label>
                     <input type="text" class="form-control" id="txt_serial">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label>Valor herramientas <i>(Pesos colombianos, sin comas ni puntos)</i></label>
+                    <input type="text" class="form-control" id="txt_valor_herramientas">
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Valor consumibles  <i>(Pesos colombianos, sin comas ni puntos)</i></label>
+                    <input type="text" class="form-control" id="txt_valor_consumibles">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label>Valor repuestos <i>(Pesos colombianos, sin comas ni puntos)</i></label>
+                    <input type="text" class="form-control" id="txt_valor_repuestos">
+                </div>
+            </div>
+            <div  class="form-row">
+                <div class="form-group col-md-6">
+                    <label>Descripción repuestos</i></label>
+                    <textarea rows="3" class="form-control" id="txt_descripcion_repuestos" placeholder="..."></textarea>
                 </div>
             </div>
             <div class="form-group col-md-12">

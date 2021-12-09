@@ -16,6 +16,7 @@ class CreatePerfilesTable extends Migration
         Schema::create('perfiles', function (Blueprint $table) {
             $table->bigIncrements('id_perfil');
             $table->string('perfil')->nullable();
+            $table->string('precio_hora')->nullable();
             $table->integer('orden')->nullable();
             $table->integer('ind_activo')->length(1)->default(1);
         });
