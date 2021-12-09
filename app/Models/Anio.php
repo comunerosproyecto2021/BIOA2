@@ -17,4 +17,10 @@ class Anio extends Model
         $anios = DB::select('SELECT * FROM anios WHERE ind_activo = 1  ORDER BY orden');
         return $anios;
     }
+
+    public static function consultarIPC($anio){
+    
+        $ipc = DB::select('SELECT ipc FROM anios WHERE anio = ? ', [$anio]);
+        return $ipc;
+    }
 }

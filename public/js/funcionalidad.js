@@ -78,3 +78,24 @@ const quitarClaseError = (elemento) => {
         .prev()
         .addClass("success-text");
 };
+
+
+const consultarIPC = () =>{
+
+    if($("#slt_anios").val() != ""){
+
+        let datos = { anio : $("#slt_anios").val()};
+        setAjax(
+            $("#hdd_ruta_consultar_ipc").val(),
+            datos,
+            "continuarConsultarIPC"
+        );
+    
+      
+    }
+}
+
+const continuarConsultarIPC = (response) => {
+    $("#txt_ipc").val("");
+    $("#txt_ipc").val(response.message[0]['ipc']+"%");
+}
