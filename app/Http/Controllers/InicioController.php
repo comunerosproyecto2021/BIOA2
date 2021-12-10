@@ -53,7 +53,7 @@ class InicioController extends Controller
 
         if ($request->ajax()) {
             try {
-                $respuesta = "";// Anio::consultarIPC($request->input('perfil'));
+                $respuesta = Perfil::consultarManoObra($request->input('perfil'));
                 return response()->json(['success' => true, 'message' => $respuesta]);
                 
             } catch (\Illuminate\Database\QueryException $ex) {

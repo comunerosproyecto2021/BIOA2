@@ -20,6 +20,7 @@
     <div class="container">
         <form>
             <input type="hidden" name="hdd_ruta_consultar_ipc" id="hdd_ruta_consultar_ipc" value="{{ url('/ipc') }}">
+            <input type="hidden" name="hdd_ruta_consultar_mano_obra" id="hdd_ruta_consultar_mano_obra" value="{{ url('/vlr_hora') }}">
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label>Encargado del mantenimiento</label>

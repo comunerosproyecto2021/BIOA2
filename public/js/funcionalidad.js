@@ -112,10 +112,14 @@ const consultarValorManoObra = () =>{
     if ($("#slt_perfiles").val() != "") {
         let datos = { perfil: $("#slt_perfiles").val() };
         setAjax(
-            $("#").val(),
+            $("#hdd_ruta_consultar_mano_obra").val(),
             datos,
-            "continuarConsultarIPC"
+            "continuarconsultarValorManoObra"
         );
     }
     
+}
+const continuarconsultarValorManoObra = (response) => {
+    $("#txt_valor_mano_obra").val("");
+    $("#txt_valor_mano_obra").val(response.message[0]["precio_hora"]);
 }

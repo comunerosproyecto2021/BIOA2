@@ -18,4 +18,8 @@ class Perfil extends Model
         $anios = DB::select('SELECT * FROM perfiles WHERE ind_activo = 1 ORDER BY orden');
         return $anios;
     }
+    public static function consultarManoObra($perfil){
+        $valores = DB::select('SELECT precio_hora FROM perfiles WHERE id_perfil = ?', [$perfil]);
+        return $valores;
+    }
 }
