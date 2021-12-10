@@ -82,10 +82,6 @@ const validarFormulario = () => {
         quitarClaseError("txt_valor_repuestos");
     }
 
-    
-    
-
-
     return validacion;
 };
 
