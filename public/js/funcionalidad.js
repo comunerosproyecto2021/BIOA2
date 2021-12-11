@@ -51,6 +51,36 @@ const validarFormulario = () => {
     } else {
         quitarClaseError("txt_serial");
     }
+    if ($("#txt_valor_mano_obra").val().trim() == "") {
+        validacion = false;
+        agregarClaseError("txt_valor_mano_obra");
+    } else {
+        quitarClaseError("txt_valor_mano_obra");
+    }
+    if ($("#txt_tiempo_mantenimiento").val().trim() == "") {
+        validacion = false;
+        agregarClaseError("txt_tiempo_mantenimiento");
+    } else {
+        quitarClaseError("txt_tiempo_mantenimiento");
+    }
+    if ($("#txt_valor_herramientas").val().trim() == "") {
+        validacion = false;
+        agregarClaseError("txt_valor_herramientas");
+    } else {
+        quitarClaseError("txt_valor_herramientas");
+    }
+    if ($("#txt_valor_consumibles").val().trim() == "") {
+        validacion = false;
+        agregarClaseError("txt_valor_consumibles");
+    } else {
+        quitarClaseError("txt_valor_consumibles");
+    }
+    if ($("#txt_valor_repuestos").val().trim() == "") {
+        validacion = false;
+        agregarClaseError("txt_valor_repuestos");
+    } else {
+        quitarClaseError("txt_valor_repuestos");
+    }
 
     return validacion;
 };

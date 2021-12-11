@@ -17,6 +17,24 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Sistema BIOA2</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{ url('/') }}">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Cerrar sesión</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
     <div class="container">
         <form>
             <input type="hidden" name="hdd_ruta_consultar_ipc" id="hdd_ruta_consultar_ipc" value="{{ url('/ipc') }}">
@@ -33,7 +51,7 @@
                 </div>
                 <div class="form-group col-md-6">
                     <label>Valor mano de obra por hora</label>
-                    <input disabled type="text" class="form-control" id="txt_valor_mano_obra">
+                    <input disabled type="number" class="form-control" id="txt_valor_mano_obra">
                 </div>
 
             </div>
@@ -50,7 +68,7 @@
                 </div>
                 <div class="form-group col-md-6">
                     <label>Tiempo de mantenimiento <i>(horas)</i></label>
-                    <input disabled type="text" class="form-control" id="txt_tiempo_mantenimiento">
+                    <input disabled type="number" class="form-control" id="txt_tiempo_mantenimiento">
                 </div>
             </div>
             <div class="form-row">
@@ -81,17 +99,17 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label>Valor herramientas <i>(Pesos colombianos, sin comas ni puntos)</i></label>
-                    <input type="text" class="form-control" id="txt_valor_herramientas">
+                    <input type="number" class="form-control" id="txt_valor_herramientas">
                 </div>
                 <div class="form-group col-md-6">
                     <label>Valor consumibles  <i>(Pesos colombianos, sin comas ni puntos)</i></label>
-                    <input type="text" class="form-control" id="txt_valor_consumibles">
+                    <input type="number" class="form-control" id="txt_valor_consumibles">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label>Valor repuestos <i>(Pesos colombianos, sin comas ni puntos)</i></label>
-                    <input type="text" class="form-control" id="txt_valor_repuestos">
+                    <input type="number" class="form-control" id="txt_valor_repuestos">
                 </div>
             </div>
             <div  class="form-row">
