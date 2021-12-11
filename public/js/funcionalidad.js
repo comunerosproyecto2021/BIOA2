@@ -120,6 +120,8 @@ const consultarValorManoObra = () =>{
     
 }
 const continuarconsultarValorManoObra = (response) => {
+
     $("#txt_valor_mano_obra").val("");
     $("#txt_valor_mano_obra").val(response.message[0]["precio_hora"]);
+
 }
