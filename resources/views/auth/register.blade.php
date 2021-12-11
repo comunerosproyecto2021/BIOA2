@@ -66,6 +66,29 @@
                                         name="password_confirmation" required autocomplete="new-password">
                                 </div>
                             </div>
+                            <div class="row mb-3">
+                                <label for="password-confirm" class="col-md-4 col-form-label text-md-right">
+                                    Nombre de usuario
+                                </label>
+
+                                <div class="col-md-6">
+                                    <input id="nombre-usuario" type="text" class="form-control"
+                                        name="nombre_usuario" required autocomplete="nombre_usuario">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="password-confirm" class="col-md-4 col-form-label text-md-right">
+                                    Tipo usuario
+                                </label>
+
+                                <div class="col-md-6">
+                                    <select class="form-control" id="tipo-usuario">
+                                          <option value="">Seleccione...</option>        
+                                          <option value="administrador">Administrador</option>
+                                          <option value="general">Usuario general</option>
+                                    </select>
+                                </div>
+                            </div>
 
                             <div class="row mb-0">
                                 <div class="col-md-12 offset-md-2">
