@@ -9,9 +9,14 @@ function setAjax(url, data={}, funcion="") {
         method: "post",
         data: data,
         success: function (result) {
+            console.log(result);
             if(funcion!="") {
                 eval( funcion + "("+ JSON.stringify(result) + ")" );
             }
         },
+        error: function (xhr, ajaxOptions, thrownError) {
+            console.error(xhr.responseJSON);
+         
+          }
     });
 }

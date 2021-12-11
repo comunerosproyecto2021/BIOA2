@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InicioController;
+use App\Http\Controllers\RegistroController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,6 +17,9 @@ use App\Http\Controllers\InicioController;
 Route::get('/', [InicioController::class, 'mostrarFormulario']);
 Route::post('/ipc', [InicioController::class, 'consultarIPC']);
 Route::post('/vlr_hora', [InicioController::class, 'consultarValorManoObra']);
+
+Route::get('/formulario_registro', [RegistroController::class, 'mostrarFormulario']);
+Route::post('/registro', [RegistroController::class, 'registrar']);
 
 
 Auth::routes();
