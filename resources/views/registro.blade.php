@@ -19,10 +19,19 @@
                     <input type="text" class="form-control" id="txt_nombre_usuario">
                 </div>
                 <div class="form-group col-md-6">
+                    <label>Correo</label>
+                    <input type="text" class="form-control" id="txt_correo">
+                </div>
+               
+            </div>
+            <div class="form-row">
+               
+                <div class="form-group col-md-6">
                     <label>Contraseña</i></label>
                     <input type="password"  class="form-control" id="txt_contrasena">
                 </div>
             </div>
+            
             <div class="form-group col-md-12">
                 <button type="button" onclick="registrarUsuario()" class="btn btn-primary">Registrar</button>
             </div>

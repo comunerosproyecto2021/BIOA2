@@ -4,7 +4,8 @@ const registrarUsuario = () => {
             nombres: $("#txt_nombres").val(),
             apellidos: $("#txt_apellidos").val(),
             nombre_usuario: $("#txt_nombre_usuario").val(),
-            contrasena: $("#txt_contrasena").val()
+            contrasena: $("#txt_contrasena").val(),
+            correo: $("#txt_correo").val(),
         };
         setAjax(
             $("#hdd_ruta_registrar_usuario").val(),
@@ -22,7 +23,7 @@ const registrarUsuario = () => {
 };
 
 const continuarRegistrarUsuario = (respuesta) => {
-    console.log(respuesta);
+    mostrarAlerta(respuesta);
 }
 
 const validarFormularioRegistro = () => {

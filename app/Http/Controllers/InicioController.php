@@ -9,10 +9,10 @@ use App\Models\Perfil;
 class InicioController extends Controller
 {
 
-    /*public function __construct()
+    public function __construct()
     {
         $this->middleware('auth');
-    }*/
+    }
 
     /**
      * Show the application form.

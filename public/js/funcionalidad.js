@@ -155,3 +155,33 @@ const continuarconsultarValorManoObra = (response) => {
     $("#txt_valor_mano_obra").val(response.message[0]["precio_hora"]);
 
 }
+
+const mostrarAlerta = (respuesta) => {
+    if (respuesta.success) {
+        Swal.fire({
+            title: "¡Registro exitoso!",
+            text: respuesta.message,
+            icon: "success",
+            confirmButtonColor: "#3490dc",
+            confirmButtonText: "Aceptar",
+        }).then((result) => {
+     
+            if (result.isConfirmed) {
+                window.location.replace(respuesta.ruta);
+            } 
+        });
+    } else {
+        let title = "Error interno";
+        if(respuesta.title){
+            title=respuesta.title;
+        }
+        Swal.fire({
+            title: title,
+            text: respuesta.message,
+            icon: "error",
+            confirmButtonColor: "#C3423F",
+            confirmButtonText: "Aceptar",
+        });
+    }
+};
+

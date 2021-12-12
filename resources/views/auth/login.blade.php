@@ -38,6 +38,23 @@
                                 @enderror
                             </div>
                         </div>
+                        <div class="row mb-3">
+                            <label for="empresa" class="col-md-4 col-form-label text-md-right">Empresa</label>
+
+                            <div class="col-md-6">
+                            <select  id="empresa" class="form-control">
+                                <option selected value="">Seleccione...</option>
+                                <option value="1">Empresa 1</option>
+                                <option value="2">Empresa 2</option>
+                            </select>
+
+                                @error('empresa')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
 
                         <div class="row mb-3">
                             <div class="col-md-6 offset-md-4">
