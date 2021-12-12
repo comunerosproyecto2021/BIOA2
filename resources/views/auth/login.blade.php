@@ -32,11 +32,11 @@
             </div>
             <div class="form-row">
                 <div class="form-group col-md-12">
-                    <label for="empresa" class="col-md-4 col-form-label text-md-right">Contrataciónx</label>
+                    <label for="empresa" class="col-md-4 col-form-label text-md-right">Empresas</label>
                     <select  id="empresa" class="form-control">
                         <option selected value="">Seleccione...</option>
-                        <option value="1">Empresa 1</option>
-                        <option value="2">Empresa 2</option>
+                        <option value="1">Los comuneros</option>
+                        <option value="2">G-Barco</option>
                     </select>
                     @error('empresa')
                         <span class="invalid-feedback" role="alert">

@@ -35,17 +35,17 @@ const guardarInformacion = () => {
     if (validarFormulario()) {
         datos = {
             encargado: $("#slt_perfiles").val(),
-            vlr_obra: $("#txt_valor_mano_obra").val(),
+            vlr_obra: $("#txt_valor_mano_obra").val().trim(),
             tipo_mant: $("#slt_tipos_mantenimientos").val(),
-            tiempo_mantenimiento: $("#txt_tiempo_mantenimiento").val(),
+            tiempo_mantenimiento: $("#txt_tiempo_mantenimiento").val().trim(),
             anio: $("#slt_anios").val(),
-            nombre_equipo: $("#txt_equipo").val(),
-            serial: $("#txt_serial").val(),
-            valor_herramientas: $("#txt_valor_herramientas").val(),
-            valor_consumibles: $("#txt_valor_consumibles").val(),
-            valor_repuestos: $("#txt_valor_repuestos").val(),
-            descripcion_repuestos: $("#txt_descripcion_repuestos").val(),
-            valor_total: $("#txt_valor_total").val(),
+            nombre_equipo: $("#txt_equipo").val().trim(),
+            serial: $("#txt_serial").val().trim(),
+            valor_herramientas: $("#txt_valor_herramientas").val().trim(),
+            valor_consumibles: $("#txt_valor_consumibles").val().trim(),
+            valor_repuestos: $("#txt_valor_repuestos").val().trim(),
+            descripcion_repuestos: $("#txt_descripcion_repuestos").val().trim(),
+            valor_total: $("#txt_valor_total").val().trim(),
             id_usuario: $("#hdd_id_usuario").val(),
         };
         setAjax(
