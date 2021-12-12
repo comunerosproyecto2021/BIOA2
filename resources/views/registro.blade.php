@@ -2,6 +2,7 @@
 @section('content')
     <div class="container">
         <form>
+            <h2 class="text-center">Formulario registro de usuarios</h2>
             <input type="hidden" name="hdd_ruta_registrar_usuario" id="hdd_ruta_registrar_usuario" value="{{ url('/registro') }}">
             <div class="form-row">
                 <div class="form-group col-md-6">
@@ -22,7 +23,6 @@
                     <label>Correo</label>
                     <input type="text" class="form-control" id="txt_correo">
                 </div>
-               
             </div>
             <div class="form-row">
                

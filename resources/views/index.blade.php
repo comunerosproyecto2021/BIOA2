@@ -18,8 +18,10 @@
           </div>
         </div>
     </nav>
-    <div class="container">
+    <div class="container-form">
+        
         <form>
+            <h2 class="text-center">Formulario de cálculo de mantenimientos</h2>
             <input type="hidden" name="hdd_ruta_consultar_ipc" id="hdd_ruta_consultar_ipc" value="{{ url('/ipc') }}">
             <input type="hidden" name="hdd_ruta_consultar_mano_obra" id="hdd_ruta_consultar_mano_obra" value="{{ url('/vlr_hora') }}">
             <div class="form-row">
@@ -36,7 +38,6 @@
                     <label>Valor mano de obra por hora</label>
                     <input disabled type="number" class="form-control" id="txt_valor_mano_obra">
                 </div>
-
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">

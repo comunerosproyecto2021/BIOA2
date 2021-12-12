@@ -11290,6 +11290,10 @@ textarea.form-control-lg {
   font-family: "Baloo Bhaijaan 2", cursive;
 }
 
+body #app main {
+  min-height: 100%;
+}
+
 form {
   width: 100%;
 }
@@ -11321,7 +11325,16 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5%;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  padding: 4rem;
+  min-height: 100vh;
+}
+
+.container-form {
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   padding: 4rem;
 }
@@ -11339,15 +11352,27 @@ footer {
 }
 
 .success {
-  border: 1px solid #1c7330 !important;
+  border: 1px solid #00bfa6 !important;
 }
 
 .success-text {
-  color: #1c7330 !important;
+  color: #00bfa6 !important;
+}
+
+input:focus, .form-control:focus {
+  border-color: #00BFA6 !important;
 }
 
 .justify-content-center {
   width: 50rem;
+}
+
+.container-left {
+  width: 100%;
+}
+
+.container-right {
+  width: 100%;
 }
 
 @media (max-width: 767px) {
@@ -11355,7 +11380,7 @@ footer {
     display: block;
   }
 
-  .container {
+  .container, .container-form {
     display: block;
     box-shadow: none;
     padding: 1.5rem;
@@ -11364,4 +11389,20 @@ footer {
   .btn-primary {
     width: 100%;
   }
+
+  .container-right {
+    display: none;
+  }
+}
+.btn-primary {
+  color: #fff;
+  background-color: #00BFA6;
+  border-color: #00BFA6;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #00BFA6;
+  border-color: #00BFA6;
+  border-width: 2px;
 }
