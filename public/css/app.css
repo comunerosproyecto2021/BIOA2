@@ -11302,6 +11302,10 @@ label {
   font-weight: bold;
 }
 
+h2, .h2, label {
+  color: #7c7878;
+}
+
 footer {
   background-color: black;
   position: absolute;
@@ -11318,6 +11322,14 @@ footer {
 
 .form-group {
   margin: 0.8rem 0 0.8rem 0;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
 }
 
 .container {
@@ -11359,8 +11371,17 @@ footer {
   color: #00bfa6 !important;
 }
 
-input:focus, .form-control:focus {
-  border-color: #00BFA6 !important;
+.form-control:focus {
+  border-color: #00bfa6 !important;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 191, 166, 0.6);
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+  color: #ffffff !important;
+  background-color: #00bfa6 !important;
+  border-color: #00bfa6 !important;
 }
 
 .justify-content-center {
@@ -11380,7 +11401,8 @@ input:focus, .form-control:focus {
     display: block;
   }
 
-  .container, .container-form {
+  .container,
+.container-form {
     display: block;
     box-shadow: none;
     padding: 1.5rem;
@@ -11393,16 +11415,26 @@ input:focus, .form-control:focus {
   .container-right {
     display: none;
   }
+
+  .nav-link,
+.navbar-brand {
+    font-size: 1rem;
+  }
 }
+.guardar {
+  display: none;
+  margin-top: 1rem;
+}
+
 .btn-primary {
   color: #fff;
-  background-color: #00BFA6;
-  border-color: #00BFA6;
+  background-color: #00bfa6;
+  border-color: #00bfa6;
 }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #00BFA6;
-  border-color: #00BFA6;
+  background-color: #00bfa6;
+  border-color: #00bfa6;
   border-width: 2px;
 }

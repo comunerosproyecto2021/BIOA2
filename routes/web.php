@@ -17,10 +17,12 @@ use App\Http\Controllers\RegistroController;
 Route::get('/', [InicioController::class, 'mostrarFormulario']);
 Route::post('/ipc', [InicioController::class, 'consultarIPC']);
 Route::post('/vlr_hora', [InicioController::class, 'consultarValorManoObra']);
+Route::post('/guardar_datos', [InicioController::class, 'guardarDatos']);
 
 Route::get('/formulario_registro', [RegistroController::class, 'mostrarFormulario']);
 Route::post('/registro', [RegistroController::class, 'registrar']);
 
+Route::get('/cerrar_sesion', [RegistroController::class, 'cerrarSesion']);
 
 Auth::routes();
 

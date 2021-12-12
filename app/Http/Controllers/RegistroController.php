@@ -2,27 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
 class RegistroController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function mostrarFormulario()
     {   
-        
-        #$anios = Anio::consultarAniosActivos();
-        #$tipos_mantenimientos = TipoMantenimiento::consultarTiposMantenimientosActivos();
-        #$perfiles = Perfil::consultarPerfilesActivos();
-      
-        return view(
-            'registro',
-            [
-                #'anios' => $anios,
-                #'tipos_mantenimientos' => $tipos_mantenimientos,
-                #'perfiles' => $perfiles
-            ]
-        );
+     
+        return view('registro');
     }
 
     public function registrar(Request $request)
@@ -47,6 +41,12 @@ class RegistroController extends Controller
             }
         }
     
+    }
+
+    public function cerrarSesion(Request $request){
+        Auth::logout();
+        return view('auth.login');
+
     }
 }
 

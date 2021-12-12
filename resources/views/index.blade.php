@@ -1,29 +1,14 @@
 @extends('layouts.app')
 @section('content')
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Sistema BIOA2</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{{ url('/') }}">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link">Cerrar sesión</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-    </nav>
+@include('./nav_bar')
     <div class="container-form">
         
         <form>
             <h2 class="text-center">Formulario de cálculo de mantenimientos</h2>
             <input type="hidden" name="hdd_ruta_consultar_ipc" id="hdd_ruta_consultar_ipc" value="{{ url('/ipc') }}">
             <input type="hidden" name="hdd_ruta_consultar_mano_obra" id="hdd_ruta_consultar_mano_obra" value="{{ url('/vlr_hora') }}">
+            <input type="hidden" name="hdd_guardar_datos" id="hdd_guardar_datos" value="{{ url('/guardar_datos') }}">
+            <input type="hidden" name="hdd_id_usuario" id="hdd_id_usuario" value="1">
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label>Encargado del mantenimiento</label>
@@ -102,8 +87,15 @@
                     <textarea rows="3" class="form-control" id="txt_descripcion_repuestos" placeholder="..."></textarea>
                 </div>
             </div>
+            <div class="form-row guardar">
+                <div class="form-group col-md-6">
+                    <label>Costo total de mantenimiento</i></label>
+                    <input disabled type="number" class="form-control" id="txt_valor_total">
+                </div>
+            </div>
             <div class="form-group col-md-12">
-                <button type="button" onclick="guardarInformacion()" class="btn btn-primary">Guardar</button>
+                <button type="button" onclick="calcularCosto()" class="btn btn-primary calcular">Calcular costo</button>
+                <button type="button" onclick="guardarInformacion()" class="btn btn-primary guardar">Guardar</button>
             </div>
         </form>
     </div>

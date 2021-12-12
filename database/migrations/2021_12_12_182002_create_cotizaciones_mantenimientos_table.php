@@ -24,6 +24,7 @@ class CreateCotizacionesMantenimientosTable extends Migration
             $table->integer('valor_consumibles')->nullable(false);
             $table->integer('valor_repuestos')->nullable(false);
             $table->integer('valor_total')->nullable(false);
+            $table->integer('tiempo_mantenimiento')->nullable(false);
             $table->text('descripcion_repuestos')->nullable();
             $table->bigInteger('id_usuario_crea')->unsigned()->index();
             $table->dateTime('fecha_crea')->default(NOW())->nullable(false);

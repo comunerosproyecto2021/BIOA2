@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+    @include('./nav_bar')
     <div class="container">
         <form>
             <h2 class="text-center">Formulario registro de usuarios</h2>

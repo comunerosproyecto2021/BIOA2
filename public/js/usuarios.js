@@ -18,6 +18,7 @@ const registrarUsuario = () => {
             text: "Debe rellenar todos los campos del formulario",
             icon: "error",
             confirmButtonText: "Aceptar",
+            confirmButtonColor: "#f27474",
         });
     }
 };
@@ -53,6 +54,13 @@ const validarFormularioRegistro = () => {
     } else {
         quitarClaseError("txt_contrasena");
     }
+    if ($("#txt_correo").val() == "") {
+        validacion = false;
+        agregarClaseError("txt_correo");
+    } else {
+        quitarClaseError("txt_correo");
+    }
+    
 
     return validacion;
 };
