@@ -32,7 +32,7 @@
             </div>
             <div class="form-row">
                 <div class="form-group col-md-12">
-                    <label for="empresa" class="col-md-4 col-form-label text-md-right">Empresa</label>
+                    <label for="empresa" class="col-md-4 col-form-label text-md-right">Contrataciónx</label>
                     <select  id="empresa" class="form-control">
                         <option selected value="">Seleccione...</option>
                         <option value="1">Empresa 1</option>
@@ -59,7 +59,7 @@
 
             <div class="form-row">
                 <div class="form-group col-md-12">
-                    <button type="submit" class="btn btn-primary">
+                    <button style="float:right" type="submit" class="btn btn-primary">
                         Iniciar sesión
                     </button>
                 </div>
