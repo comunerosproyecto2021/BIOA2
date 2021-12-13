@@ -8,7 +8,7 @@
             <input type="hidden" name="hdd_ruta_consultar_ipc" id="hdd_ruta_consultar_ipc" value="{{ url('/ipc') }}">
             <input type="hidden" name="hdd_ruta_consultar_mano_obra" id="hdd_ruta_consultar_mano_obra" value="{{ url('/vlr_hora') }}">
             <input type="hidden" name="hdd_guardar_datos" id="hdd_guardar_datos" value="{{ url('/guardar_datos') }}">
-            <input type="hidden" name="hdd_id_usuario" id="hdd_id_usuario" value="1">
+            <input type="hidden" name="hdd_id_usuario" id="hdd_id_usuario" value="{{session('id_usuario')}}">
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label>Encargado del mantenimiento</label>

@@ -45,7 +45,7 @@ class RegistroController extends Controller
 
     public function cerrarSesion(Request $request){
         Auth::logout();
-        return view('auth.login');
+        return view('login');
 
     }
 }

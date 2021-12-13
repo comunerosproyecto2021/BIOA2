@@ -8,9 +8,9 @@
             @csrf
             <div class="form-row">
                 <div class="form-group col-md-12">
-                    <label>Correo</label>
-                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-                    @error('email')
+                    <label>Nombre de usuario</label>
+                    <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>
+                    @error('username')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
@@ -33,10 +33,11 @@
             <div class="form-row">
                 <div class="form-group col-md-12">
                     <label for="empresa" class="col-md-4 col-form-label text-md-right">Empresas</label>
-                    <select  id="empresa" class="form-control">
+                    <select  id="empresa" name="empresa" class="form-control @error('empresa') is-invalid @enderror">
                         <option selected value="">Seleccione...</option>
-                        <option value="1">Los comuneros</option>
-                        <option value="2">G-Barco</option>
+                        @foreach($empresas as $value)
+                            <option value="{{ $value->id_empresa }}">{{ $value->nombre }}</option>
+                        @endforeach
                     </select>
                     @error('empresa')
                         <span class="invalid-feedback" role="alert">

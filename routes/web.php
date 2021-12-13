@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InicioController;
 use App\Http\Controllers\RegistroController;
+use App\Http\Controllers\Auth\LoginController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,7 +24,7 @@ Route::post('/guardar_datos', [InicioController::class, 'guardarDatos']);
 Route::get('/formulario_registro', [RegistroController::class, 'mostrarFormulario']);
 Route::post('/registro', [RegistroController::class, 'registrar']);
 
-Route::get('/cerrar_sesion', [RegistroController::class, 'cerrarSesion']);
+Route::get('/cerrar_sesion', [LoginController::class, 'logout']);
 
 Auth::routes();
 
