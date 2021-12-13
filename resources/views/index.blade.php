@@ -12,11 +12,16 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label>Encargado del mantenimiento</label>
+                
                     <select onchange="consultarValorManoObra()" id="slt_perfiles" class="form-control">
                         <option selected value="">Seleccione...</option>
-                        @foreach ($perfiles as $value)
-                            <option value="{{ $value->id_perfil }}">{{ $value->perfil }}</option>
-                        @endforeach
+                        <?php if(session('id_empresa')=="1"){ ?> 
+                            @foreach ($perfiles as $value)
+                                <option value="{{ $value->id_perfil }}">{{ $value->perfil }}</option>
+                            @endforeach
+                        <?php }else{ ?>
+                            <option value="{{ $ingeniero[0]->id_perfil }} ">{{ $ingeniero[0]->perfil }}</option>
+                        <?php } ?>
                     </select>
                 </div>
                 <div class="form-group col-md-6">

@@ -26,13 +26,15 @@ class InicioController extends Controller
         $anios = Anio::consultarAniosActivos();
         $tipos_mantenimientos = TipoMantenimiento::consultarTiposMantenimientosActivos();
         $perfiles = Perfil::consultarPerfilesActivos();
-      
+        $ingeniero = Perfil::consultarIngeniero();
+        
         return view(
             'index',
             [
                 'anios' => $anios,
                 'tipos_mantenimientos' => $tipos_mantenimientos,
-                'perfiles' => $perfiles
+                'perfiles' => $perfiles,
+                'ingeniero' => $ingeniero,
             ]
         );
     }
