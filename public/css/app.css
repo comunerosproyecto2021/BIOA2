@@ -11302,7 +11302,8 @@ label {
   font-weight: bold;
 }
 
-h2, .h2, label {
+h2, .h2,
+label {
   color: #7c7878;
 }
 

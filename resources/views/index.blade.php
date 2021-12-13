@@ -26,7 +26,7 @@
                 </div>
                 <div class="form-group col-md-6">
                     <label>Valor mano de obra por hora</label>
-                    <input disabled type="number" class="form-control" id="txt_valor_mano_obra">
+                    <input disabled type="number" class="form-control" id="txt_valor_mano_obra"  min="0" pattern="^[0-9]+" onpaste="return false;" onDrop="return false;">
                 </div>
             </div>
             <div class="form-row">
@@ -42,7 +42,7 @@
                 </div>
                 <div class="form-group col-md-6">
                     <label>Tiempo de mantenimiento <i>(horas)</i></label>
-                    <input disabled type="number" class="form-control" id="txt_tiempo_mantenimiento">
+                    <input disabled type="number" class="form-control" id="txt_tiempo_mantenimiento"  min="0" pattern="^[0-9]+" onpaste="return false;" onDrop="return false;">
                 </div>
             </div>
             <div class="form-row">
@@ -73,17 +73,17 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label>Valor herramientas <i>(Pesos colombianos, sin comas ni puntos)</i></label>
-                    <input type="number" class="form-control" id="txt_valor_herramientas">
+                    <input type="number" class="form-control" id="txt_valor_herramientas"  min="0" pattern="^[0-9]+" onpaste="return false;" onDrop="return false;">
                 </div>
                 <div class="form-group col-md-6">
                     <label>Valor consumibles  <i>(Pesos colombianos, sin comas ni puntos)</i></label>
-                    <input type="number" class="form-control" id="txt_valor_consumibles">
+                    <input type="number" class="form-control" id="txt_valor_consumibles"  min="0" pattern="^[0-9]+" onpaste="return false;" onDrop="return false;">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label>Valor repuestos <i>(Pesos colombianos, sin comas ni puntos)</i></label>
-                    <input type="number" class="form-control" id="txt_valor_repuestos">
+                    <input type="number" class="form-control" id="txt_valor_repuestos"  min="0" pattern="^[0-9]+" onpaste="return false;" onDrop="return false;">
                 </div>
             </div>
             <div  class="form-row">

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
     @include('./nav_bar')
-    <div class="container">
+    <div class="container-form">
         <form>
             <h2 class="text-center">Formulario registro de usuarios</h2>
             <input type="hidden" name="hdd_ruta_registrar_usuario" id="hdd_ruta_registrar_usuario" value="{{ url('/registro') }}">
