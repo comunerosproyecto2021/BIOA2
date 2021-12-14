@@ -22,7 +22,7 @@ class CotizacionMantenimiento extends Model
         INNER JOIN tipos_mantenimientos T ON T.id_tipo = C.id_tipo_mantenimiento
         INNER JOIN users U ON U.id = C.id_usuario_crea
         INNER JOIN empresas E ON E.id_empresa = C.id_empresa
-        ORDER BY fecha_crea DESC;");
+        ORDER BY fecha_crea;");
         return $mantenimientos;
     }
 

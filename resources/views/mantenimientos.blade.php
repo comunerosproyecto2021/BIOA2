@@ -9,26 +9,26 @@
                         <thead>
                             <tr>
                             <th></th>
-                            <th scope="col">ID</th>
-                            <th scope="col">EQUIPO</th>
-                            <th scope="col">SERIAL</th>
-                            <th scope="col">TIPO MANTENIMIENTO</th>
-                            <th scope="col">ENCARGADO</th>
-                            <th scope="col">USUARIO</th>
-                            <th scope="col">FECHA CREA</th>
+                            <th scope="col" width="15%">ID</th>
+                            <th scope="col" width="15%">EQUIPO</th>
+                            <th scope="col" width="15%">SERIAL</th>
+                            <th scope="col" width="15%">TIPO MANTENIMIENTO</th>
+                            <th scope="col" width="15%">ENCARGADO</th>
+                            <th scope="col" width="15%">USUARIO</th>
+                            <th scope="col" width="15%">FECHA CREA</th>
                             </tr>
                         </thead>
                         <tbody>
                                 @foreach($mantenimientos as $value)
                                     <tr>
                                         <td><input class="form-check-input" type="checkbox" value="" id="chk_{{$value->id_cotizacion}}"></td>
-                                        <th scope="row">{{$value->id_cotizacion}}</th>
-                                        <td>{{$value->nombre_equipo}}</td>
-                                        <td>{{$value->serial}}</td>
-                                        <td>{{$value->tipo_mantenimiento}}</td>
-                                        <td>{{$value->perfil}}</td>
-                                        <td>{{$value->usuario}}</td>
-                                        <td>{{$value->fecha_crea}}</td>
+                                        <td scope="row"width="15%">{{$value->id_cotizacion}}</td>
+                                        <td width="15%">{{$value->nombre_equipo}}</td>
+                                        <td width="15%">{{$value->serial}}</td>
+                                        <td width="15%">{{$value->tipo_mantenimiento}}</td>
+                                        <td width="15%">{{$value->perfil}}</td>
+                                        <td width="15%">{{$value->usuario}}</td>
+                                        <td width="15%">{{$value->fecha_crea}}</td>
                                     </tr>
                                 @endforeach                           
                         </tbody>

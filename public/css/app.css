@@ -11308,6 +11308,32 @@ label {
   color: #7c7878;
 }
 
+thead, tbody {
+  display: block;
+}
+
+thead {
+  background-color: #00bfa6 !important;
+  color: #fff !important;
+}
+
+table {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+tbody {
+  height: 60vh;
+  overflow-y: auto;
+}
+
 footer {
   background-color: black;
   position: absolute;
