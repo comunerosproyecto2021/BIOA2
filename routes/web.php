@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InicioController;
 use App\Http\Controllers\RegistroController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\MantenimientosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,7 @@ Route::post('/registro', [RegistroController::class, 'registrar']);
 
 Route::get('/cerrar_sesion', [LoginController::class, 'logout']);
 
+Route::get('/mantenimientos', [MantenimientosController::class, 'listarMantenimientos']);
 Auth::routes();
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

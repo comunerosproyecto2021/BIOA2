@@ -27,6 +27,7 @@ class CreateCotizacionesMantenimientosTable extends Migration
             $table->integer('tiempo_mantenimiento')->nullable(false);
             $table->text('descripcion_repuestos')->nullable();
             $table->bigInteger('id_usuario_crea')->unsigned()->index();
+            $table->bigInteger('id_empresa')->unsigned()->index();
             $table->dateTime('fecha_crea')->default(NOW())->nullable(false);
             $table->dateTime('fecha_modificacion')->nullable();
            
@@ -38,6 +39,11 @@ class CreateCotizacionesMantenimientosTable extends Migration
             $table->foreign('id_tipo_mantenimiento')
             ->references('id_tipo')
             ->on('tipos_mantenimientos')
+            ->onDelete('cascade');
+
+            $table->foreign('id_empresa')
+            ->references('id_empresa')
+            ->on('empresas')
             ->onDelete('cascade');
         });
     }

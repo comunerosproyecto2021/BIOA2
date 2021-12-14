@@ -8,6 +8,7 @@
 }
 body #app main {
     min-height: 100%;
+    background-color: #fff;
 }
 form {
     width: 100%;
@@ -60,6 +61,16 @@ footer {
         rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     padding: 4rem;
 }
+.container-table {
+    flex: 1 0 auto;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    padding: 4rem;
+}
+
 .btn-primary {
     width: 50%;
 }
@@ -98,6 +109,7 @@ footer {
 }
 .container-right {
     width: 100%;
+    margin-left: 5rem;
 }
 
 @media (max-width: 767px) {

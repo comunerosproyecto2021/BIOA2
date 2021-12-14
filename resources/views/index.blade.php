@@ -9,6 +9,13 @@
             <input type="hidden" name="hdd_ruta_consultar_mano_obra" id="hdd_ruta_consultar_mano_obra" value="{{ url('/vlr_hora') }}">
             <input type="hidden" name="hdd_guardar_datos" id="hdd_guardar_datos" value="{{ url('/guardar_datos') }}">
             <input type="hidden" name="hdd_id_usuario" id="hdd_id_usuario" value="{{session('id_usuario')}}">
+            <input type="hidden" name="hdd_id_empresa" id="hdd_id_empresa" value="{{session('id_empresa')}}">
+
+            <input type="hidden" name="hdd_ipc_2016" id="hdd_ipc_2016" value="{{ $ipc_2016[0]->ipc}}">
+            <input type="hidden" name="hdd_ipc_2017" id="hdd_ipc_2017" value="{{ $ipc_2017[0]->ipc}}">
+            <input type="hidden" name="hdd_ipc_2018" id="hdd_ipc_2018" value="{{ $ipc_2018[0]->ipc}}">
+            <input type="hidden" name="hdd_ipc_2019" id="hdd_ipc_2019" value="{{ $ipc_2019[0]->ipc}}">
+
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label>Encargado del mantenimiento</label>
@@ -48,7 +55,7 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label>Año</label>
-                    <select onchange="consultarIPC()" id="slt_anios" class="form-control">
+                    <select onchange="calcularValorManoIPC()" id="slt_anios" class="form-control">
                         <option selected value="">Seleccione...</option>
                         @foreach ($anios as $value)
                             <option value="{{ $value->anio }}">{{ $value->anio }}</option>
@@ -56,8 +63,8 @@
                     </select>
                 </div>
                 <div class="form-group col-md-6">
-                    <label>IPC</label>
-                    <input disabled type="text" class="form-control" id="txt_ipc">
+                    <label>Valor mano de obra con IPC</label>
+                    <input disabled type="text" class="form-control" id="txt_valor_mano_ipc">
                 </div>
             </div>
             <div class="form-row">

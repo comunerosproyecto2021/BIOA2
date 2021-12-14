@@ -68,7 +68,8 @@
         </form>       
     </div>
     <div class="container-right">
-        <img width="100%" height="400rem"src="{{ asset('images/login.svg') }}" alt="">
+        <img width="90%" height="150rem"src="{{ asset('images/g_barco.jpeg') }}" alt="">
+        <img width="90%" height="150rem"src="{{ asset('images/comuneros.jpeg') }}" alt="">
     </div>
 </div>
 @endsection

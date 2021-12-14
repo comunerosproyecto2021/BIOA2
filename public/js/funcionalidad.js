@@ -15,8 +15,52 @@ const calcularCosto = () => {
     }
 };
 
+const calcularValoresIPC = () => {
+    let valor_mano = $("#txt_valor_mano_obra").val();
+   
+    let ipc_2016 = $("#hdd_ipc_2016").val() / 100;
+    let ipc_2017 = $("#hdd_ipc_2017").val() / 100;
+    let ipc_2018 = $("#hdd_ipc_2018").val() / 100;
+    let ipc_2019 = $("#hdd_ipc_2019").val() / 100;
+  
+    let valor_mano_ipc = 0;
+    let calculo = 0;
+
+    switch (parseInt($("#slt_anios").val())) {
+        case 2016:
+            calculo =
+                valor_mano * ipc_2016 +
+                valor_mano * ipc_2017 +
+                valor_mano * ipc_2018 +
+                valor_mano * ipc_2019;
+            valor_mano_ipc = valor_mano - calculo;
+        break;
+        case 2017:
+            calculo =
+                valor_mano * ipc_2017 +
+                valor_mano * ipc_2018 +
+                valor_mano * ipc_2019;
+            valor_mano_ipc = valor_mano - calculo;
+        break;
+        case 2018:
+            calculo =
+                valor_mano * ipc_2018 +
+                valor_mano * ipc_2019;
+            valor_mano_ipc = valor_mano - calculo;
+        break;
+        case 2019:
+            calculo =
+                valor_mano * ipc_2019;
+            valor_mano_ipc = valor_mano - calculo;
+        break;
+    }
+  
+    return valor_mano_ipc;
+} 
+
+
 const sumatoriaCostos = () => {
-    let valorManoObra = parseInt($("#txt_valor_mano_obra").val().trim());
+    let valorManoObra = parseInt($("#txt_valor_mano_ipc").val().trim());
     let horas = parseInt($("#txt_tiempo_mantenimiento").val().trim());
     let valor_herramientas = parseInt(
         $("#txt_valor_herramientas").val().trim()
@@ -47,6 +91,7 @@ const guardarInformacion = () => {
             descripcion_repuestos: $("#txt_descripcion_repuestos").val().trim(),
             valor_total: $("#txt_valor_total").val().trim(),
             id_usuario: $("#hdd_id_usuario").val(),
+            id_empresa: $("#hdd_id_empresa").val(),
         };
         setAjax(
             $("#hdd_guardar_datos").val(),
@@ -89,11 +134,11 @@ const validarFormulario = () => {
     } else {
         quitarClaseError("slt_anios");
     }
-    if ($("#txt_ipc").val().trim() == "") {
+    if ($("#txt_valor_mano_ipc").val().trim() == "") {
         validacion = false;
-        agregarClaseError("txt_ipc");
+        agregarClaseError("txt_valor_mano_ipc");
     } else {
-        quitarClaseError("txt_ipc");
+        quitarClaseError("txt_valor_mano_ipc");
     }
     if ($("#txt_equipo").val().trim() == "") {
         validacion = false;
@@ -165,30 +210,20 @@ const quitarClaseError = (elemento) => {
         .addClass("success-text");
 };
 
-const consultarIPC = () => {
-    if ($("#slt_anios").val() != "") {
-        let datos = { anio: $("#slt_anios").val() };
-        setAjax(
-            $("#hdd_ruta_consultar_ipc").val(),
-            datos,
-            "continuarConsultarIPC"
-        );
-    }
-};
-
-const continuarConsultarIPC = (response) => {
-    $("#txt_ipc").val("");
-    $("#txt_ipc").val(response.message[0]["ipc"] + "%");
+const calcularValorManoIPC = () => {
+    $("#txt_valor_mano_ipc").val("");
+    $("#txt_valor_mano_ipc").val(calcularValoresIPC());
+   
 };
 
 const seleccionarTipoMantenimiento = () => {
     $("#txt_tiempo_mantenimiento").prop("disabled", true);
     $("#txt_tiempo_mantenimiento").val("");
-    if ($("#slt_tipos_mantenimientos").val() == 1) {
-        //Correctivo
-        $("#txt_tiempo_mantenimiento").prop("disabled", false);
-    } else if ($("#slt_tipos_mantenimientos").val() == 2) {
+    if ($("#slt_tipos_mantenimientos").val() == 2) {
         //Preventivo
+        $("#txt_tiempo_mantenimiento").prop("disabled", false);
+    } else if ($("#slt_tipos_mantenimientos").val() == 1) {
+        //Correctivo
         $("#txt_tiempo_mantenimiento").val("2");
     }
 };
@@ -206,6 +241,7 @@ const consultarValorManoObra = () => {
 const continuarconsultarValorManoObra = (response) => {
     $("#txt_valor_mano_obra").val("");
     $("#txt_valor_mano_obra").val(response.message[0]["precio_hora"]);
+    
 };
 
 const mostrarAlerta = (respuesta) => {

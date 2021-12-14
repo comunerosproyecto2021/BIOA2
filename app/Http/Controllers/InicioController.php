@@ -27,6 +27,11 @@ class InicioController extends Controller
         $tipos_mantenimientos = TipoMantenimiento::consultarTiposMantenimientosActivos();
         $perfiles = Perfil::consultarPerfilesActivos();
         $ingeniero = Perfil::consultarIngeniero();
+        $anios = Anio::consultarAniosActivos();
+        $ipc_2016 = Anio::consultarIPC(2016);
+        $ipc_2017 = Anio::consultarIPC(2017);
+        $ipc_2018 = Anio::consultarIPC(2018);
+        $ipc_2019 = Anio::consultarIPC(2019);
         
         return view(
             'index',
@@ -35,6 +40,11 @@ class InicioController extends Controller
                 'tipos_mantenimientos' => $tipos_mantenimientos,
                 'perfiles' => $perfiles,
                 'ingeniero' => $ingeniero,
+
+                'ipc_2016' => $ipc_2016,
+                'ipc_2017' => $ipc_2017,
+                'ipc_2018' => $ipc_2018,
+                'ipc_2019' => $ipc_2019,
             ]
         );
     }
@@ -84,6 +94,7 @@ class InicioController extends Controller
                 $cotizacion->tiempo_mantenimiento=$request->input('tiempo_mantenimiento');
                 $cotizacion->descripcion_repuestos=$request->input('descripcion_repuestos');
                 $cotizacion->id_usuario_crea=$request->input('id_usuario');
+                $cotizacion->id_empresa=$request->input('id_empresa');
                 $cotizacion->fecha_crea= date("Y-m-d H:i:s");
                 $respuesta = $cotizacion->save();
                 if($respuesta){
