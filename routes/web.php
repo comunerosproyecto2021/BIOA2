@@ -28,6 +28,9 @@ Route::post('/registro', [RegistroController::class, 'registrar']);
 Route::get('/cerrar_sesion', [LoginController::class, 'logout']);
 
 Route::get('/mantenimientos', [MantenimientosController::class, 'listarMantenimientos']);
+
+Route::get('/ver_pdf', [MantenimientosController::class, 'VerPDF']);
+Route::get('/reporte', [MantenimientosController::class, 'reporte']);
 Auth::routes();
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

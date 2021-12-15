@@ -15,4 +15,7 @@ class MantenimientosController extends Controller
             'mantenimientos' => $mantenimientos,
         ]);
     }
+    public function VerPDF(){
+        
+    }
 }
