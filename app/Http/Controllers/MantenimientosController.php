@@ -15,7 +15,6 @@ class MantenimientosController extends Controller
             'mantenimientos' => $mantenimientos,
         ]);
     }
-
     public function reportePdf(){
       
         return view('pdf',
@@ -31,4 +30,8 @@ class MantenimientosController extends Controller
     }
 
     
+    public function VerPDF(){
+        
+    }
+
 }

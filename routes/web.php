@@ -29,8 +29,13 @@ Route::get('/cerrar_sesion', [LoginController::class, 'logout']);
 
 Route::get('/mantenimientos', [MantenimientosController::class, 'listarMantenimientos']);
 
+<<<<<<< HEAD
 Route::get('/reporte_pdf', [MantenimientosController::class, 'reportePdf']);
 Route::get('/generar_reporte', [MantenimientosController::class, 'generarReporte']);
+=======
+Route::get('/ver_pdf', [MantenimientosController::class, 'VerPDF']);
+Route::get('/reporte', [MantenimientosController::class, 'reporte']);
+>>>>>>> 63b5dd0020a336f699165926259843861148df82
 Auth::routes();
 
 
