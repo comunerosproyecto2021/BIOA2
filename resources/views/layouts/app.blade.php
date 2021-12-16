@@ -8,6 +8,7 @@
 
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/funcionalidad.js') }}" defer></script>
+    <script src="{{ asset('js/mantenimientos.js') }}" defer></script>
     <script src="{{ asset('js/usuarios.js') }}" defer></script>
     <script src="{{ asset('js/jquery-3.6.0.min.js') }}" defer></script>
     <script src="{{ asset('js/sweetalert2@11.js') }}" defer></script>
