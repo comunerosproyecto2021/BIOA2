@@ -110,7 +110,7 @@ const guardarInformacion = () => {
 };
 
 const continuarGuardarInformacion = (respuesta) => {
-    //mostrarAlerta(respuesta);
+    mostrarAlerta(respuesta);
 };
 
 const validarFormulario = () => {
@@ -240,8 +240,7 @@ const consultarValorManoObra = () => {
 };
 const continuarconsultarValorManoObra = (response) => {
     $("#txt_valor_mano_obra").val("");
-    $("#txt_valor_mano_obra").val(response.message[0]["precio_hora"]);
-    
+    $("#txt_valor_mano_obra").val(response.message[0]["precio_hora"]);  
 };
 
 const mostrarAlerta = (respuesta) => {

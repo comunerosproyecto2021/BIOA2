@@ -9,7 +9,7 @@ function setAjax(url, data={}, funcion="") {
         method: "post",
         data: data,
         success: function (result) {
-            console.log(result);
+            
             if(funcion!="") {
                 eval( funcion + "("+ JSON.stringify(result) + ")" );
             }

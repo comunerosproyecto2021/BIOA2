@@ -28,6 +28,7 @@ Route::post('/registro', [RegistroController::class, 'registrar']);
 Route::get('/cerrar_sesion', [LoginController::class, 'logout']);
 
 Route::get('/mantenimientos', [MantenimientosController::class, 'listarMantenimientos']);
+Route::post('/mantenimientos_filtro', [MantenimientosController::class, 'listarMantenimientosFiltro']);
 
 
 Route::get('/reporte_pdf', [MantenimientosController::class, 'reportePdf']);

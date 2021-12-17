@@ -10,17 +10,25 @@ use App\Models\Empresa;
 class MantenimientosController extends Controller
 {
     public function listarMantenimientos(){
-        $mantenimientos = CotizacionMantenimiento::consultarMantenimientos();
+        //$mantenimientos = CotizacionMantenimiento::consultarMantenimientos();
         $anios = Anio::consultarAniosActivos();
         $empresas = Empresa::consultarEmpresasActivos(); 
         
         return view('mantenimientos',
         [
-            'mantenimientos' => $mantenimientos,
             'anios' => $anios,
             'empresas' => $empresas,
         ]);
     }
+
+    public function listarMantenimientosFiltro(Request $request){
+
+        $mantenimientos = CotizacionMantenimiento::consultarMantenimientosFiltros($request);
+        return response()->json(['success' => true, 'message' => $mantenimientos, 'ruta' => '']);
+
+    }
+
+
     public function reportePdf(){
       
         return view('pdf',
