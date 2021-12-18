@@ -42,37 +42,34 @@ const continuarConsultarMantenimientos = (respuesta) => {
         html += `<table class="table table-striped">
                     <thead>
                         <tr>
-                            <th style='with:25%' scope="col">Equipo</th>
-                            <th style='with:10%' scope="col">Vlr herramientas</th>
-                            <th style='with:10%' scope="col">Vlr consumibles</th>
-                            <th style='with:10%' scope="col">Vlr repuestos</th>
-                            <th style='with:10%' scope="col">Vlr hora</th>
-                            <th style='with:10%' scope="col">Tiempo</th>
-                            <th style='with:10%' scope="col">Total</th>
-                            <th style='with:15%' scope="col">Empresa</th>
+                            <th style='width:25%' scope="col">Equipo</th>
+                            <th style='width:10%' scope="col">Vlr herramientas</th>
+                            <th style='width:10%' scope="col">Vlr consumibles</th>
+                            <th style='width:10%' scope="col">Vlr repuestos</th>
+                            <th style='width:10%' scope="col">Vlr hora</th>
+                            <th style='width:10%' scope="col">Tiempo</th>
+                            <th style='width:10%' scope="col">Total</th>
+                            <th style='width:15%' scope="col">Empresa</th>
                         </tr>
                     </thead>
                     <tbody>`;
             respuesta.message.forEach(element => {
                 
-                html += `<tr  style='with:100%'>
-                            <th  style='with:25%' scope='row'>${element.nombre_equipo}</th>
-                            <td  style='with:25%'>${element.valor_herramienta}</td>
-                            <td  style='with:25%'>${element.valor_consumibles}</td>
-                            <td  style='with:25%'>${element.valor_repuestos}</td>
-                            <td  style='with:25%'></td>
-                            <td  style='with:25%'>${element.tiempo_mantenimiento}</td>
-                            <td  style='with:25%'>${element.valor_total}</td>
-                            <td  style='with:25%'>${element.empresa}</td>
-                        </tr>`;
-              
-                  
+                html +=`<tr>
+                            <td style='width:25%'>${element.nombre_equipo}</td>
+                            <td style='width:10%'>${element.valor_herramienta}</td>
+                            <td style='width:10%'>${element.valor_consumibles}</td>
+                            <td style='width:10%'>${element.valor_repuestos}</td>
+                            <td style='width:10%'>200000</td>
+                            <td style='width:10%'>${element.tiempo_mantenimiento}</td>
+                            <td style='width:10%'>${element.valor_total}</td>
+                            <td style='width:15%'>${element.empresa}</td>
+                        </tr>`; 
             });
             
             html += `   </tbody>
                     </table>`;        
-      
-        
+       
     }
     $("#table_mantenimientos_container").append(html);
 }

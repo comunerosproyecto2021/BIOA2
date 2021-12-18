@@ -38,7 +38,7 @@
                     </div>
                 </div>
 
-                <div id="table_mantenimientos_container" class="row">
+                <div id="table_mantenimientos_container" class="table-responsive">
                    
                 </div>
                     
