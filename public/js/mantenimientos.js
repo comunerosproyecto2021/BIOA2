@@ -42,34 +42,38 @@ const continuarConsultarMantenimientos = (respuesta) => {
         html += `<table class="table table-striped">
                     <thead>
                         <tr>
-                            <th style='width:25%' scope="col">Equipo</th>
+                            <th style='width:10%' scope="col">Equipo</th>
                             <th style='width:10%' scope="col">Vlr herramientas</th>
                             <th style='width:10%' scope="col">Vlr consumibles</th>
                             <th style='width:10%' scope="col">Vlr repuestos</th>
                             <th style='width:10%' scope="col">Vlr hora</th>
                             <th style='width:10%' scope="col">Tiempo</th>
                             <th style='width:10%' scope="col">Total</th>
-                            <th style='width:15%' scope="col">Empresa</th>
+                            <th style='width:10%' scope="col">Empresa</th>
                         </tr>
                     </thead>
                     <tbody>`;
             respuesta.message.forEach(element => {
                 
                 html +=`<tr>
-                            <td style='width:25%'>${element.nombre_equipo}</td>
+                            <td style='width:10%'>${element.nombre_equipo}</td>
                             <td style='width:10%'>${element.valor_herramienta}</td>
                             <td style='width:10%'>${element.valor_consumibles}</td>
                             <td style='width:10%'>${element.valor_repuestos}</td>
                             <td style='width:10%'>200000</td>
                             <td style='width:10%'>${element.tiempo_mantenimiento}</td>
                             <td style='width:10%'>${element.valor_total}</td>
-                            <td style='width:15%'>${element.empresa}</td>
+                            <td style='width:10%'>${element.empresa}</td>
                         </tr>`; 
             });
             
             html += `   </tbody>
-                    </table>`;        
-       
+                    </table>
+                    <div class='container_button_pdf'>
+                        <button type='button' onclick='descargarPDF(${respuesta.message.length});'  class='btn btn-primary'>Descargar PDF</button>
+                    </div>`;        
+            
+
     }
     $("#table_mantenimientos_container").append(html);
 }
@@ -105,4 +109,9 @@ const validarFormularioFiltros = () =>{
 
     return validar;
 
+}
+
+
+const descargarPDF = (cantidad) => {
+    console.log(cantidad);
 }
