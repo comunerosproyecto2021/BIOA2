@@ -7,6 +7,7 @@
                 <div class="row">
                     <h5>Filtros</h5>
                     <input type="hidden" id="hdd_route_consultar_mantenimientos" value="{{url('/mantenimientos_filtro')}}">
+                    <input type="hidden" id="hdd_route_descargar_pdf" value="{{url('/descargar_pdf')}}">
                     <div class="form-group"> 
                         <?php $aux = 1; ?>
                         @foreach($empresas as $value)

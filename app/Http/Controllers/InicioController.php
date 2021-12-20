@@ -90,6 +90,8 @@ class InicioController extends Controller
                 $cotizacion->valor_herramienta=$request->input('valor_herramientas');
                 $cotizacion->valor_consumibles=$request->input('valor_consumibles');
                 $cotizacion->valor_repuestos=$request->input('valor_repuestos');
+                $cotizacion->valor_mano_ipc=$request->input('valor_mano_ipc');
+                
                 $cotizacion->valor_total=$request->input('valor_total');
                 $cotizacion->tiempo_mantenimiento=$request->input('tiempo_mantenimiento');
                 $cotizacion->descripcion_repuestos=$request->input('descripcion_repuestos');

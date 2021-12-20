@@ -1,27 +1,8 @@
 const consultarMantenimientos = () => {
     $("#spn_mensaje_error").empty();
     if(validarFormularioFiltros()){
-      
-        let cantidad_empresas = $("#hdd_cantidad_empresas").val();
-        let cantidad_anios = $("#hdd_cantidad_anios").val();
-        let datos = {};
-
-        for (let i = 1; i < cantidad_empresas; i++) {
-            if ($("#chk_empresa_" + i).prop("checked")) {
-                datos["empresa_" + i] = $("#chk_empresa_" + i).val();
-            }else{
-                datos["empresa_" + i] = "";
-            }
-        }
-
-        for (let i = 1; i < cantidad_anios; i++) {
-            if ($("#chk_anio_" + i).prop("checked")) {
-                datos["anio_" + i] = $("#chk_anio_" + i).val();
-            }else{
-                datos["anio_" + i] = "";
-            }
-        }
-    
+          
+        datos = construirDatosReporte();
         setAjax(
             $("#hdd_route_consultar_mantenimientos").val(),
             datos,
@@ -33,6 +14,31 @@ const consultarMantenimientos = () => {
         $("#spn_mensaje_error").append("<i class='error-text'>Por favor, seleccione por lo menos una empresa y un año para realizar la búsqueda de los datos.</i>");
     }
 };
+
+const construirDatosReporte = () => {
+
+    let cantidad_empresas = $("#hdd_cantidad_empresas").val();
+    let cantidad_anios = $("#hdd_cantidad_anios").val();
+    let datos = {};
+
+    for (let i = 1; i < cantidad_empresas; i++) {
+        if ($("#chk_empresa_" + i).prop("checked")) {
+            datos["empresa_" + i] = $("#chk_empresa_" + i).val();
+        }else{
+            datos["empresa_" + i] = "";
+        }
+    }
+
+    for (let i = 1; i < cantidad_anios; i++) {
+        if ($("#chk_anio_" + i).prop("checked")) {
+            datos["anio_" + i] = $("#chk_anio_" + i).val();
+        }else{
+            datos["anio_" + i] = "";
+        }
+    }
+
+    return datos;
+}
 
 const continuarConsultarMantenimientos = (respuesta) => {
     $("#table_mantenimientos_container").empty();
@@ -70,7 +76,7 @@ const continuarConsultarMantenimientos = (respuesta) => {
             html += `   </tbody>
                     </table>
                     <div class='container_button_pdf'>
-                        <button type='button' onclick='descargarPDF(${respuesta.message.length});'  class='btn btn-primary'>Descargar PDF</button>
+                        <button type='button' onclick='descargarPDF();'  class='btn btn-primary'>Descargar PDF</button>
                     </div>`;        
             
 
@@ -112,6 +118,21 @@ const validarFormularioFiltros = () =>{
 }
 
 
-const descargarPDF = (cantidad) => {
-    console.log(cantidad);
+const descargarPDF = () => {
+    $("#spn_mensaje_error").empty();
+    if(validarFormularioFiltros()){
+        datos = construirDatosReporte();
+        
+        setAjax(
+            $("#hdd_route_descargar_pdf").val(),
+            datos,
+            "continuarDescargarPDF"
+        );
+    } 
+   
+}
+
+const continuarDescargarPDF = (respuesta) => {
+    window.open(respuesta, '_blank');
+    //console.log(respuesta);
 }

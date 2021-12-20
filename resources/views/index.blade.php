@@ -10,7 +10,6 @@
             <input type="hidden" name="hdd_guardar_datos" id="hdd_guardar_datos" value="{{ url('/guardar_datos') }}">
             <input type="hidden" name="hdd_id_usuario" id="hdd_id_usuario" value="{{session('id_usuario')}}">
             <input type="hidden" name="hdd_id_empresa" id="hdd_id_empresa" value="{{session('id_empresa')}}">
-
             <input type="hidden" name="hdd_ipc_2016" id="hdd_ipc_2016" value="{{ $ipc_2016[0]->ipc}}">
             <input type="hidden" name="hdd_ipc_2017" id="hdd_ipc_2017" value="{{ $ipc_2017[0]->ipc}}">
             <input type="hidden" name="hdd_ipc_2018" id="hdd_ipc_2018" value="{{ $ipc_2018[0]->ipc}}">
@@ -27,7 +26,7 @@
                                 <option value="{{ $value->id_perfil }}">{{ $value->perfil }}</option>
                             @endforeach
                         <?php }else{ ?>
-                            <option value="{{ $ingeniero[0]->id_perfil }} ">{{ $ingeniero[0]->perfil }}</option>
+                                <option value="{{ $ingeniero[0]->id_perfil }} ">{{ $ingeniero[0]->perfil }}</option>
                         <?php } ?>
                     </select>
                 </div>
@@ -48,7 +47,7 @@
                     </select>
                 </div>
                 <div class="form-group col-md-6">
-                    <label>Tiempo de mantenimiento <i>(horas)</i></label>
+                    <label>Tiempo de mantenimiento<i>(horas)</i></label>
                     <input disabled type="number" class="form-control" id="txt_tiempo_mantenimiento"  min="0" pattern="^[0-9]+" onpaste="return false;" onDrop="return false;">
                 </div>
             </div>

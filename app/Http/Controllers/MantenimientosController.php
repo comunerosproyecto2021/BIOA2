@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use \PDF;
+use PDF;
 use App\Models\CotizacionMantenimiento;
 use App\Models\Anio;
 use App\Models\Empresa;
@@ -28,24 +28,28 @@ class MantenimientosController extends Controller
 
     }
 
-
-    public function reportePdf(){
-      
+    public function descargarPDF(Request $request){
+        $mantenimientos = CotizacionMantenimiento::consultarMantenimientosFiltros($request);
+        //$pdf = PDF::loadView('pdf', [ 'mantenimientos' => $mantenimientos]);
+        //$pdf->loadHTML('<h1>Test</h1>');
+        //return $pdf->download('archivo.pdf');
+        //return $pdf->stream();
         return view('pdf',
         [
-      
+            'mantenimientos' => $mantenimientos,
         ]);
     }
-
-    public function generarReporte(){
-      
-        //$pdf = PDF::loadView('pdf');
-        //return $pdf->download("Reporte.pdf");
+    public function verPDF(Request $request){
+        $mantenimientos = CotizacionMantenimiento::consultarMantenimientos();
+        $pdf = PDF::loadView('pdf', [ 'mantenimientos' => $mantenimientos]);
+        $pdf ->render();
+        $nombre="Reporte_PDF";
+        //return $pdf->stream();
+        $pdf=$pdf->output();
+        @file_put_contents(UPLOAD_DIR.$nombre.".pdf", $pdf);
+        //echo json_encode("http://regorodri.noip.me/proyecto/librerias/php/".UPLOAD_DIR.$nombre.".pdf");
     }
 
-    
-    public function VerPDF(){
-        
-    }
+ 
 
 }

@@ -33,9 +33,9 @@ Route::post('/mantenimientos_filtro', [MantenimientosController::class, 'listarM
 
 Route::get('/reporte_pdf', [MantenimientosController::class, 'reportePdf']);
 Route::get('/generar_reporte', [MantenimientosController::class, 'generarReporte']);
+Route::post('/descargar_pdf', [MantenimientosController::class, 'descargarPDF']);
 
-Route::get('/ver_pdf', [MantenimientosController::class, 'VerPDF']);
-Route::get('/reporte', [MantenimientosController::class, 'reporte']);
+Route::get('/ver', [MantenimientosController::class, 'verPDF']);
 
 Auth::routes();
 
