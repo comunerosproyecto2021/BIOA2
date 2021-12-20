@@ -32,7 +32,7 @@ class MantenimientosController extends Controller
         $mantenimientos = CotizacionMantenimiento::consultarMantenimientosFiltros($request);
         $pdf = PDF::loadView('pdf', [ 'mantenimientos' => $mantenimientos]);
         $path = public_path('pdf/');    
-        $fileName =  time().'.'. 'pdf' ; 
+        $fileName =  'reporte_cotizaciones'.'.'. 'pdf' ; 
         $pdf->save($path . '/' . $fileName); 
         $pdf = public_path('pdf/'.$fileName); 
 
