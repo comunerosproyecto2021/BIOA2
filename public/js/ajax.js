@@ -17,6 +17,6 @@ function setAjax(url, data={}, funcion="") {
         error: function (xhr, ajaxOptions, thrownError) {
             console.error(xhr.responseJSON);
          
-          }
+        }
     });
 }

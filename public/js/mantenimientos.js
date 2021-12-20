@@ -123,16 +123,53 @@ const descargarPDF = () => {
     if(validarFormularioFiltros()){
         datos = construirDatosReporte();
         
-        setAjax(
+       $.ajax({ 
+
+            type: 'GET', 
+
+            url: $("#hdd_route_descargar_pdf").val(), 
+
+            data: datos, 
+
+            xhrFields: { 
+
+                responseType: 'blob' 
+
+            }, 
+
+            success: function(response){ 
+                
+                var blob = new Blob([response]); 
+                var link = document.createElement('a'); 
+                link.href = window.URL.createObjectURL(blob); 
+                link.download = "Reporte_cotizacion_mantenimientos.pdf"; 
+                link.click(); 
+            }, 
+
+            error: function (xhr, ajaxOptions, thrownError) {
+                console.error(xhr);
+             
+            }
+
+        }); 
+        /*setAjax(
             $("#hdd_route_descargar_pdf").val(),
             datos,
             "continuarDescargarPDF"
-        );
+        );*/
     } 
    
 }
 
-const continuarDescargarPDF = (respuesta) => {
-    window.open(respuesta, '_blank');
-    //console.log(respuesta);
+const continuarDescargarPDF = (response) => {
+    //var blob = new Blob([response]); 
+
+    /*var link = document.createElement('a'); 
+
+    link.href = window.URL.createObjectURL(blob); 
+
+    link.download = "Sample.pdf"; 
+
+    link.click(); */
+    console.log(response);
 }
