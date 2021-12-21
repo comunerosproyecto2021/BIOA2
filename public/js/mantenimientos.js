@@ -125,6 +125,9 @@ const descargarPDF = () => {
             title: "Generando PDF",
             html: "Por favor, espere mientras se genera el documento PDF",
             timerProgressBar: true,
+            allowOutsideClick: false,
+            allowEscapeKey: false,
+            
             didOpen: () => {
                 Swal.showLoading();
             },
@@ -150,6 +153,9 @@ const descargarPDF = () => {
 
             error: function (xhr, ajaxOptions, thrownError) {
                 console.error(xhr);
+                console.error(ajaxOptions);
+                console.error(thrownError);
+                swal.close();
             },
         });
     }

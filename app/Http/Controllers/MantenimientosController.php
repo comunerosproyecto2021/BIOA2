@@ -29,7 +29,7 @@ class MantenimientosController extends Controller
     }
 
     public function descargarPDF(Request $request){
-        $mantenimientos = CotizacionMantenimiento::consultarMantenimientosFiltros($request);
+        $mantenimientos = CotizacionMantenimiento::consultarMantenimientosFiltrossdsa($request);
         $pdf = PDF::loadView('pdf', [ 'mantenimientos' => $mantenimientos]);
         $path = public_path('pdf/');    
         $fileName =  'reporte_cotizaciones'.'.'. 'pdf' ; 
