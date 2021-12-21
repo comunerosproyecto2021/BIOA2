@@ -72,8 +72,8 @@
                     <td width="70%">
                         <h4>Reporte cotización de mantenimiento - BIOA2</h4>
                     </td>
-                    <td width="15%"><img height="50rem" src="../public/images/comuneros.jpeg" alt=""></td>
-                    <td width="15%"><img height="50rem" src="../public/images/g_barco.jpeg" alt=""></td>
+                    <td width="15%"><img height="30rem" src="../public/images/comuneros.jpeg" alt=""></td>
+                    <td width="15%"><img height="30rem" src="../public/images/g_barco.jpeg" alt=""></td>
                 </tr>
 
             </div>

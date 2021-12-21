@@ -143,12 +143,11 @@ footer {
     width: 100%;
     margin-left: 5rem;
 }
-.container-filtros{
+.container-filtros {
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-    padding:2rem;
+    padding: 2rem;
     margin-bottom: 2rem;
 }
-
 
 @media (max-width: 767px) {
     .form-row {
@@ -171,20 +170,19 @@ footer {
     .navbar-brand {
         font-size: 1rem;
     }
-    .text-center img{
+    .text-center img {
         width: 80%;
-
     }
     footer {
         height: 20rem;
     }
-    .col-4{
+    .col-4 {
         width: 100%;
     }
-    .container-filtros{
+    .container-filtros {
         box-shadow: none;
-        padding:0;
-        margin-bottom:0;
+        padding: 0;
+        margin-bottom: 0;
     }
 }
 .guardar {
