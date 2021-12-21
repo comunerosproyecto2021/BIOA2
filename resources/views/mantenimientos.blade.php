@@ -4,7 +4,7 @@
     <div class="container-table">
         <div class="row">
             <div class="col-12">
-                <div class="row">
+                <div class="row container-filtros">
                     <h5>Filtros</h5>
                     <input type="hidden" id="hdd_route_consultar_mantenimientos" value="{{url('/mantenimientos_filtro')}}">
                     <input type="hidden" id="hdd_route_descargar_pdf" value="{{url('/descargar_pdf')}}">
@@ -35,7 +35,9 @@
                         <span id="spn_mensaje_error"></span>
                     </div>
                     <div class="form-group">
-                        <button type="button" onclick="consultarMantenimientos();" class="btn btn-primary">Consultar</button>
+                        <div class="col-4">
+                            <button type="button" onclick="consultarMantenimientos();" class="btn btn-primary">Consultar</button>
+                        </div>
                     </div>
                 </div>
 

@@ -76,7 +76,9 @@ const continuarConsultarMantenimientos = (respuesta) => {
             html += `   </tbody>
                     </table>
                     <div class='container_button_pdf'>
-                        <button type='button' onclick='descargarPDF();'  class='btn btn-primary'>Descargar PDF</button>
+                        <div class="col-4">
+                            <button type='button' onclick='descargarPDF();'  class='btn btn-primary'>Descargar PDF</button>
+                        </div>    
                     </div>`;        
             
 
