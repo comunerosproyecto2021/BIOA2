@@ -39,6 +39,4 @@ class MantenimientosController extends Controller
         return response()->download($pdf); 
     }
 
- 
-
 }
