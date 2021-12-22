@@ -34,6 +34,8 @@ class CotizacionMantenimiento extends Model
         $anio_2 = $request->input('anio_2');
         $anio_3 = $request->input('anio_3');
         $anio_4 = $request->input('anio_4');
+
+        $equipo = $request->input('equipo');
         
         $empresa_1 == "" ? "NULL" :  $empresa_1;
         $empresa_2 == "" ? "NULL" :  $empresa_2;
@@ -42,10 +44,15 @@ class CotizacionMantenimiento extends Model
         $anio_2 == "" ? "NULL" :  $anio_2;
         $anio_3 == "" ? "NULL" :  $anio_3;
         $anio_4 == "" ? "NULL" :  $anio_4;
-       
+        
+        $equipo == "" ? "" :  $equipo;
+        
         $sql_empresas="( C.id_empresa='$empresa_1' OR C.id_empresa='$empresa_2' )";
-        $sql_anios="( anio_cotizacion='$anio_1' OR anio_cotizacion='$anio_2' OR anio_cotizacion='$anio_3' OR anio_cotizacion='$anio_4' )";
-
+        $sql_anios="( C.anio_cotizacion='$anio_1' OR C.anio_cotizacion='$anio_2' OR C.anio_cotizacion='$anio_3' OR C.anio_cotizacion='$anio_4' )";
+        $sql_equipos = "";
+        if($equipo <> ""){
+            $sql_equipos = " AND (C.nombre_equipo LIKE '%$equipo%') ";
+        }
         $mantenimientos = DB::select("SELECT C.*, P.perfil, T.tipo_mantenimiento, CONCAT(U.name, ' ', U.surname) AS usuario,
         E.nombre AS empresa, E.logo
         FROM cotizaciones_mantenimientos C
@@ -53,7 +60,7 @@ class CotizacionMantenimiento extends Model
         INNER JOIN tipos_mantenimientos T ON T.id_tipo = C.id_tipo_mantenimiento
         INNER JOIN users U ON U.id = C.id_usuario_crea
         INNER JOIN empresas E ON E.id_empresa = C.id_empresa
-        WHERE C.id_cotizacion IS NOT NULL AND $sql_empresas AND $sql_anios
+        WHERE C.id_cotizacion IS NOT NULL AND $sql_empresas AND $sql_anios $sql_equipos
         ORDER BY C.fecha_crea;");
 
         return $mantenimientos;

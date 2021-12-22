@@ -32,6 +32,17 @@
 
                     </div>
                     <div class="form-group">
+                        <div class="col-4">
+                            <label>Nombre del equipo</label>
+                            <select id="slt_equipo" class="form-control">
+                                <option selected value="">Seleccione...</option>
+                                @foreach ($equipos as $value)
+                                    <option value="{{ $value->nombre }}">{{ $value->nombre }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <span id="spn_mensaje_error"></span>
                     </div>
                     <div class="form-group">

@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 class Perfil extends Model
 {
-    use HasFactory;
+
     protected $table = 'perfiles';
     public $timestamps = false;
 

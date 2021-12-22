@@ -34,6 +34,11 @@ const construirDatosReporte = () => {
             datos["anio_" + i] = "";
         }
     }
+    if($("#slt_equipo").val() != "") {
+        datos["equipo"] = $("#slt_equipo").val();
+    }else{
+        datos["equipo"] = "";
+    }
 
     return datos;
 };

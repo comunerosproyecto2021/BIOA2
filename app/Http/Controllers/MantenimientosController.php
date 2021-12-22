@@ -6,6 +6,7 @@ use PDF;
 use App\Models\CotizacionMantenimiento;
 use App\Models\Anio;
 use App\Models\Empresa;
+use App\Models\Equipo;
 
 class MantenimientosController extends Controller
 {
@@ -13,11 +14,13 @@ class MantenimientosController extends Controller
        
         $anios = Anio::consultarAniosActivos();
         $empresas = Empresa::consultarEmpresasActivos(); 
+        $equipos = Equipo::consultarEquiposActivos();
         
         return view('mantenimientos',
         [
             'anios' => $anios,
             'empresas' => $empresas,
+            'equipos' => $equipos,
         ]);
     }
 
@@ -29,7 +32,7 @@ class MantenimientosController extends Controller
     }
 
     public function descargarPDF(Request $request){
-        $mantenimientos = CotizacionMantenimiento::consultarMantenimientosFiltrossdsa($request);
+        $mantenimientos = CotizacionMantenimiento::consultarMantenimientosFiltros($request);
         $pdf = PDF::loadView('pdf', [ 'mantenimientos' => $mantenimientos]);
         $path = public_path('pdf/');    
         $fileName =  'reporte_cotizaciones'.'.'. 'pdf' ; 
