@@ -90,15 +90,21 @@ const validarFormularioFiltros = () => {
 
     if (
         !$("#chk_empresa_1").prop("checked") &&
-        !$("#chk_empresa_2").prop("checked")
+        !$("#chk_empresa_2").prop("checked") &&
+        !$("#chk_empresa_3").prop("checked") &&
+        !$("#chk_empresa_4").prop("checked")
     ) {
         agregarClaseError("chk_empresa_1");
         agregarClaseError("chk_empresa_2");
+        agregarClaseError("chk_empresa_3");
+        agregarClaseError("chk_empresa_4");
 
         validar = false;
     } else {
         quitarClaseError("chk_empresa_1");
         quitarClaseError("chk_empresa_2");
+        quitarClaseError("chk_empresa_3");
+        quitarClaseError("chk_empresa_4");
     }
     if (
         !$("#chk_anio_1").prop("checked") &&

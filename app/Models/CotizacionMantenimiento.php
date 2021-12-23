@@ -29,6 +29,8 @@ class CotizacionMantenimiento extends Model
     {
         $empresa_1 = $request->input('empresa_1');
         $empresa_2 = $request->input('empresa_2');
+        $empresa_3 = $request->input('empresa_3');
+        $empresa_4 = $request->input('empresa_4');
 
         $anio_1 = $request->input('anio_1');
         $anio_2 = $request->input('anio_2');
@@ -39,6 +41,8 @@ class CotizacionMantenimiento extends Model
         
         $empresa_1 == "" ? "NULL" :  $empresa_1;
         $empresa_2 == "" ? "NULL" :  $empresa_2;
+        $empresa_3 == "" ? "NULL" :  $empresa_3;
+        $empresa_4 == "" ? "NULL" :  $empresa_4;
 
         $anio_1 == "" ? "NULL" :  $anio_1;
         $anio_2 == "" ? "NULL" :  $anio_2;
@@ -47,7 +51,7 @@ class CotizacionMantenimiento extends Model
         
         $equipo == "" ? "" :  $equipo;
         
-        $sql_empresas="( C.id_empresa='$empresa_1' OR C.id_empresa='$empresa_2' )";
+        $sql_empresas="( C.id_empresa='$empresa_1' OR C.id_empresa='$empresa_2' OR C.id_empresa='$empresa_3' OR C.id_empresa='$empresa_4' )";
         $sql_anios="( C.anio_cotizacion='$anio_1' OR C.anio_cotizacion='$anio_2' OR C.anio_cotizacion='$anio_3' OR C.anio_cotizacion='$anio_4' )";
         $sql_equipos = "";
         if($equipo <> ""){
