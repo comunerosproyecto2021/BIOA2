@@ -7,6 +7,7 @@ use App\Models\Anio;
 use App\Models\TipoMantenimiento;
 use App\Models\Perfil;
 use App\Models\CotizacionMantenimiento;
+use App\Models\Equipo;
 
 class InicioController extends Controller
 {
@@ -26,6 +27,9 @@ class InicioController extends Controller
         $anios = Anio::consultarAniosActivos();
         $tipos_mantenimientos = TipoMantenimiento::consultarTiposMantenimientosActivos();
         $perfiles = Perfil::consultarPerfilesActivos();
+        $equipos = Equipo::consultarEquiposActivos();
+
+        
         $ingeniero = Perfil::consultarIngeniero();
         $anios = Anio::consultarAniosActivos();
         $ipc_2016 = Anio::consultarIPC(2016);
@@ -39,6 +43,7 @@ class InicioController extends Controller
                 'anios' => $anios,
                 'tipos_mantenimientos' => $tipos_mantenimientos,
                 'perfiles' => $perfiles,
+                'equipos' => $equipos,
                 'ingeniero' => $ingeniero,
 
                 'ipc_2016' => $ipc_2016,
@@ -90,6 +95,8 @@ class InicioController extends Controller
                 $cotizacion->valor_herramienta=$request->input('valor_herramientas');
                 $cotizacion->valor_consumibles=$request->input('valor_consumibles');
                 $cotizacion->valor_repuestos=$request->input('valor_repuestos');
+                $cotizacion->valor_mano_ipc=$request->input('valor_mano_ipc');
+                
                 $cotizacion->valor_total=$request->input('valor_total');
                 $cotizacion->tiempo_mantenimiento=$request->input('tiempo_mantenimiento');
                 $cotizacion->descripcion_repuestos=$request->input('descripcion_repuestos');

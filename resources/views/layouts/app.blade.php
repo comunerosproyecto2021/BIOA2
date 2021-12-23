@@ -8,6 +8,7 @@
 
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/funcionalidad.js') }}" defer></script>
+    <script src="{{ asset('js/mantenimientos.js') }}" defer></script>
     <script src="{{ asset('js/usuarios.js') }}" defer></script>
     <script src="{{ asset('js/jquery-3.6.0.min.js') }}" defer></script>
     <script src="{{ asset('js/sweetalert2@11.js') }}" defer></script>
@@ -21,9 +22,10 @@
             @yield('content')
         </main>
     </div>
-    <footer class="flex-shrink-0 py-4 bg-dark text-white-50">
-        <div class="text-center">
-            <small>Copyright &copy; Todos los derechos reservados.</small>
+    <footer class="flex-shrink-0 py-4 text-white-50">
+        <div class="text-center"> 
+            <img width="300rem" height="120rem" src="{{ asset('images/g_barco.jpeg') }}" alt="">
+            <img width="300rem" height="120rem" src="{{ asset('images/comuneros.jpeg') }}" alt="">
         </div>
     </footer>
 </body>
