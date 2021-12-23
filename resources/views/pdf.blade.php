@@ -203,8 +203,11 @@
                     <td width="70%">
                         <h4>Reporte cotización de mantenimiento - BIOA2</h4>
                     </td>
-                    <td width="15%"><img height="30rem" src="../public/images/comuneros.jpeg" alt=""></td>
-                    <td width="15%"><img height="30rem" src="../public/images/g_barco.jpeg" alt=""></td>
+                    @if(!is_null($value->logo))
+                        <td width="30%"><img height="40rem" src="../public/images/{{$value->logo}}" alt=""></td>
+                    @endif
+
+                   
                 </tr>
 
             </div>
