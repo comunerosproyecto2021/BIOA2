@@ -68,11 +68,18 @@
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label>Nombre del equipo</label>
-                    <input type="text" class="form-control" id="txt_equipo">
+                    
+                    <label>Equipo</label>
+                    <select id="txt_equipo" class="form-control">
+                        <option selected value="">Seleccione...</option>
+                        @foreach ($equipos as $value)
+                            <option value="{{ $value->nombre }}">{{ $value->nombre }}</option>
+                        @endforeach
+                    </select>
+
                 </div>
                 <div class="form-group col-md-6">
-                    <label>Serial</label>
+                    <label>Serial / modelo</label>
                     <input type="text" class="form-control" id="txt_serial">
                 </div>
             </div>

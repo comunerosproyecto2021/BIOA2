@@ -58,22 +58,156 @@
             page-break-after: always;
         }
 
-
-        td h4 {}
-
     </style>
 </head>
 
 <body>
     <div class="container">
+        <?php 
+            $total_preventivo_herramientas_2016=0; 
+            $total_preventivo_consumibles_2016=0;  
+            $total_preventivo_repuestos_2016=0;  
+            $total_preventivo_valor_mano_2016=0;
+            $total_preventivo_tiempo_2016=0;
+            $total_preventivo_2016=0;  
+            
+            $total_correctivo_herramientas_2016=0; 
+            $total_correctivo_consumibles_2016=0;  
+            $total_correctivo_repuestos_2016=0;  
+            $total_correctivo_valor_mano_2016=0;
+            $total_correctivo_tiempo_2016=0;
+            $total_correctivo_2016=0;
+
+            $total_preventivo_herramientas_2017=0; 
+            $total_preventivo_consumibles_2017=0;  
+            $total_preventivo_repuestos_2017=0;  
+            $total_preventivo_valor_mano_2017=0;
+            $total_preventivo_tiempo_2017=0;
+            $total_preventivo_2017=0;  
+            
+            $total_correctivo_herramientas_2017=0; 
+            $total_correctivo_consumibles_2017=0;  
+            $total_correctivo_repuestos_2017=0;  
+            $total_correctivo_valor_mano_2017=0;
+            $total_correctivo_tiempo_2017=0;
+            $total_correctivo_2017=0;
+
+            $total_preventivo_herramientas_2018=0; 
+            $total_preventivo_consumibles_2018=0;  
+            $total_preventivo_repuestos_2018=0;  
+            $total_preventivo_valor_mano_2018=0;
+            $total_preventivo_tiempo_2018=0;
+            $total_preventivo_2018=0;  
+            
+            $total_correctivo_herramientas_2018=0; 
+            $total_correctivo_consumibles_2018=0;  
+            $total_correctivo_repuestos_2018=0;  
+            $total_correctivo_valor_mano_2018=0;
+            $total_correctivo_tiempo_2018=0;
+            $total_correctivo_2018=0;
+
+            $total_preventivo_herramientas_2019=0; 
+            $total_preventivo_consumibles_2019=0;  
+            $total_preventivo_repuestos_2019=0;  
+            $total_preventivo_valor_mano_2019=0;
+            $total_preventivo_tiempo_2019=0;
+            $total_preventivo_2019=0;  
+            
+            $total_correctivo_herramientas_2019=0; 
+            $total_correctivo_consumibles_2019=0;  
+            $total_correctivo_repuestos_2019=0;  
+            $total_correctivo_valor_mano_2019=0;
+            $total_correctivo_tiempo_2019=0;
+            $total_correctivo_2019=0;
+        ?>
         @foreach ($mantenimientos as $value)
+
+            <?php 
+                if($value->id_tipo_mantenimiento == 1 && $value->anio_cotizacion == 2016){
+                    $total_preventivo_herramientas_2016 += $value->valor_herramienta;
+                    $total_preventivo_consumibles_2016 +=  $value->valor_consumibles;
+                    $total_preventivo_repuestos_2016 +=  $value->valor_repuestos;
+                    $total_preventivo_valor_mano_2016 += $value->valor_mano_ipc;
+                    $total_preventivo_tiempo_2016 += $value->tiempo_mantenimiento;
+                    $total_preventivo_2016 += $value->valor_total;
+                }
+
+                if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2016){
+                    $total_correctivo_herramientas_2016 += $value->valor_herramienta;
+                    $total_correctivo_consumibles_2016 +=  $value->valor_consumibles;
+                    $total_correctivo_repuestos_2016 +=  $value->valor_repuestos;
+                    $total_correctivo_valor_mano_2016 += $value->valor_mano_ipc;
+                    $total_correctivo_tiempo_2016 += $value->tiempo_mantenimiento;
+                    $total_correctivo_2016 += $value->valor_total;
+                }
+
+                if($value->id_tipo_mantenimiento == 1 && $value->anio_cotizacion == 2017){
+                    $total_preventivo_herramientas_2017 += $value->valor_herramienta;
+                    $total_preventivo_consumibles_2017 +=  $value->valor_consumibles;
+                    $total_preventivo_repuestos_2017 +=  $value->valor_repuestos;
+                    $total_preventivo_valor_mano_2017 += $value->valor_mano_ipc;
+                    $total_preventivo_tiempo_2017 += $value->tiempo_mantenimiento;
+                    $total_preventivo_2017 += $value->valor_total;
+                }
+
+                if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2017){
+                    $total_correctivo_herramientas_2017 += $value->valor_herramienta;
+                    $total_correctivo_consumibles_2017 +=  $value->valor_consumibles;
+                    $total_correctivo_repuestos_2017 +=  $value->valor_repuestos;
+                    $total_correctivo_valor_mano_2017 += $value->valor_mano_ipc;
+                    $total_correctivo_tiempo_2017 += $value->tiempo_mantenimiento;
+                    $total_correctivo_2017 += $value->valor_total;
+                }
+
+                if($value->id_tipo_mantenimiento == 1 && $value->anio_cotizacion == 2018){
+                    $total_preventivo_herramientas_2018 += $value->valor_herramienta;
+                    $total_preventivo_consumibles_2018 +=  $value->valor_consumibles;
+                    $total_preventivo_repuestos_2018 +=  $value->valor_repuestos;
+                    $total_preventivo_valor_mano_2018 += $value->valor_mano_ipc;
+                    $total_preventivo_tiempo_2018 += $value->tiempo_mantenimiento;
+                    $total_preventivo_2018 += $value->valor_total;
+                }
+
+                if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2018){
+                    $total_correctivo_herramientas_2018 += $value->valor_herramienta;
+                    $total_correctivo_consumibles_2018 +=  $value->valor_consumibles;
+                    $total_correctivo_repuestos_2018 +=  $value->valor_repuestos;
+                    $total_correctivo_valor_mano_2018 += $value->valor_mano_ipc;
+                    $total_correctivo_tiempo_2018 += $value->tiempo_mantenimiento;
+                    $total_correctivo_2018 += $value->valor_total;
+                }
+
+
+                if($value->id_tipo_mantenimiento == 1 && $value->anio_cotizacion == 2019){
+                    $total_preventivo_herramientas_2019 += $value->valor_herramienta;
+                    $total_preventivo_consumibles_2019 +=  $value->valor_consumibles;
+                    $total_preventivo_repuestos_2019 +=  $value->valor_repuestos;
+                    $total_preventivo_valor_mano_2019 += $value->valor_mano_ipc;
+                    $total_preventivo_tiempo_2019 += $value->tiempo_mantenimiento;
+                    $total_preventivo_2019 += $value->valor_total;
+                }
+
+                if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2019){
+                    $total_correctivo_herramientas_2019 += $value->valor_herramienta;
+                    $total_correctivo_consumibles_2019 +=  $value->valor_consumibles;
+                    $total_correctivo_repuestos_2019 +=  $value->valor_repuestos;
+                    $total_correctivo_valor_mano_2019 += $value->valor_mano_ipc;
+                    $total_correctivo_tiempo_2019 += $value->tiempo_mantenimiento;
+                    $total_correctivo_2019 += $value->valor_total;
+                }
+
+            ?>
+            
             <div style="display: table; width: 100%; margin-bottom:50px;">
                 <tr>
                     <td width="70%">
                         <h4>Reporte cotización de mantenimiento - BIOA2</h4>
                     </td>
-                    <td width="15%"><img height="50rem" src="../public/images/comuneros.jpeg" alt=""></td>
-                    <td width="15%"><img height="50rem" src="../public/images/g_barco.jpeg" alt=""></td>
+                    @if(!is_null($value->logo))
+                        <td width="30%"><img height="40rem" src="../public/images/{{$value->logo}}" alt=""></td>
+                    @endif
+
+                   
                 </tr>
 
             </div>
@@ -122,6 +256,243 @@
             </table>
             <div class="page-break"></div>
         @endforeach
+        
+        @if($total_preventivo_herramientas_2016>0)
+            <h4>Preventivo - 2016</h4>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td align="right"><label>Total herramientas</label></td>
+                        <td align="left"><label>${{ $total_preventivo_herramientas_2016 }}</label></td>
+
+                        <td align="right"><label>Total consumibles</label></td>
+                        <td align="left"><label>${{ $total_preventivo_consumibles_2016 }}</label></td>
+                    </tr>
+                    <tr>
+                        <td align="right"><label>Total repuestos</label></td>
+                        <td align="left"><label>${{ $total_preventivo_repuestos_2016 }}</label></td>
+
+                        <td align="right">Total tiempo</td>
+                        <td align="left">{{ $total_preventivo_tiempo_2016 }} horas</td>
+                    </tr>
+                    <tr>
+                        <td align="right"><label>Total mano de obra</label></td>
+                        <td align="left"><label>${{ $total_preventivo_valor_mano_2016 }}</label></td>
+
+                        <td align="right"><label>Total</label></td>
+                        <td align="left"><label>${{ $total_preventivo_2016 }}</label></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        @endif
+        @if($total_correctivo_herramientas_2016>0)
+            <h4>Correctivo - 2016</h4>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td align="right"><label>Total herramientas</label></td>
+                        <td align="left"><label>${{ $total_correctivo_herramientas_2016 }}</label></td>
+
+                        <td align="right"><label>Total consumibles</label></td>
+                        <td align="left"><label>${{ $total_correctivo_consumibles_2016 }}</label></td>
+                    </tr>
+                    <tr>
+                        <td align="right"><label>Total repuestos</label></td>
+                        <td align="left"><label>${{ $total_correctivo_repuestos_2016 }}</label></td>
+
+                        <td align="right">Total tiempo</td>
+                        <td align="left">{{ $total_correctivo_tiempo_2016 }} horas</td>
+                    </tr>
+                    <tr>
+                        <td align="right"><label>Total mano de obra</label></td>
+                        <td align="left"><label>${{ $total_correctivo_valor_mano_2016 }}</label></td>
+
+                        <td align="right"><label>Total</label></td>
+                        <td align="left"><label>${{ $total_correctivo_2016 }}</label></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        @endif
+
+        @if($total_preventivo_herramientas_2017>0)
+        <h4>Preventivo - 2017</h4>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td align="right"><label>Total herramientas</label></td>
+                    <td align="left"><label>${{ $total_preventivo_herramientas_2017 }}</label></td>
+
+                    <td align="right"><label>Total consumibles</label></td>
+                    <td align="left"><label>${{ $total_preventivo_consumibles_2017 }}</label></td>
+                </tr>
+                <tr>
+                    <td align="right"><label>Total repuestos</label></td>
+                    <td align="left"><label>${{ $total_preventivo_repuestos_2017 }}</label></td>
+
+                    <td align="right">Total tiempo</td>
+                    <td align="left">{{ $total_preventivo_tiempo_2017 }} horas</td>
+                </tr>
+                <tr>
+                    <td align="right"><label>Total mano de obra</label></td>
+                    <td align="left"><label>${{ $total_preventivo_valor_mano_2017 }}</label></td>
+
+                    <td align="right"><label>Total</label></td>
+                    <td align="left"><label>${{ $total_preventivo_2017 }}</label></td>
+                </tr>
+                
+            </tbody>
+        </table>
+    @endif
+    @if($total_correctivo_herramientas_2017>0)
+        <h4>Correctivo - 2017</h4>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td align="right"><label>Total herramientas</label></td>
+                    <td align="left"><label>${{ $total_correctivo_herramientas_2017 }}</label></td>
+
+                    <td align="right"><label>Total consumibles</label></td>
+                    <td align="left"><label>${{ $total_correctivo_consumibles_2017 }}</label></td>
+                </tr>
+                <tr>
+                    <td align="right"><label>Total repuestos</label></td>
+                    <td align="left"><label>${{ $total_correctivo_repuestos_2017 }}</label></td>
+
+                    <td align="right">Total tiempo</td>
+                    <td align="left">{{ $total_correctivo_tiempo_2017 }} horas</td>
+                </tr>
+                <tr>
+                    <td align="right"><label>Total mano de obra</label></td>
+                    <td align="left"><label>${{ $total_correctivo_valor_mano_2017 }}</label></td>
+
+                    <td align="right"><label>Total</label></td>
+                    <td align="left"><label>${{ $total_correctivo_2017 }}</label></td>
+                </tr>
+                
+            </tbody>
+        </table>
+    @endif
+
+    @if($total_preventivo_herramientas_2018>0)
+        <h4>Preventivo - 2018</h4>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td align="right"><label>Total herramientas</label></td>
+                    <td align="left"><label>${{ $total_preventivo_herramientas_2018 }}</label></td>
+
+                    <td align="right"><label>Total consumibles</label></td>
+                    <td align="left"><label>${{ $total_preventivo_consumibles_2018 }}</label></td>
+                </tr>
+                <tr>
+                    <td align="right"><label>Total repuestos</label></td>
+                    <td align="left"><label>${{ $total_preventivo_repuestos_2018 }}</label></td>
+
+                    <td align="right">Total tiempo</td>
+                    <td align="left">{{ $total_preventivo_tiempo_2018 }} horas</td>
+                </tr>
+                <tr>
+                    <td align="right"><label>Total mano de obra</label></td>
+                    <td align="left"><label>${{ $total_preventivo_valor_mano_2018 }}</label></td>
+
+                    <td align="right"><label>Total</label></td>
+                    <td align="left"><label>${{ $total_preventivo_2018 }}</label></td>
+                </tr>
+                
+            </tbody>
+        </table>
+    @endif
+    @if($total_correctivo_herramientas_2018>0)
+        <h4>Correctivo - 2018</h4>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td align="right"><label>Total herramientas</label></td>
+                    <td align="left"><label>${{ $total_correctivo_herramientas_2018 }}</label></td>
+
+                    <td align="right"><label>Total consumibles</label></td>
+                    <td align="left"><label>${{ $total_correctivo_consumibles_2018 }}</label></td>
+                </tr>
+                <tr>
+                    <td align="right"><label>Total repuestos</label></td>
+                    <td align="left"><label>${{ $total_correctivo_repuestos_2018 }}</label></td>
+
+                    <td align="right">Total tiempo</td>
+                    <td align="left">{{ $total_correctivo_tiempo_2018 }} horas</td>
+                </tr>
+                <tr>
+                    <td align="right"><label>Total mano de obra</label></td>
+                    <td align="left"><label>${{ $total_correctivo_valor_mano_2018 }}</label></td>
+
+                    <td align="right"><label>Total</label></td>
+                    <td align="left"><label>${{ $total_correctivo_2018 }}</label></td>
+                </tr>
+                
+            </tbody>
+        </table>
+    @endif
+
+    @if($total_preventivo_herramientas_2019>0)
+        <h4>Preventivo - 2019</h4>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td align="right"><label>Total herramientas</label></td>
+                    <td align="left"><label>${{ $total_preventivo_herramientas_2019 }}</label></td>
+
+                    <td align="right"><label>Total consumibles</label></td>
+                    <td align="left"><label>${{ $total_preventivo_consumibles_2019 }}</label></td>
+                </tr>
+                <tr>
+                    <td align="right"><label>Total repuestos</label></td>
+                    <td align="left"><label>${{ $total_preventivo_repuestos_2019 }}</label></td>
+
+                    <td align="right">Total tiempo</td>
+                    <td align="left">{{ $total_preventivo_tiempo_2019 }} horas</td>
+                </tr>
+                <tr>
+                    <td align="right"><label>Total mano de obra</label></td>
+                    <td align="left"><label>${{ $total_preventivo_valor_mano_2019 }}</label></td>
+
+                    <td align="right"><label>Total</label></td>
+                    <td align="left"><label>${{ $total_preventivo_2019 }}</label></td>
+                </tr>
+                
+            </tbody>
+        </table>
+    @endif
+    @if($total_correctivo_herramientas_2019>0)
+        <h4>Correctivo - 2019</h4>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td align="right"><label>Total herramientas</label></td>
+                    <td align="left"><label>${{ $total_correctivo_herramientas_2019 }}</label></td>
+
+                    <td align="right"><label>Total consumibles</label></td>
+                    <td align="left"><label>${{ $total_correctivo_consumibles_2019 }}</label></td>
+                </tr>
+                <tr>
+                    <td align="right"><label>Total repuestos</label></td>
+                    <td align="left"><label>${{ $total_correctivo_repuestos_2019 }}</label></td>
+
+                    <td align="right">Total tiempo</td>
+                    <td align="left">{{ $total_correctivo_tiempo_2019 }} horas</td>
+                </tr>
+                <tr>
+                    <td align="right"><label>Total mano de obra</label></td>
+                    <td align="left"><label>${{ $total_correctivo_valor_mano_2019 }}</label></td>
+
+                    <td align="right"><label>Total</label></td>
+                    <td align="left"><label>${{ $total_correctivo_2019 }}</label></td>
+                </tr>
+                
+            </tbody>
+        </table>
+    @endif    
+
     </div>
 </body>
 
