@@ -144,15 +144,6 @@ const descargarPDF = () => {
             },
         });
         datos = construirDatosReporte();
-
-            success: function(response){ 
-               
-                var blob = new Blob([response]); 
-                var link = document.createElement('a'); 
-                link.href = window.URL.createObjectURL(blob); 
-                link.download = "Reporte_cotizacion_mantenimientos.pdf"; 
-                link.click(); 
-            }, 
         $.ajax({
             type: "GET",
             url: $("#hdd_route_descargar_pdf").val(),
@@ -169,6 +160,7 @@ const descargarPDF = () => {
                 link.download = "Reporte_cotizacion_mantenimientos.pdf";
                 link.click();
             },
+
 
             error: function (xhr, ajaxOptions, thrownError) {
                 console.error(xhr);

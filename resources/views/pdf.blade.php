@@ -64,138 +64,550 @@
 <body>
     <div class="container">
         <?php 
-            $total_preventivo_herramientas_2016=0; 
-            $total_preventivo_consumibles_2016=0;  
-            $total_preventivo_repuestos_2016=0;  
-            $total_preventivo_valor_mano_2016=0;
-            $total_preventivo_tiempo_2016=0;
-            $total_preventivo_2016=0;  
-            
-            $total_correctivo_herramientas_2016=0; 
-            $total_correctivo_consumibles_2016=0;  
-            $total_correctivo_repuestos_2016=0;  
-            $total_correctivo_valor_mano_2016=0;
-            $total_correctivo_tiempo_2016=0;
-            $total_correctivo_2016=0;
 
-            $total_preventivo_herramientas_2017=0; 
-            $total_preventivo_consumibles_2017=0;  
-            $total_preventivo_repuestos_2017=0;  
-            $total_preventivo_valor_mano_2017=0;
-            $total_preventivo_tiempo_2017=0;
-            $total_preventivo_2017=0;  
+            //Comuneros
+            $total_preventivo_herramientas_2016_comuneros=0; 
+            $total_preventivo_consumibles_2016_comuneros=0;  
+            $total_preventivo_repuestos_2016_comuneros=0;  
+            $total_preventivo_valor_mano_2016_comuneros=0;
+            $total_preventivo_tiempo_2016_comuneros=0;
+            $total_preventivo_2016_comuneros=0;  
             
-            $total_correctivo_herramientas_2017=0; 
-            $total_correctivo_consumibles_2017=0;  
-            $total_correctivo_repuestos_2017=0;  
-            $total_correctivo_valor_mano_2017=0;
-            $total_correctivo_tiempo_2017=0;
-            $total_correctivo_2017=0;
+            $total_correctivo_herramientas_2016_comuneros=0; 
+            $total_correctivo_consumibles_2016_comuneros=0;  
+            $total_correctivo_repuestos_2016_comuneros=0;  
+            $total_correctivo_valor_mano_2016_comuneros=0;
+            $total_correctivo_tiempo_2016_comuneros=0;
+            $total_correctivo_2016_comuneros=0;
 
-            $total_preventivo_herramientas_2018=0; 
-            $total_preventivo_consumibles_2018=0;  
-            $total_preventivo_repuestos_2018=0;  
-            $total_preventivo_valor_mano_2018=0;
-            $total_preventivo_tiempo_2018=0;
-            $total_preventivo_2018=0;  
+            $total_preventivo_herramientas_2017_comuneros=0; 
+            $total_preventivo_consumibles_2017_comuneros=0;  
+            $total_preventivo_repuestos_2017_comuneros=0;  
+            $total_preventivo_valor_mano_2017_comuneros=0;
+            $total_preventivo_tiempo_2017_comuneros=0;
+            $total_preventivo_2017_comuneros=0;  
             
-            $total_correctivo_herramientas_2018=0; 
-            $total_correctivo_consumibles_2018=0;  
-            $total_correctivo_repuestos_2018=0;  
-            $total_correctivo_valor_mano_2018=0;
-            $total_correctivo_tiempo_2018=0;
-            $total_correctivo_2018=0;
+            $total_correctivo_herramientas_2017_comuneros=0; 
+            $total_correctivo_consumibles_2017_comuneros=0;  
+            $total_correctivo_repuestos_2017_comuneros=0;  
+            $total_correctivo_valor_mano_2017_comuneros=0;
+            $total_correctivo_tiempo_2017_comuneros=0;
+            $total_correctivo_2017_comuneros=0;
 
-            $total_preventivo_herramientas_2019=0; 
-            $total_preventivo_consumibles_2019=0;  
-            $total_preventivo_repuestos_2019=0;  
-            $total_preventivo_valor_mano_2019=0;
-            $total_preventivo_tiempo_2019=0;
-            $total_preventivo_2019=0;  
+            $total_preventivo_herramientas_2018_comuneros=0; 
+            $total_preventivo_consumibles_2018_comuneros=0;  
+            $total_preventivo_repuestos_2018_comuneros=0;  
+            $total_preventivo_valor_mano_2018_comuneros=0;
+            $total_preventivo_tiempo_2018_comuneros=0;
+            $total_preventivo_2018_comuneros=0;  
             
-            $total_correctivo_herramientas_2019=0; 
-            $total_correctivo_consumibles_2019=0;  
-            $total_correctivo_repuestos_2019=0;  
-            $total_correctivo_valor_mano_2019=0;
-            $total_correctivo_tiempo_2019=0;
-            $total_correctivo_2019=0;
+            $total_correctivo_herramientas_2018_comuneros=0; 
+            $total_correctivo_consumibles_2018_comuneros=0;  
+            $total_correctivo_repuestos_2018_comuneros=0;  
+            $total_correctivo_valor_mano_2018_comuneros=0;
+            $total_correctivo_tiempo_2018_comuneros=0;
+            $total_correctivo_2018_comuneros=0;
+
+            $total_preventivo_herramientas_2019_comuneros=0; 
+            $total_preventivo_consumibles_2019_comuneros=0;  
+            $total_preventivo_repuestos_2019_comuneros=0;  
+            $total_preventivo_valor_mano_2019_comuneros=0;
+            $total_preventivo_tiempo_2019_comuneros=0;
+            $total_preventivo_2019_comuneros=0;  
+            
+            $total_correctivo_herramientas_2019_comuneros=0; 
+            $total_correctivo_consumibles_2019_comuneros=0;  
+            $total_correctivo_repuestos_2019_comuneros=0;  
+            $total_correctivo_valor_mano_2019_comuneros=0;
+            $total_correctivo_tiempo_2019_comuneros=0;
+            $total_correctivo_2019_comuneros=0;
+
+
+            //G-barco
+
+            $total_preventivo_herramientas_2016_g_barco=0; 
+            $total_preventivo_consumibles_2016_g_barco=0;  
+            $total_preventivo_repuestos_2016_g_barco=0;  
+            $total_preventivo_valor_mano_2016_g_barco=0;
+            $total_preventivo_tiempo_2016_g_barco=0;
+            $total_preventivo_2016_g_barco=0;  
+            
+            $total_correctivo_herramientas_2016_g_barco=0; 
+            $total_correctivo_consumibles_2016_g_barco=0;  
+            $total_correctivo_repuestos_2016_g_barco=0;  
+            $total_correctivo_valor_mano_2016_g_barco=0;
+            $total_correctivo_tiempo_2016_g_barco=0;
+            $total_correctivo_2016_g_barco=0;
+
+            $total_preventivo_herramientas_2017_g_barco=0; 
+            $total_preventivo_consumibles_2017_g_barco=0;  
+            $total_preventivo_repuestos_2017_g_barco=0;  
+            $total_preventivo_valor_mano_2017_g_barco=0;
+            $total_preventivo_tiempo_2017_g_barco=0;
+            $total_preventivo_2017_g_barco=0;  
+            
+            $total_correctivo_herramientas_2017_g_barco=0; 
+            $total_correctivo_consumibles_2017_g_barco=0;  
+            $total_correctivo_repuestos_2017_g_barco=0;  
+            $total_correctivo_valor_mano_2017_g_barco=0;
+            $total_correctivo_tiempo_2017_g_barco=0;
+            $total_correctivo_2017_g_barco=0;
+
+            $total_preventivo_herramientas_2018_g_barco=0; 
+            $total_preventivo_consumibles_2018_g_barco=0;  
+            $total_preventivo_repuestos_2018_g_barco=0;  
+            $total_preventivo_valor_mano_2018_g_barco=0;
+            $total_preventivo_tiempo_2018_g_barco=0;
+            $total_preventivo_2018_g_barco=0;  
+            
+            $total_correctivo_herramientas_2018_g_barco=0; 
+            $total_correctivo_consumibles_2018_g_barco=0;  
+            $total_correctivo_repuestos_2018_g_barco=0;  
+            $total_correctivo_valor_mano_2018_g_barco=0;
+            $total_correctivo_tiempo_2018_g_barco=0;
+            $total_correctivo_2018_g_barco=0;
+
+            $total_preventivo_herramientas_2019_g_barco=0; 
+            $total_preventivo_consumibles_2019_g_barco=0;  
+            $total_preventivo_repuestos_2019_g_barco=0;  
+            $total_preventivo_valor_mano_2019_g_barco=0;
+            $total_preventivo_tiempo_2019_g_barco=0;
+            $total_preventivo_2019_g_barco=0;  
+            
+            $total_correctivo_herramientas_2019_g_barco=0; 
+            $total_correctivo_consumibles_2019_g_barco=0;  
+            $total_correctivo_repuestos_2019_g_barco=0;  
+            $total_correctivo_valor_mano_2019_g_barco=0;
+            $total_correctivo_tiempo_2019_g_barco=0;
+            $total_correctivo_2019_g_barco=0;
+
+            //Meditec
+
+            $total_preventivo_herramientas_2016_meditec=0; 
+            $total_preventivo_consumibles_2016_meditec=0;  
+            $total_preventivo_repuestos_2016_meditec=0;  
+            $total_preventivo_valor_mano_2016_meditec=0;
+            $total_preventivo_tiempo_2016_meditec=0;
+            $total_preventivo_2016_meditec=0;  
+            
+            $total_correctivo_herramientas_2016_meditec=0; 
+            $total_correctivo_consumibles_2016_meditec=0;  
+            $total_correctivo_repuestos_2016_meditec=0;  
+            $total_correctivo_valor_mano_2016_meditec=0;
+            $total_correctivo_tiempo_2016_meditec=0;
+            $total_correctivo_2016_meditec=0;
+
+            $total_preventivo_herramientas_2017_meditec=0; 
+            $total_preventivo_consumibles_2017_meditec=0;  
+            $total_preventivo_repuestos_2017_meditec=0;  
+            $total_preventivo_valor_mano_2017_meditec=0;
+            $total_preventivo_tiempo_2017_meditec=0;
+            $total_preventivo_2017_meditec=0;  
+            
+            $total_correctivo_herramientas_2017_meditec=0; 
+            $total_correctivo_consumibles_2017_meditec=0;  
+            $total_correctivo_repuestos_2017_meditec=0;  
+            $total_correctivo_valor_mano_2017_meditec=0;
+            $total_correctivo_tiempo_2017_meditec=0;
+            $total_correctivo_2017_meditec=0;
+
+            $total_preventivo_herramientas_2018_meditec=0; 
+            $total_preventivo_consumibles_2018_meditec=0;  
+            $total_preventivo_repuestos_2018_meditec=0;  
+            $total_preventivo_valor_mano_2018_meditec=0;
+            $total_preventivo_tiempo_2018_meditec=0;
+            $total_preventivo_2018_meditec=0;  
+            
+            $total_correctivo_herramientas_2018_meditec=0; 
+            $total_correctivo_consumibles_2018_meditec=0;  
+            $total_correctivo_repuestos_2018_meditec=0;  
+            $total_correctivo_valor_mano_2018_meditec=0;
+            $total_correctivo_tiempo_2018_meditec=0;
+            $total_correctivo_2018_meditec=0;
+
+            $total_preventivo_herramientas_2019_meditec=0; 
+            $total_preventivo_consumibles_2019_meditec=0;  
+            $total_preventivo_repuestos_2019_meditec=0;  
+            $total_preventivo_valor_mano_2019_meditec=0;
+            $total_preventivo_tiempo_2019_meditec=0;
+            $total_preventivo_2019_meditec=0;  
+            
+            $total_correctivo_herramientas_2019_meditec=0; 
+            $total_correctivo_consumibles_2019_meditec=0;  
+            $total_correctivo_repuestos_2019_meditec=0;  
+            $total_correctivo_valor_mano_2019_meditec=0;
+            $total_correctivo_tiempo_2019_meditec=0;
+            $total_correctivo_2019_meditec=0;
+
+
+            //Ingenieria 
+
+            $total_preventivo_herramientas_2016_ingenieria=0; 
+            $total_preventivo_consumibles_2016_ingenieria=0;  
+            $total_preventivo_repuestos_2016_ingenieria=0;  
+            $total_preventivo_valor_mano_2016_ingenieria=0;
+            $total_preventivo_tiempo_2016_ingenieria=0;
+            $total_preventivo_2016_ingenieria=0;  
+            
+            $total_correctivo_herramientas_2016_ingenieria=0; 
+            $total_correctivo_consumibles_2016_ingenieria=0;  
+            $total_correctivo_repuestos_2016_ingenieria=0;  
+            $total_correctivo_valor_mano_2016_ingenieria=0;
+            $total_correctivo_tiempo_2016_ingenieria=0;
+            $total_correctivo_2016_ingenieria=0;
+
+            $total_preventivo_herramientas_2017_ingenieria=0; 
+            $total_preventivo_consumibles_2017_ingenieria=0;  
+            $total_preventivo_repuestos_2017_ingenieria=0;  
+            $total_preventivo_valor_mano_2017_ingenieria=0;
+            $total_preventivo_tiempo_2017_ingenieria=0;
+            $total_preventivo_2017_ingenieria=0;  
+            
+            $total_correctivo_herramientas_2017_ingenieria=0; 
+            $total_correctivo_consumibles_2017_ingenieria=0;  
+            $total_correctivo_repuestos_2017_ingenieria=0;  
+            $total_correctivo_valor_mano_2017_ingenieria=0;
+            $total_correctivo_tiempo_2017_ingenieria=0;
+            $total_correctivo_2017_ingenieria=0;
+
+            $total_preventivo_herramientas_2018_ingenieria=0; 
+            $total_preventivo_consumibles_2018_ingenieria=0;  
+            $total_preventivo_repuestos_2018_ingenieria=0;  
+            $total_preventivo_valor_mano_2018_ingenieria=0;
+            $total_preventivo_tiempo_2018_ingenieria=0;
+            $total_preventivo_2018_ingenieria=0;  
+            
+            $total_correctivo_herramientas_2018_ingenieria=0; 
+            $total_correctivo_consumibles_2018_ingenieria=0;  
+            $total_correctivo_repuestos_2018_ingenieria=0;  
+            $total_correctivo_valor_mano_2018_ingenieria=0;
+            $total_correctivo_tiempo_2018_ingenieria=0;
+            $total_correctivo_2018_ingenieria=0;
+
+            $total_preventivo_herramientas_2019_ingenieria=0; 
+            $total_preventivo_consumibles_2019_ingenieria=0;  
+            $total_preventivo_repuestos_2019_ingenieria=0;  
+            $total_preventivo_valor_mano_2019_ingenieria=0;
+            $total_preventivo_tiempo_2019_ingenieria=0;
+            $total_preventivo_2019_ingenieria=0;  
+            
+            $total_correctivo_herramientas_2019_ingenieria=0; 
+            $total_correctivo_consumibles_2019_ingenieria=0;  
+            $total_correctivo_repuestos_2019_ingenieria=0;  
+            $total_correctivo_valor_mano_2019_ingenieria=0;
+            $total_correctivo_tiempo_2019_ingenieria=0;
+            $total_correctivo_2019_ingenieria=0;
+
+
         ?>
         @foreach ($mantenimientos as $value)
 
             <?php 
-                if($value->id_tipo_mantenimiento == 1 && $value->anio_cotizacion == 2016){
-                    $total_preventivo_herramientas_2016 += $value->valor_herramienta;
-                    $total_preventivo_consumibles_2016 +=  $value->valor_consumibles;
-                    $total_preventivo_repuestos_2016 +=  $value->valor_repuestos;
-                    $total_preventivo_valor_mano_2016 += $value->valor_mano_ipc;
-                    $total_preventivo_tiempo_2016 += $value->tiempo_mantenimiento;
-                    $total_preventivo_2016 += $value->valor_total;
-                }
+                //COMUNEROS
+                if($value->id_empresa == 1){
+                    if($value->id_tipo_mantenimiento == 1 && $value->anio_cotizacion == 2016){
+                        $total_preventivo_herramientas_2016_comuneros += $value->valor_herramienta;
+                        $total_preventivo_consumibles_2016_comuneros +=  $value->valor_consumibles;
+                        $total_preventivo_repuestos_2016_comuneros +=  $value->valor_repuestos;
+                        $total_preventivo_valor_mano_2016_comuneros += $value->valor_mano_ipc;
+                        $total_preventivo_tiempo_2016_comuneros += $value->tiempo_mantenimiento;
+                        $total_preventivo_2016_comuneros += $value->valor_total;
+                    }
 
-                if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2016){
-                    $total_correctivo_herramientas_2016 += $value->valor_herramienta;
-                    $total_correctivo_consumibles_2016 +=  $value->valor_consumibles;
-                    $total_correctivo_repuestos_2016 +=  $value->valor_repuestos;
-                    $total_correctivo_valor_mano_2016 += $value->valor_mano_ipc;
-                    $total_correctivo_tiempo_2016 += $value->tiempo_mantenimiento;
-                    $total_correctivo_2016 += $value->valor_total;
-                }
+                    if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2016){
+                        $total_correctivo_herramientas_2016_comuneros += $value->valor_herramienta;
+                        $total_correctivo_consumibles_2016_comuneros +=  $value->valor_consumibles;
+                        $total_correctivo_repuestos_2016_comuneros +=  $value->valor_repuestos;
+                        $total_correctivo_valor_mano_2016_comuneros += $value->valor_mano_ipc;
+                        $total_correctivo_tiempo_2016_comuneros += $value->tiempo_mantenimiento;
+                        $total_correctivo_2016_comuneros += $value->valor_total;
+                    }
 
-                if($value->id_tipo_mantenimiento == 1 && $value->anio_cotizacion == 2017){
-                    $total_preventivo_herramientas_2017 += $value->valor_herramienta;
-                    $total_preventivo_consumibles_2017 +=  $value->valor_consumibles;
-                    $total_preventivo_repuestos_2017 +=  $value->valor_repuestos;
-                    $total_preventivo_valor_mano_2017 += $value->valor_mano_ipc;
-                    $total_preventivo_tiempo_2017 += $value->tiempo_mantenimiento;
-                    $total_preventivo_2017 += $value->valor_total;
-                }
+                    if($value->id_tipo_mantenimiento == 1 && $value->anio_cotizacion == 2017){
+                        $total_preventivo_herramientas_2017_comuneros += $value->valor_herramienta;
+                        $total_preventivo_consumibles_2017_comuneros +=  $value->valor_consumibles;
+                        $total_preventivo_repuestos_2017_comuneros +=  $value->valor_repuestos;
+                        $total_preventivo_valor_mano_2017_comuneros += $value->valor_mano_ipc;
+                        $total_preventivo_tiempo_2017_comuneros += $value->tiempo_mantenimiento;
+                        $total_preventivo_2017_comuneros += $value->valor_total;
+                    }
 
-                if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2017){
-                    $total_correctivo_herramientas_2017 += $value->valor_herramienta;
-                    $total_correctivo_consumibles_2017 +=  $value->valor_consumibles;
-                    $total_correctivo_repuestos_2017 +=  $value->valor_repuestos;
-                    $total_correctivo_valor_mano_2017 += $value->valor_mano_ipc;
-                    $total_correctivo_tiempo_2017 += $value->tiempo_mantenimiento;
-                    $total_correctivo_2017 += $value->valor_total;
-                }
+                    if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2017){
+                        $total_correctivo_herramientas_2017_comuneros += $value->valor_herramienta;
+                        $total_correctivo_consumibles_2017_comuneros +=  $value->valor_consumibles;
+                        $total_correctivo_repuestos_2017_comuneros +=  $value->valor_repuestos;
+                        $total_correctivo_valor_mano_2017_comuneros += $value->valor_mano_ipc;
+                        $total_correctivo_tiempo_2017_comuneros += $value->tiempo_mantenimiento;
+                        $total_correctivo_2017_comuneros += $value->valor_total;
+                    }
 
-                if($value->id_tipo_mantenimiento == 1 && $value->anio_cotizacion == 2018){
-                    $total_preventivo_herramientas_2018 += $value->valor_herramienta;
-                    $total_preventivo_consumibles_2018 +=  $value->valor_consumibles;
-                    $total_preventivo_repuestos_2018 +=  $value->valor_repuestos;
-                    $total_preventivo_valor_mano_2018 += $value->valor_mano_ipc;
-                    $total_preventivo_tiempo_2018 += $value->tiempo_mantenimiento;
-                    $total_preventivo_2018 += $value->valor_total;
-                }
+                    if($value->id_tipo_mantenimiento == 1 && $value->anio_cotizacion == 2018){
+                        $total_preventivo_herramientas_2018_comuneros += $value->valor_herramienta;
+                        $total_preventivo_consumibles_2018_comuneros +=  $value->valor_consumibles;
+                        $total_preventivo_repuestos_2018_comuneros +=  $value->valor_repuestos;
+                        $total_preventivo_valor_mano_2018_comuneros += $value->valor_mano_ipc;
+                        $total_preventivo_tiempo_2018_comuneros += $value->tiempo_mantenimiento;
+                        $total_preventivo_2018_comuneros += $value->valor_total;
+                    }
 
-                if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2018){
-                    $total_correctivo_herramientas_2018 += $value->valor_herramienta;
-                    $total_correctivo_consumibles_2018 +=  $value->valor_consumibles;
-                    $total_correctivo_repuestos_2018 +=  $value->valor_repuestos;
-                    $total_correctivo_valor_mano_2018 += $value->valor_mano_ipc;
-                    $total_correctivo_tiempo_2018 += $value->tiempo_mantenimiento;
-                    $total_correctivo_2018 += $value->valor_total;
-                }
+                    if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2018){
+                        $total_correctivo_herramientas_2018_comuneros += $value->valor_herramienta;
+                        $total_correctivo_consumibles_2018_comuneros +=  $value->valor_consumibles;
+                        $total_correctivo_repuestos_2018_comuneros +=  $value->valor_repuestos;
+                        $total_correctivo_valor_mano_2018_comuneros += $value->valor_mano_ipc;
+                        $total_correctivo_tiempo_2018_comuneros += $value->tiempo_mantenimiento;
+                        $total_correctivo_2018_comuneros += $value->valor_total;
+                    }
 
 
-                if($value->id_tipo_mantenimiento == 1 && $value->anio_cotizacion == 2019){
-                    $total_preventivo_herramientas_2019 += $value->valor_herramienta;
-                    $total_preventivo_consumibles_2019 +=  $value->valor_consumibles;
-                    $total_preventivo_repuestos_2019 +=  $value->valor_repuestos;
-                    $total_preventivo_valor_mano_2019 += $value->valor_mano_ipc;
-                    $total_preventivo_tiempo_2019 += $value->tiempo_mantenimiento;
-                    $total_preventivo_2019 += $value->valor_total;
-                }
+                    if($value->id_tipo_mantenimiento == 1 && $value->anio_cotizacion == 2019){
+                        $total_preventivo_herramientas_2019_comuneros += $value->valor_herramienta;
+                        $total_preventivo_consumibles_2019_comuneros +=  $value->valor_consumibles;
+                        $total_preventivo_repuestos_2019_comuneros +=  $value->valor_repuestos;
+                        $total_preventivo_valor_mano_2019_comuneros += $value->valor_mano_ipc;
+                        $total_preventivo_tiempo_2019_comuneros += $value->tiempo_mantenimiento;
+                        $total_preventivo_2019_comuneros += $value->valor_total;
+                    }
 
-                if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2019){
-                    $total_correctivo_herramientas_2019 += $value->valor_herramienta;
-                    $total_correctivo_consumibles_2019 +=  $value->valor_consumibles;
-                    $total_correctivo_repuestos_2019 +=  $value->valor_repuestos;
-                    $total_correctivo_valor_mano_2019 += $value->valor_mano_ipc;
-                    $total_correctivo_tiempo_2019 += $value->tiempo_mantenimiento;
-                    $total_correctivo_2019 += $value->valor_total;
-                }
+                    if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2019){
+                        $total_correctivo_herramientas_2019_comuneros += $value->valor_herramienta;
+                        $total_correctivo_consumibles_2019_comuneros +=  $value->valor_consumibles;
+                        $total_correctivo_repuestos_2019_comuneros +=  $value->valor_repuestos;
+                        $total_correctivo_valor_mano_2019_comuneros += $value->valor_mano_ipc;
+                        $total_correctivo_tiempo_2019_comuneros += $value->tiempo_mantenimiento;
+                        $total_correctivo_2019_comuneros += $value->valor_total;
+                    }
+                }        
 
+                //G_BARCO
+                if($value->id_empresa == 2){
+                    if($value->id_tipo_mantenimiento == 1 && $value->anio_cotizacion == 2016){
+                        $total_preventivo_herramientas_2016_g_barco += $value->valor_herramienta;
+                        $total_preventivo_consumibles_2016_g_barco +=  $value->valor_consumibles;
+                        $total_preventivo_repuestos_2016_g_barco +=  $value->valor_repuestos;
+                        $total_preventivo_valor_mano_2016_g_barco += $value->valor_mano_ipc;
+                        $total_preventivo_tiempo_2016_g_barco += $value->tiempo_mantenimiento;
+                        $total_preventivo_2016_g_barco += $value->valor_total;
+                    }
+
+                    if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2016){
+                        $total_correctivo_herramientas_2016_g_barco += $value->valor_herramienta;
+                        $total_correctivo_consumibles_2016_g_barco +=  $value->valor_consumibles;
+                        $total_correctivo_repuestos_2016_g_barco +=  $value->valor_repuestos;
+                        $total_correctivo_valor_mano_2016_g_barco += $value->valor_mano_ipc;
+                        $total_correctivo_tiempo_2016_g_barco += $value->tiempo_mantenimiento;
+                        $total_correctivo_2016_g_barco += $value->valor_total;
+                    }
+
+                    if($value->id_tipo_mantenimiento == 1 && $value->anio_cotizacion == 2017){
+                        $total_preventivo_herramientas_2017_g_barco += $value->valor_herramienta;
+                        $total_preventivo_consumibles_2017_g_barco +=  $value->valor_consumibles;
+                        $total_preventivo_repuestos_2017_g_barco +=  $value->valor_repuestos;
+                        $total_preventivo_valor_mano_2017_g_barco += $value->valor_mano_ipc;
+                        $total_preventivo_tiempo_2017_g_barco += $value->tiempo_mantenimiento;
+                        $total_preventivo_2017_g_barco += $value->valor_total;
+                    }
+
+                    if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2017){
+                        $total_correctivo_herramientas_2017_g_barco += $value->valor_herramienta;
+                        $total_correctivo_consumibles_2017_g_barco +=  $value->valor_consumibles;
+                        $total_correctivo_repuestos_2017_g_barco +=  $value->valor_repuestos;
+                        $total_correctivo_valor_mano_2017_g_barco += $value->valor_mano_ipc;
+                        $total_correctivo_tiempo_2017_g_barco += $value->tiempo_mantenimiento;
+                        $total_correctivo_2017_g_barco += $value->valor_total;
+                    }
+
+                    if($value->id_tipo_mantenimiento == 1 && $value->anio_cotizacion == 2018){
+                        $total_preventivo_herramientas_2018_g_barco += $value->valor_herramienta;
+                        $total_preventivo_consumibles_2018_g_barco +=  $value->valor_consumibles;
+                        $total_preventivo_repuestos_2018_g_barco +=  $value->valor_repuestos;
+                        $total_preventivo_valor_mano_2018_g_barco += $value->valor_mano_ipc;
+                        $total_preventivo_tiempo_2018_g_barco += $value->tiempo_mantenimiento;
+                        $total_preventivo_2018_g_barco += $value->valor_total;
+                    }
+
+                    if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2018){
+                        $total_correctivo_herramientas_2018_g_barco += $value->valor_herramienta;
+                        $total_correctivo_consumibles_2018_g_barco +=  $value->valor_consumibles;
+                        $total_correctivo_repuestos_2018_g_barco +=  $value->valor_repuestos;
+                        $total_correctivo_valor_mano_2018_g_barco += $value->valor_mano_ipc;
+                        $total_correctivo_tiempo_2018_g_barco += $value->tiempo_mantenimiento;
+                        $total_correctivo_2018_g_barco += $value->valor_total;
+                    }
+
+
+                    if($value->id_tipo_mantenimiento == 1 && $value->anio_cotizacion == 2019){
+                        $total_preventivo_herramientas_2019_g_barco += $value->valor_herramienta;
+                        $total_preventivo_consumibles_2019_g_barco +=  $value->valor_consumibles;
+                        $total_preventivo_repuestos_2019_g_barco +=  $value->valor_repuestos;
+                        $total_preventivo_valor_mano_2019_g_barco += $value->valor_mano_ipc;
+                        $total_preventivo_tiempo_2019_g_barco += $value->tiempo_mantenimiento;
+                        $total_preventivo_2019_g_barco += $value->valor_total;
+                    }
+
+                    if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2019){
+                        $total_correctivo_herramientas_2019_g_barco += $value->valor_herramienta;
+                        $total_correctivo_consumibles_2019_g_barco +=  $value->valor_consumibles;
+                        $total_correctivo_repuestos_2019_g_barco +=  $value->valor_repuestos;
+                        $total_correctivo_valor_mano_2019_g_barco += $value->valor_mano_ipc;
+                        $total_correctivo_tiempo_2019_g_barco += $value->tiempo_mantenimiento;
+                        $total_correctivo_2019_g_barco += $value->valor_total;
+                    }
+                }        
+                
+                //MEDITEC
+                if($value->id_empresa == 3){
+                    if($value->id_tipo_mantenimiento == 1 && $value->anio_cotizacion == 2016){
+                        $total_preventivo_herramientas_2016_meditec += $value->valor_herramienta;
+                        $total_preventivo_consumibles_2016_meditec +=  $value->valor_consumibles;
+                        $total_preventivo_repuestos_2016_meditec +=  $value->valor_repuestos;
+                        $total_preventivo_valor_mano_2016_meditec += $value->valor_mano_ipc;
+                        $total_preventivo_tiempo_2016_meditec += $value->tiempo_mantenimiento;
+                        $total_preventivo_2016_meditec += $value->valor_total;
+                    }
+
+                    if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2016){
+                        $total_correctivo_herramientas_2016_meditec += $value->valor_herramienta;
+                        $total_correctivo_consumibles_2016_meditec +=  $value->valor_consumibles;
+                        $total_correctivo_repuestos_2016_meditec +=  $value->valor_repuestos;
+                        $total_correctivo_valor_mano_2016_meditec += $value->valor_mano_ipc;
+                        $total_correctivo_tiempo_2016_meditec += $value->tiempo_mantenimiento;
+                        $total_correctivo_2016_meditec += $value->valor_total;
+                    }
+
+                    if($value->id_tipo_mantenimiento == 1 && $value->anio_cotizacion == 2017){
+                        $total_preventivo_herramientas_2017_meditec += $value->valor_herramienta;
+                        $total_preventivo_consumibles_2017_meditec +=  $value->valor_consumibles;
+                        $total_preventivo_repuestos_2017_meditec +=  $value->valor_repuestos;
+                        $total_preventivo_valor_mano_2017_meditec += $value->valor_mano_ipc;
+                        $total_preventivo_tiempo_2017_meditec += $value->tiempo_mantenimiento;
+                        $total_preventivo_2017_meditec += $value->valor_total;
+                    }
+
+                    if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2017){
+                        $total_correctivo_herramientas_2017_meditec += $value->valor_herramienta;
+                        $total_correctivo_consumibles_2017_meditec +=  $value->valor_consumibles;
+                        $total_correctivo_repuestos_2017_meditec +=  $value->valor_repuestos;
+                        $total_correctivo_valor_mano_2017_meditec += $value->valor_mano_ipc;
+                        $total_correctivo_tiempo_2017_meditec += $value->tiempo_mantenimiento;
+                        $total_correctivo_2017_meditec += $value->valor_total;
+                    }
+
+                    if($value->id_tipo_mantenimiento == 1 && $value->anio_cotizacion == 2018){
+                        $total_preventivo_herramientas_2018_meditec += $value->valor_herramienta;
+                        $total_preventivo_consumibles_2018_meditec +=  $value->valor_consumibles;
+                        $total_preventivo_repuestos_2018_meditec +=  $value->valor_repuestos;
+                        $total_preventivo_valor_mano_2018_meditec += $value->valor_mano_ipc;
+                        $total_preventivo_tiempo_2018_meditec += $value->tiempo_mantenimiento;
+                        $total_preventivo_2018_meditec += $value->valor_total;
+                    }
+
+                    if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2018){
+                        $total_correctivo_herramientas_2018_meditec += $value->valor_herramienta;
+                        $total_correctivo_consumibles_2018_meditec +=  $value->valor_consumibles;
+                        $total_correctivo_repuestos_2018_meditec +=  $value->valor_repuestos;
+                        $total_correctivo_valor_mano_2018_meditec += $value->valor_mano_ipc;
+                        $total_correctivo_tiempo_2018_meditec += $value->tiempo_mantenimiento;
+                        $total_correctivo_2018_meditec += $value->valor_total;
+                    }
+
+
+                    if($value->id_tipo_mantenimiento == 1 && $value->anio_cotizacion == 2019){
+                        $total_preventivo_herramientas_2019_meditec += $value->valor_herramienta;
+                        $total_preventivo_consumibles_2019_meditec +=  $value->valor_consumibles;
+                        $total_preventivo_repuestos_2019_meditec +=  $value->valor_repuestos;
+                        $total_preventivo_valor_mano_2019_meditec += $value->valor_mano_ipc;
+                        $total_preventivo_tiempo_2019_meditec += $value->tiempo_mantenimiento;
+                        $total_preventivo_2019_meditec += $value->valor_total;
+                    }
+
+                    if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2019){
+                        $total_correctivo_herramientas_2019_meditec += $value->valor_herramienta;
+                        $total_correctivo_consumibles_2019_meditec +=  $value->valor_consumibles;
+                        $total_correctivo_repuestos_2019_meditec +=  $value->valor_repuestos;
+                        $total_correctivo_valor_mano_2019_meditec += $value->valor_mano_ipc;
+                        $total_correctivo_tiempo_2019_meditec += $value->tiempo_mantenimiento;
+                        $total_correctivo_2019_meditec += $value->valor_total;
+                    }
+                }        
+
+
+                //INGENIERÍA Y SOLUCIONES BIOMEDICAS S.A.S
+
+                if($value->id_empresa == 4){
+                    if($value->id_tipo_mantenimiento == 1 && $value->anio_cotizacion == 2016){
+                        $total_preventivo_herramientas_2016_ingenieria += $value->valor_herramienta;
+                        $total_preventivo_consumibles_2016_ingenieria +=  $value->valor_consumibles;
+                        $total_preventivo_repuestos_2016_ingenieria +=  $value->valor_repuestos;
+                        $total_preventivo_valor_mano_2016_ingenieria += $value->valor_mano_ipc;
+                        $total_preventivo_tiempo_2016_ingenieria += $value->tiempo_mantenimiento;
+                        $total_preventivo_2016_ingenieria += $value->valor_total;
+                    }
+
+                    if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2016){
+                        $total_correctivo_herramientas_2016_ingenieria += $value->valor_herramienta;
+                        $total_correctivo_consumibles_2016_ingenieria +=  $value->valor_consumibles;
+                        $total_correctivo_repuestos_2016_ingenieria +=  $value->valor_repuestos;
+                        $total_correctivo_valor_mano_2016_ingenieria += $value->valor_mano_ipc;
+                        $total_correctivo_tiempo_2016_ingenieria += $value->tiempo_mantenimiento;
+                        $total_correctivo_2016_ingenieria += $value->valor_total;
+                    }
+
+                    if($value->id_tipo_mantenimiento == 1 && $value->anio_cotizacion == 2017){
+                        $total_preventivo_herramientas_2017_ingenieria += $value->valor_herramienta;
+                        $total_preventivo_consumibles_2017_ingenieria +=  $value->valor_consumibles;
+                        $total_preventivo_repuestos_2017_ingenieria +=  $value->valor_repuestos;
+                        $total_preventivo_valor_mano_2017_ingenieria += $value->valor_mano_ipc;
+                        $total_preventivo_tiempo_2017_ingenieria += $value->tiempo_mantenimiento;
+                        $total_preventivo_2017_ingenieria += $value->valor_total;
+                    }
+
+                    if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2017){
+                        $total_correctivo_herramientas_2017_ingenieria += $value->valor_herramienta;
+                        $total_correctivo_consumibles_2017_ingenieria +=  $value->valor_consumibles;
+                        $total_correctivo_repuestos_2017_ingenieria +=  $value->valor_repuestos;
+                        $total_correctivo_valor_mano_2017_ingenieria += $value->valor_mano_ipc;
+                        $total_correctivo_tiempo_2017_ingenieria += $value->tiempo_mantenimiento;
+                        $total_correctivo_2017_ingenieria += $value->valor_total;
+                    }
+
+                    if($value->id_tipo_mantenimiento == 1 && $value->anio_cotizacion == 2018){
+                        $total_preventivo_herramientas_2018_ingenieria += $value->valor_herramienta;
+                        $total_preventivo_consumibles_2018_ingenieria +=  $value->valor_consumibles;
+                        $total_preventivo_repuestos_2018_ingenieria +=  $value->valor_repuestos;
+                        $total_preventivo_valor_mano_2018_ingenieria += $value->valor_mano_ipc;
+                        $total_preventivo_tiempo_2018_ingenieria += $value->tiempo_mantenimiento;
+                        $total_preventivo_2018_ingenieria += $value->valor_total;
+                    }
+
+                    if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2018){
+                        $total_correctivo_herramientas_2018_ingenieria += $value->valor_herramienta;
+                        $total_correctivo_consumibles_2018_ingenieria +=  $value->valor_consumibles;
+                        $total_correctivo_repuestos_2018_ingenieria +=  $value->valor_repuestos;
+                        $total_correctivo_valor_mano_2018_ingenieria += $value->valor_mano_ipc;
+                        $total_correctivo_tiempo_2018_ingenieria += $value->tiempo_mantenimiento;
+                        $total_correctivo_2018_ingenieria += $value->valor_total;
+                    }
+
+
+                    if($value->id_tipo_mantenimiento == 1 && $value->anio_cotizacion == 2019){
+                        $total_preventivo_herramientas_2019_ingenieria += $value->valor_herramienta;
+                        $total_preventivo_consumibles_2019_ingenieria +=  $value->valor_consumibles;
+                        $total_preventivo_repuestos_2019_ingenieria +=  $value->valor_repuestos;
+                        $total_preventivo_valor_mano_2019_ingenieria += $value->valor_mano_ipc;
+                        $total_preventivo_tiempo_2019_ingenieria += $value->tiempo_mantenimiento;
+                        $total_preventivo_2019_ingenieria += $value->valor_total;
+                    }
+
+                    if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2019){
+                        $total_correctivo_herramientas_2019_ingenieria += $value->valor_herramienta;
+                        $total_correctivo_consumibles_2019_ingenieria +=  $value->valor_consumibles;
+                        $total_correctivo_repuestos_2019_ingenieria +=  $value->valor_repuestos;
+                        $total_correctivo_valor_mano_2019_ingenieria += $value->valor_mano_ipc;
+                        $total_correctivo_tiempo_2019_ingenieria += $value->tiempo_mantenimiento;
+                        $total_correctivo_2019_ingenieria += $value->valor_total;
+                    }
+                }    
             ?>
             
             <div style="display: table; width: 100%; margin-bottom:50px;">
@@ -207,7 +619,6 @@
                         <td width="30%"><img height="40rem" src="../public/images/{{$value->logo}}" alt=""></td>
                     @endif
 
-                   
                 </tr>
 
             </div>
@@ -256,243 +667,7 @@
             </table>
             <div class="page-break"></div>
         @endforeach
-        
-        @if($total_preventivo_herramientas_2016>0)
-            <h4>Preventivo - 2016</h4>
-            <table class="table">
-                <tbody>
-                    <tr>
-                        <td align="right"><label>Total herramientas</label></td>
-                        <td align="left"><label>${{ $total_preventivo_herramientas_2016 }}</label></td>
-
-                        <td align="right"><label>Total consumibles</label></td>
-                        <td align="left"><label>${{ $total_preventivo_consumibles_2016 }}</label></td>
-                    </tr>
-                    <tr>
-                        <td align="right"><label>Total repuestos</label></td>
-                        <td align="left"><label>${{ $total_preventivo_repuestos_2016 }}</label></td>
-
-                        <td align="right">Total tiempo</td>
-                        <td align="left">{{ $total_preventivo_tiempo_2016 }} horas</td>
-                    </tr>
-                    <tr>
-                        <td align="right"><label>Total mano de obra</label></td>
-                        <td align="left"><label>${{ $total_preventivo_valor_mano_2016 }}</label></td>
-
-                        <td align="right"><label>Total</label></td>
-                        <td align="left"><label>${{ $total_preventivo_2016 }}</label></td>
-                    </tr>
-                    
-                </tbody>
-            </table>
-        @endif
-        @if($total_correctivo_herramientas_2016>0)
-            <h4>Correctivo - 2016</h4>
-            <table class="table">
-                <tbody>
-                    <tr>
-                        <td align="right"><label>Total herramientas</label></td>
-                        <td align="left"><label>${{ $total_correctivo_herramientas_2016 }}</label></td>
-
-                        <td align="right"><label>Total consumibles</label></td>
-                        <td align="left"><label>${{ $total_correctivo_consumibles_2016 }}</label></td>
-                    </tr>
-                    <tr>
-                        <td align="right"><label>Total repuestos</label></td>
-                        <td align="left"><label>${{ $total_correctivo_repuestos_2016 }}</label></td>
-
-                        <td align="right">Total tiempo</td>
-                        <td align="left">{{ $total_correctivo_tiempo_2016 }} horas</td>
-                    </tr>
-                    <tr>
-                        <td align="right"><label>Total mano de obra</label></td>
-                        <td align="left"><label>${{ $total_correctivo_valor_mano_2016 }}</label></td>
-
-                        <td align="right"><label>Total</label></td>
-                        <td align="left"><label>${{ $total_correctivo_2016 }}</label></td>
-                    </tr>
-                    
-                </tbody>
-            </table>
-        @endif
-
-        @if($total_preventivo_herramientas_2017>0)
-        <h4>Preventivo - 2017</h4>
-        <table class="table">
-            <tbody>
-                <tr>
-                    <td align="right"><label>Total herramientas</label></td>
-                    <td align="left"><label>${{ $total_preventivo_herramientas_2017 }}</label></td>
-
-                    <td align="right"><label>Total consumibles</label></td>
-                    <td align="left"><label>${{ $total_preventivo_consumibles_2017 }}</label></td>
-                </tr>
-                <tr>
-                    <td align="right"><label>Total repuestos</label></td>
-                    <td align="left"><label>${{ $total_preventivo_repuestos_2017 }}</label></td>
-
-                    <td align="right">Total tiempo</td>
-                    <td align="left">{{ $total_preventivo_tiempo_2017 }} horas</td>
-                </tr>
-                <tr>
-                    <td align="right"><label>Total mano de obra</label></td>
-                    <td align="left"><label>${{ $total_preventivo_valor_mano_2017 }}</label></td>
-
-                    <td align="right"><label>Total</label></td>
-                    <td align="left"><label>${{ $total_preventivo_2017 }}</label></td>
-                </tr>
-                
-            </tbody>
-        </table>
-    @endif
-    @if($total_correctivo_herramientas_2017>0)
-        <h4>Correctivo - 2017</h4>
-        <table class="table">
-            <tbody>
-                <tr>
-                    <td align="right"><label>Total herramientas</label></td>
-                    <td align="left"><label>${{ $total_correctivo_herramientas_2017 }}</label></td>
-
-                    <td align="right"><label>Total consumibles</label></td>
-                    <td align="left"><label>${{ $total_correctivo_consumibles_2017 }}</label></td>
-                </tr>
-                <tr>
-                    <td align="right"><label>Total repuestos</label></td>
-                    <td align="left"><label>${{ $total_correctivo_repuestos_2017 }}</label></td>
-
-                    <td align="right">Total tiempo</td>
-                    <td align="left">{{ $total_correctivo_tiempo_2017 }} horas</td>
-                </tr>
-                <tr>
-                    <td align="right"><label>Total mano de obra</label></td>
-                    <td align="left"><label>${{ $total_correctivo_valor_mano_2017 }}</label></td>
-
-                    <td align="right"><label>Total</label></td>
-                    <td align="left"><label>${{ $total_correctivo_2017 }}</label></td>
-                </tr>
-                
-            </tbody>
-        </table>
-    @endif
-
-    @if($total_preventivo_herramientas_2018>0)
-        <h4>Preventivo - 2018</h4>
-        <table class="table">
-            <tbody>
-                <tr>
-                    <td align="right"><label>Total herramientas</label></td>
-                    <td align="left"><label>${{ $total_preventivo_herramientas_2018 }}</label></td>
-
-                    <td align="right"><label>Total consumibles</label></td>
-                    <td align="left"><label>${{ $total_preventivo_consumibles_2018 }}</label></td>
-                </tr>
-                <tr>
-                    <td align="right"><label>Total repuestos</label></td>
-                    <td align="left"><label>${{ $total_preventivo_repuestos_2018 }}</label></td>
-
-                    <td align="right">Total tiempo</td>
-                    <td align="left">{{ $total_preventivo_tiempo_2018 }} horas</td>
-                </tr>
-                <tr>
-                    <td align="right"><label>Total mano de obra</label></td>
-                    <td align="left"><label>${{ $total_preventivo_valor_mano_2018 }}</label></td>
-
-                    <td align="right"><label>Total</label></td>
-                    <td align="left"><label>${{ $total_preventivo_2018 }}</label></td>
-                </tr>
-                
-            </tbody>
-        </table>
-    @endif
-    @if($total_correctivo_herramientas_2018>0)
-        <h4>Correctivo - 2018</h4>
-        <table class="table">
-            <tbody>
-                <tr>
-                    <td align="right"><label>Total herramientas</label></td>
-                    <td align="left"><label>${{ $total_correctivo_herramientas_2018 }}</label></td>
-
-                    <td align="right"><label>Total consumibles</label></td>
-                    <td align="left"><label>${{ $total_correctivo_consumibles_2018 }}</label></td>
-                </tr>
-                <tr>
-                    <td align="right"><label>Total repuestos</label></td>
-                    <td align="left"><label>${{ $total_correctivo_repuestos_2018 }}</label></td>
-
-                    <td align="right">Total tiempo</td>
-                    <td align="left">{{ $total_correctivo_tiempo_2018 }} horas</td>
-                </tr>
-                <tr>
-                    <td align="right"><label>Total mano de obra</label></td>
-                    <td align="left"><label>${{ $total_correctivo_valor_mano_2018 }}</label></td>
-
-                    <td align="right"><label>Total</label></td>
-                    <td align="left"><label>${{ $total_correctivo_2018 }}</label></td>
-                </tr>
-                
-            </tbody>
-        </table>
-    @endif
-
-    @if($total_preventivo_herramientas_2019>0)
-        <h4>Preventivo - 2019</h4>
-        <table class="table">
-            <tbody>
-                <tr>
-                    <td align="right"><label>Total herramientas</label></td>
-                    <td align="left"><label>${{ $total_preventivo_herramientas_2019 }}</label></td>
-
-                    <td align="right"><label>Total consumibles</label></td>
-                    <td align="left"><label>${{ $total_preventivo_consumibles_2019 }}</label></td>
-                </tr>
-                <tr>
-                    <td align="right"><label>Total repuestos</label></td>
-                    <td align="left"><label>${{ $total_preventivo_repuestos_2019 }}</label></td>
-
-                    <td align="right">Total tiempo</td>
-                    <td align="left">{{ $total_preventivo_tiempo_2019 }} horas</td>
-                </tr>
-                <tr>
-                    <td align="right"><label>Total mano de obra</label></td>
-                    <td align="left"><label>${{ $total_preventivo_valor_mano_2019 }}</label></td>
-
-                    <td align="right"><label>Total</label></td>
-                    <td align="left"><label>${{ $total_preventivo_2019 }}</label></td>
-                </tr>
-                
-            </tbody>
-        </table>
-    @endif
-    @if($total_correctivo_herramientas_2019>0)
-        <h4>Correctivo - 2019</h4>
-        <table class="table">
-            <tbody>
-                <tr>
-                    <td align="right"><label>Total herramientas</label></td>
-                    <td align="left"><label>${{ $total_correctivo_herramientas_2019 }}</label></td>
-
-                    <td align="right"><label>Total consumibles</label></td>
-                    <td align="left"><label>${{ $total_correctivo_consumibles_2019 }}</label></td>
-                </tr>
-                <tr>
-                    <td align="right"><label>Total repuestos</label></td>
-                    <td align="left"><label>${{ $total_correctivo_repuestos_2019 }}</label></td>
-
-                    <td align="right">Total tiempo</td>
-                    <td align="left">{{ $total_correctivo_tiempo_2019 }} horas</td>
-                </tr>
-                <tr>
-                    <td align="right"><label>Total mano de obra</label></td>
-                    <td align="left"><label>${{ $total_correctivo_valor_mano_2019 }}</label></td>
-
-                    <td align="right"><label>Total</label></td>
-                    <td align="left"><label>${{ $total_correctivo_2019 }}</label></td>
-                </tr>
-                
-            </tbody>
-        </table>
-    @endif    
-
+        @include('pdf_empresas_totales')
     </div>
 </body>
 
