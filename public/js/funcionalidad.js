@@ -111,7 +111,7 @@ const guardarInformacion = () => {
 };
 
 const continuarGuardarInformacion = (respuesta) => {
-    //mostrarAlerta(respuesta);
+    mostrarAlerta(respuesta);
 };
 
 const validarFormulario = () => {
