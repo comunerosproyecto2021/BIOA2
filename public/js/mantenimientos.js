@@ -144,7 +144,6 @@ const descargarPDF = () => {
             },
         });
         datos = construirDatosReporte();
-
         $.ajax({
             type: "GET",
             url: $("#hdd_route_descargar_pdf").val(),
@@ -161,6 +160,7 @@ const descargarPDF = () => {
                 link.download = "Reporte_cotizacion_mantenimientos.pdf";
                 link.click();
             },
+
 
             error: function (xhr, ajaxOptions, thrownError) {
                 console.error(xhr);
