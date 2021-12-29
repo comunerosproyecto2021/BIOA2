@@ -21,8 +21,13 @@
                 <td align="right"><label>Total mano de obra</label></td>
                 <td align="left"><label>${{ $total_preventivo_valor_mano_2016_comuneros }}</label></td>
 
+                <td align="right"><label>Total equipos</label></td>
+                <td align="left"><label>{{ $equipos_preventivo_2016_comuneros }}</label></td>
+            </tr>
+            <tr>
+            
                 <td align="right"><label>Total</label></td>
-                <td align="left"><label>${{ $total_preventivo_2016_comuneros }}</label></td>
+                <td colspan="3" align="left"><label>${{ $total_preventivo_2016_comuneros }}</label></td>
             </tr>
             
         </tbody>
@@ -47,12 +52,17 @@
                 <td align="right">Total tiempo</td>
                 <td align="left">{{ $total_correctivo_tiempo_2016_comuneros }} horas</td>
             </tr>
+            
             <tr>
                 <td align="right"><label>Total mano de obra</label></td>
                 <td align="left"><label>${{ $total_correctivo_valor_mano_2016_comuneros }}</label></td>
 
+                <td align="right"><label>Total equipos</label></td>
+                <td align="left"><label>{{ $equipos_correctivo_2016_comuneros }}</label></td>
+            </tr>
+            <tr>
                 <td align="right"><label>Total</label></td>
-                <td align="left"><label>${{ $total_correctivo_2016_comuneros }}</label></td>
+                <td colspan="3" align="left"><label>${{ $total_correctivo_2016_comuneros }}</label></td>
             </tr>
             
         </tbody>
@@ -77,12 +87,17 @@
                 <td align="right">Total tiempo</td>
                 <td align="left">{{ $total_preventivo_tiempo_2017_comuneros }} horas</td>
             </tr>
+          
             <tr>
                 <td align="right"><label>Total mano de obra</label></td>
                 <td align="left"><label>${{ $total_preventivo_valor_mano_2017_comuneros }}</label></td>
 
+                <td align="right"><label>Total equipos</label></td>
+                <td align="left"><label>{{ $equipos_preventivo_2017_comuneros }}</label></td>
+            </tr>
+            <tr>
                 <td align="right"><label>Total</label></td>
-                <td align="left"><label>${{ $total_preventivo_2017_comuneros }}</label></td>
+                <td colspan="3" align="left"><label>${{ $total_preventivo_2017_comuneros }}</label></td>
             </tr>
             
         </tbody>
@@ -111,8 +126,12 @@
                 <td align="right"><label>Total mano de obra</label></td>
                 <td align="left"><label>${{ $total_correctivo_valor_mano_2017_comuneros }}</label></td>
 
+                <td align="right"><label>Total equipos</label></td>
+                <td align="left"><label>{{ $equipos_correctivo_2017_comuneros }}</label></td>
+            </tr>
+            <tr>
                 <td align="right"><label>Total</label></td>
-                <td align="left"><label>${{ $total_correctivo_2017_comuneros }}</label></td>
+                <td colspan="3" align="left"><label>${{ $total_correctivo_2017_comuneros }}</label></td>
             </tr>
             
         </tbody>
@@ -137,12 +156,17 @@
                 <td align="right">Total tiempo</td>
                 <td align="left">{{ $total_preventivo_tiempo_2018_comuneros }} horas</td>
             </tr>
+           
             <tr>
                 <td align="right"><label>Total mano de obra</label></td>
                 <td align="left"><label>${{ $total_preventivo_valor_mano_2018_comuneros }}</label></td>
 
+                <td align="right"><label>Total equipos</label></td>
+                <td align="left"><label>{{ $equipos_preventivo_2018_comuneros }}</label></td>
+            </tr>
+            <tr>
                 <td align="right"><label>Total</label></td>
-                <td align="left"><label>${{ $total_preventivo_2018_comuneros }}</label></td>
+                <td colspan="3" align="left"><label>${{ $total_preventivo_2018_comuneros }}</label></td>
             </tr>
             
         </tbody>
@@ -174,7 +198,18 @@
                 <td align="right"><label>Total</label></td>
                 <td align="left"><label>${{ $total_correctivo_2018_comuneros }}</label></td>
             </tr>
-            
+
+            <tr>
+                <td align="right"><label>Total mano de obra</label></td>
+                <td align="left"><label>${{ $total_correctivo_valor_mano_2018_comuneros }}</label></td>
+
+                <td align="right"><label>Total equipos</label></td>
+                <td align="left"><label>{{ $equipos_correctivo_2018_comuneros }}</label></td>
+            </tr>
+            <tr>
+                <td align="right"><label>Total</label></td>
+                <td colspan="3" align="left"><label>${{ $total_correctivo_2018_comuneros }}</label></td>
+            </tr>
         </tbody>
     </table>
 @endif
@@ -197,12 +232,17 @@
                 <td align="right">Total tiempo</td>
                 <td align="left">{{ $total_preventivo_tiempo_2019_comuneros }} horas</td>
             </tr>
+           
             <tr>
                 <td align="right"><label>Total mano de obra</label></td>
                 <td align="left"><label>${{ $total_preventivo_valor_mano_2019_comuneros }}</label></td>
 
+                <td align="right"><label>Total equipos</label></td>
+                <td align="left"><label>{{ $equipos_preventivo_2019_comuneros }}</label></td>
+            </tr>
+            <tr>
                 <td align="right"><label>Total</label></td>
-                <td align="left"><label>${{ $total_preventivo_2019_comuneros }}</label></td>
+                <td colspan="3" align="left"><label>${{ $total_preventivo_2019_comuneros }}</label></td>
             </tr>
             
         </tbody>
@@ -227,12 +267,17 @@
                 <td align="right">Total tiempo</td>
                 <td align="left">{{ $total_correctivo_tiempo_2019_comuneros }} horas</td>
             </tr>
+        
             <tr>
                 <td align="right"><label>Total mano de obra</label></td>
                 <td align="left"><label>${{ $total_correctivo_valor_mano_2019_comuneros }}</label></td>
 
+                <td align="right"><label>Total equipos</label></td>
+                <td align="left"><label>{{ $equipos_correctivo_2019_comuneros }}</label></td>
+            </tr>
+            <tr>
                 <td align="right"><label>Total</label></td>
-                <td align="left"><label>${{ $total_correctivo_2019_comuneros }}</label></td>
+                <td colspan="3" align="left"><label>${{ $total_correctivo_2019_comuneros }}</label></td>
             </tr>
             
         </tbody>
@@ -269,6 +314,18 @@
                 <td align="right"><label>Total</label></td>
                 <td align="left"><label>${{ $total_preventivo_2016_g_barco }}</label></td>
             </tr>
+
+            <tr>
+                <td align="right"><label>Total mano de obra</label></td>
+                <td align="left"><label>${{ $total_preventivo_valor_mano_2016_g_barco }}</label></td>
+
+                <td align="right"><label>Total equipos</label></td>
+                <td align="left"><label>{{ $equipos_preventivo_2016_g_barco }}</label></td>
+            </tr>
+            <tr>
+                <td align="right"><label>Total</label></td>
+                <td colspan="3" align="left"><label>${{ $total_preventivo_2016_g_barco }}</label></td>
+            </tr>
             
         </tbody>
     </table>
@@ -292,14 +349,19 @@
                 <td align="right">Total tiempo</td>
                 <td align="left">{{ $total_correctivo_tiempo_2016_g_barco }} horas</td>
             </tr>
+                       
             <tr>
                 <td align="right"><label>Total mano de obra</label></td>
                 <td align="left"><label>${{ $total_correctivo_valor_mano_2016_g_barco }}</label></td>
 
-                <td align="right"><label>Total</label></td>
-                <td align="left"><label>${{ $total_correctivo_2016_g_barco }}</label></td>
+                <td align="right"><label>Total equipos</label></td>
+                <td align="left"><label>{{ $equipos_correctivo_2016_g_barco }}</label></td>
             </tr>
-            
+            <tr>
+                <td align="right"><label>Total</label></td>
+                <td colspan="3" align="left"><label>${{ $total_correctivo_2016_g_barco }}</label></td>
+            </tr>
+
         </tbody>
     </table>
 @endif
@@ -322,13 +384,19 @@
                 <td align="right">Total tiempo</td>
                 <td align="left">{{ $total_preventivo_tiempo_2017_g_barco }} horas</td>
             </tr>
+           
             <tr>
                 <td align="right"><label>Total mano de obra</label></td>
                 <td align="left"><label>${{ $total_preventivo_valor_mano_2017_g_barco }}</label></td>
 
-                <td align="right"><label>Total</label></td>
-                <td align="left"><label>${{ $total_preventivo_2017_g_barco }}</label></td>
+                <td align="right"><label>Total equipos</label></td>
+                <td align="left"><label>{{ $equipos_preventivo_2017_g_barco }}</label></td>
             </tr>
+            <tr>
+                <td align="right"><label>Total</label></td>
+                <td colspan="3" align="left"><label>${{ $total_preventivo_2017_g_barco }}</label></td>
+            </tr>
+            
             
         </tbody>
     </table>
@@ -358,6 +426,18 @@
 
                 <td align="right"><label>Total</label></td>
                 <td align="left"><label>${{ $total_correctivo_2017_g_barco }}</label></td>
+            </tr>
+
+            <tr>
+                <td align="right"><label>Total mano de obra</label></td>
+                <td align="left"><label>${{ $total_correctivo_valor_mano_2017_g_barco }}</label></td>
+
+                <td align="right"><label>Total equipos</label></td>
+                <td align="left"><label>{{ $equipos_correctivo_2017_g_barco }}</label></td>
+            </tr>
+            <tr>
+                <td align="right"><label>Total</label></td>
+                <td colspan="3" align="left"><label>${{ $total_correctivo_2017_g_barco }}</label></td>
             </tr>
             
         </tbody>
@@ -390,6 +470,17 @@
                 <td align="left"><label>${{ $total_preventivo_2018_g_barco }}</label></td>
             </tr>
             
+            <tr>
+                <td align="right"><label>Total mano de obra</label></td>
+                <td align="left"><label>${{ $total_preventivo_valor_mano_2018_g_barco }}</label></td>
+
+                <td align="right"><label>Total equipos</label></td>
+                <td align="left"><label>{{ $equipos_preventivo_2018_g_barco }}</label></td>
+            </tr>
+            <tr>
+                <td align="right"><label>Total</label></td>
+                <td colspan="3" align="left"><label>${{ $total_preventivo_2018_g_barco }}</label></td>
+            </tr>
         </tbody>
     </table>
 @endif
@@ -412,12 +503,17 @@
                 <td align="right">Total tiempo</td>
                 <td align="left">{{ $total_correctivo_tiempo_2018_g_barco }} horas</td>
             </tr>
+       
             <tr>
                 <td align="right"><label>Total mano de obra</label></td>
                 <td align="left"><label>${{ $total_correctivo_valor_mano_2018_g_barco }}</label></td>
 
+                <td align="right"><label>Total equipos</label></td>
+                <td align="left"><label>{{ $equipos_correctivo_2018_g_barco }}</label></td>
+            </tr>
+            <tr>
                 <td align="right"><label>Total</label></td>
-                <td align="left"><label>${{ $total_correctivo_2018_g_barco }}</label></td>
+                <td colspan="3" align="left"><label>${{ $total_correctivo_2018_g_barco }}</label></td>
             </tr>
             
         </tbody>
@@ -442,14 +538,19 @@
                 <td align="right">Total tiempo</td>
                 <td align="left">{{ $total_preventivo_tiempo_2019_g_barco }} horas</td>
             </tr>
+           
             <tr>
                 <td align="right"><label>Total mano de obra</label></td>
                 <td align="left"><label>${{ $total_preventivo_valor_mano_2019_g_barco }}</label></td>
 
-                <td align="right"><label>Total</label></td>
-                <td align="left"><label>${{ $total_preventivo_2019_g_barco }}</label></td>
+                <td align="right"><label>Total equipos</label></td>
+                <td align="left"><label>{{ $equipos_preventivo_2019_g_barco }}</label></td>
             </tr>
-            
+            <tr>
+                <td align="right"><label>Total</label></td>
+                <td colspan="3" align="left"><label>${{ $total_preventivo_2019_g_barco }}</label></td>
+            </tr>
+              
         </tbody>
     </table>
 @endif
@@ -472,12 +573,17 @@
                 <td align="right">Total tiempo</td>
                 <td align="left">{{ $total_correctivo_tiempo_2019_g_barco }} horas</td>
             </tr>
+         
             <tr>
                 <td align="right"><label>Total mano de obra</label></td>
                 <td align="left"><label>${{ $total_correctivo_valor_mano_2019_g_barco }}</label></td>
 
+                <td align="right"><label>Total equipos</label></td>
+                <td align="left"><label>{{ $equipos_correctivo_2019_g_barco }}</label></td>
+            </tr>
+            <tr>
                 <td align="right"><label>Total</label></td>
-                <td align="left"><label>${{ $total_correctivo_2019_g_barco }}</label></td>
+                <td colspan="3" align="left"><label>${{ $total_correctivo_2019_g_barco }}</label></td>
             </tr>
             
         </tbody>
@@ -507,12 +613,17 @@
                 <td align="right">Total tiempo</td>
                 <td align="left">{{ $total_preventivo_tiempo_2016_meditec }} horas</td>
             </tr>
+          
             <tr>
                 <td align="right"><label>Total mano de obra</label></td>
                 <td align="left"><label>${{ $total_preventivo_valor_mano_2016_meditec }}</label></td>
 
+                <td align="right"><label>Total equipos</label></td>
+                <td align="left"><label>{{ $equipos_preventivo_2016_meditec }}</label></td>
+            </tr>
+            <tr>
                 <td align="right"><label>Total</label></td>
-                <td align="left"><label>${{ $total_preventivo_2016_meditec }}</label></td>
+                <td colspan="3" align="left"><label>${{ $total_preventivo_2016_meditec }}</label></td>
             </tr>
             
         </tbody>
@@ -537,12 +648,17 @@
                 <td align="right">Total tiempo</td>
                 <td align="left">{{ $total_correctivo_tiempo_2016_meditec }} horas</td>
             </tr>
+       
             <tr>
                 <td align="right"><label>Total mano de obra</label></td>
                 <td align="left"><label>${{ $total_correctivo_valor_mano_2016_meditec }}</label></td>
 
+                <td align="right"><label>Total equipos</label></td>
+                <td align="left"><label>{{ $equipos_correctivo_2016_meditec }}</label></td>
+            </tr>
+            <tr>
                 <td align="right"><label>Total</label></td>
-                <td align="left"><label>${{ $total_correctivo_2016_meditec }}</label></td>
+                <td colspan="3" align="left"><label>${{ $total_correctivo_2016_meditec }}</label></td>
             </tr>
             
         </tbody>
@@ -567,12 +683,17 @@
                 <td align="right">Total tiempo</td>
                 <td align="left">{{ $total_preventivo_tiempo_2017_meditec }} horas</td>
             </tr>
+        
             <tr>
                 <td align="right"><label>Total mano de obra</label></td>
                 <td align="left"><label>${{ $total_preventivo_valor_mano_2017_meditec }}</label></td>
 
+                <td align="right"><label>Total equipos</label></td>
+                <td align="left"><label>{{ $equipos_preventivo_2017_meditec }}</label></td>
+            </tr>
+            <tr>
                 <td align="right"><label>Total</label></td>
-                <td align="left"><label>${{ $total_preventivo_2017_meditec }}</label></td>
+                <td colspan="3" align="left"><label>${{ $total_preventivo_2017_meditec }}</label></td>
             </tr>
             
         </tbody>
@@ -597,12 +718,17 @@
                 <td align="right">Total tiempo</td>
                 <td align="left">{{ $total_correctivo_tiempo_2017_meditec }} horas</td>
             </tr>
+           
             <tr>
                 <td align="right"><label>Total mano de obra</label></td>
                 <td align="left"><label>${{ $total_correctivo_valor_mano_2017_meditec }}</label></td>
 
+                <td align="right"><label>Total equipos</label></td>
+                <td align="left"><label>{{ $equipos_correctivo_2017_meditec }}</label></td>
+            </tr>
+            <tr>
                 <td align="right"><label>Total</label></td>
-                <td align="left"><label>${{ $total_correctivo_2017_meditec }}</label></td>
+                <td colspan="3" align="left"><label>${{ $total_correctivo_2017_meditec }}</label></td>
             </tr>
             
         </tbody>
@@ -627,12 +753,17 @@
                 <td align="right">Total tiempo</td>
                 <td align="left">{{ $total_preventivo_tiempo_2018_meditec }} horas</td>
             </tr>
+          
             <tr>
                 <td align="right"><label>Total mano de obra</label></td>
                 <td align="left"><label>${{ $total_preventivo_valor_mano_2018_meditec }}</label></td>
 
+                <td align="right"><label>Total equipos</label></td>
+                <td align="left"><label>{{ $equipos_preventivo_2018_meditec }}</label></td>
+            </tr>
+            <tr>
                 <td align="right"><label>Total</label></td>
-                <td align="left"><label>${{ $total_preventivo_2018_meditec }}</label></td>
+                <td colspan="3" align="left"><label>${{ $total_preventivo_2018_meditec }}</label></td>
             </tr>
             
         </tbody>
@@ -640,7 +771,7 @@
 @endif
 
 @if($total_correctivo_2018_meditec>0)
-    <h4>Meditec  - correctivo - 2018</h4>
+    <h4>Meditec - correctivo - 2018</h4>
     <table class="table">
         <tbody>
             <tr>
@@ -657,12 +788,17 @@
                 <td align="right">Total tiempo</td>
                 <td align="left">{{ $total_correctivo_tiempo_2018_meditec }} horas</td>
             </tr>
+         
             <tr>
                 <td align="right"><label>Total mano de obra</label></td>
                 <td align="left"><label>${{ $total_correctivo_valor_mano_2018_meditec }}</label></td>
 
+                <td align="right"><label>Total equipos</label></td>
+                <td align="left"><label>{{ $equipos_correctivo_2018_meditec }}</label></td>
+            </tr>
+            <tr>
                 <td align="right"><label>Total</label></td>
-                <td align="left"><label>${{ $total_correctivo_2018_meditec }}</label></td>
+                <td colspan="3" align="left"><label>${{ $total_correctivo_2018_meditec }}</label></td>
             </tr>
             
         </tbody>
@@ -694,6 +830,18 @@
                 <td align="right"><label>Total</label></td>
                 <td align="left"><label>${{ $total_preventivo_2019_meditec }}</label></td>
             </tr>
+
+            <tr>
+                <td align="right"><label>Total mano de obra</label></td>
+                <td align="left"><label>${{ $total_preventivo_valor_mano_2019_meditec }}</label></td>
+
+                <td align="right"><label>Total equipos</label></td>
+                <td align="left"><label>{{ $equipos_preventivo_2019_meditec }}</label></td>
+            </tr>
+            <tr>
+                <td align="right"><label>Total</label></td>
+                <td colspan="3" align="left"><label>${{ $total_preventivo_2019_meditec }}</label></td>
+            </tr>
             
         </tbody>
     </table>
@@ -717,12 +865,17 @@
                 <td align="right">Total tiempo</td>
                 <td align="left">{{ $total_correctivo_tiempo_2019_meditec }} horas</td>
             </tr>
+           
             <tr>
                 <td align="right"><label>Total mano de obra</label></td>
                 <td align="left"><label>${{ $total_correctivo_valor_mano_2019_meditec }}</label></td>
 
+                <td align="right"><label>Total equipos</label></td>
+                <td align="left"><label>{{ $equipos_correctivo_2019_meditec }}</label></td>
+            </tr>
+            <tr>
                 <td align="right"><label>Total</label></td>
-                <td align="left"><label>${{ $total_correctivo_2019_meditec }}</label></td>
+                <td colspan="3" align="left"><label>${{ $total_correctivo_2019_meditec }}</label></td>
             </tr>
             
         </tbody>
@@ -751,14 +904,18 @@
                 <td align="right">Total tiempo</td>
                 <td align="left">{{ $total_preventivo_tiempo_2016_ingenieria }} horas</td>
             </tr>
+                        
             <tr>
                 <td align="right"><label>Total mano de obra</label></td>
                 <td align="left"><label>${{ $total_preventivo_valor_mano_2016_ingenieria }}</label></td>
 
-                <td align="right"><label>Total</label></td>
-                <td align="left"><label>${{ $total_preventivo_2016_ingenieria }}</label></td>
+                <td align="right"><label>Total equipos</label></td>
+                <td align="left"><label>{{ $equipos_preventivo_2016_ingenieria }}</label></td>
             </tr>
-            
+            <tr>
+                <td align="right"><label>Total</label></td>
+                <td colspan="3" align="left"><label>${{ $total_preventivo_2016_ingenieria }}</label></td>
+            </tr>
         </tbody>
     </table>
 @endif
@@ -781,12 +938,17 @@
                 <td align="right">Total tiempo</td>
                 <td align="left">{{ $total_correctivo_tiempo_2016_ingenieria }} horas</td>
             </tr>
+          
             <tr>
                 <td align="right"><label>Total mano de obra</label></td>
                 <td align="left"><label>${{ $total_correctivo_valor_mano_2016_ingenieria }}</label></td>
 
+                <td align="right"><label>Total equipos</label></td>
+                <td align="left"><label>{{ $equipos_correctivo_2016_ingenieria }}</label></td>
+            </tr>
+            <tr>
                 <td align="right"><label>Total</label></td>
-                <td align="left"><label>${{ $total_correctivo_2016_ingenieria }}</label></td>
+                <td colspan="3" align="left"><label>${{ $total_correctivo_2016_ingenieria }}</label></td>
             </tr>
             
         </tbody>
@@ -811,12 +973,17 @@
                 <td align="right">Total tiempo</td>
                 <td align="left">{{ $total_preventivo_tiempo_2017_ingenieria }} horas</td>
             </tr>
+    
             <tr>
                 <td align="right"><label>Total mano de obra</label></td>
                 <td align="left"><label>${{ $total_preventivo_valor_mano_2017_ingenieria }}</label></td>
 
+                <td align="right"><label>Total equipos</label></td>
+                <td align="left"><label>{{ $equipos_preventivo_2017_ingenieria }}</label></td>
+            </tr>
+            <tr>
                 <td align="right"><label>Total</label></td>
-                <td align="left"><label>${{ $total_preventivo_2017_ingenieria }}</label></td>
+                <td colspan="3" align="left"><label>${{ $total_preventivo_2017_ingenieria }}</label></td>
             </tr>
             
         </tbody>
@@ -841,12 +1008,17 @@
                 <td align="right">Total tiempo</td>
                 <td align="left">{{ $total_correctivo_tiempo_2017_ingenieria }} horas</td>
             </tr>
+                  
             <tr>
                 <td align="right"><label>Total mano de obra</label></td>
-                <td align="left"><label>${{ $total_correctivo_valor_mano_2017_ingenieria }}</label></td>
-
+                <td align="left"><label>${{ $total_correctivo_valor_mano_2017_ingenieria }}</td>
+                
+                <td align="right"><label>Total equipos</label></td>
+                <td align="left"><label>{{ $equipos_correctivo_2017_ingenieria }}</label></td>
+            </tr>
+            <tr>
                 <td align="right"><label>Total</label></td>
-                <td align="left"><label>${{ $total_correctivo_2017_ingenieria }}</label></td>
+                <td colspan="3" align="left"><label>${{ $total_correctivo_2017_ingenieria }}</label></td>
             </tr>
             
         </tbody>
@@ -878,6 +1050,18 @@
                 <td align="right"><label>Total</label></td>
                 <td align="left"><label>${{ $total_preventivo_2018_ingenieria }}</label></td>
             </tr>
+
+            <tr>
+                <td align="right"><label>Total mano de obra</label></td>
+                <td align="left"><label>${{ $total_preventivo_valor_mano_2018_ingenieria }}</td>
+
+                <td align="right"><label>Total equipos</label></td>
+                <td align="left"><label>{{ $equipos_preventivo_2018_ingenieria }}</label></td>
+            </tr>
+            <tr>
+                <td align="right"><label>Total</label></td>
+                <td colspan="3" align="left"><label>${{ $total_preventivo_2018_ingenieria }}</label></td>
+            </tr>
             
         </tbody>
     </table>
@@ -901,12 +1085,17 @@
                 <td align="right">Total tiempo</td>
                 <td align="left">{{ $total_correctivo_tiempo_2018_ingenieria }} horas</td>
             </tr>
+       
             <tr>
                 <td align="right"><label>Total mano de obra</label></td>
-                <td align="left"><label>${{ $total_correctivo_valor_mano_2018_ingenieria }}</label></td>
+                <td align="left"><label>${{ $total_correctivo_valor_mano_2018_ingenieria }}</td>
 
+                <td align="right"><label>Total equipos</label></td>
+                <td align="left"><label>{{ $equipos_correctivo_2018_ingenieria }}</label></td>
+            </tr>
+            <tr>
                 <td align="right"><label>Total</label></td>
-                <td align="left"><label>${{ $total_correctivo_2018_ingenieria }}</label></td>
+                <td colspan="3" align="left"><label>${{ $total_correctivo_2018_ingenieria }}</label></td>
             </tr>
             
         </tbody>
@@ -931,12 +1120,17 @@
                 <td align="right">Total tiempo</td>
                 <td align="left">{{ $total_preventivo_tiempo_2019_ingenieria }} horas</td>
             </tr>
+                    
             <tr>
                 <td align="right"><label>Total mano de obra</label></td>
-                <td align="left"><label>${{ $total_preventivo_valor_mano_2019_ingenieria }}</label></td>
+                <td align="left"><label>${{ $total_preventivo_valor_mano_2019_ingenieria }}</td>
 
+                <td align="right"><label>Total equipos</label></td>
+                <td align="left"><label>{{ $equipos_preventivo_2019_ingenieria }}</label></td>
+            </tr>
+            <tr>
                 <td align="right"><label>Total</label></td>
-                <td align="left"><label>${{ $total_preventivo_2019_ingenieria }}</label></td>
+                <td colspan="3" align="left"><label>${{ $total_preventivo_2019_ingenieria }}</label></td>
             </tr>
             
         </tbody>
@@ -961,12 +1155,17 @@
                 <td align="right">Total tiempo</td>
                 <td align="left">{{ $total_correctivo_tiempo_2019_ingenieria }} horas</td>
             </tr>
+                              
             <tr>
                 <td align="right"><label>Total mano de obra</label></td>
-                <td align="left"><label>${{ $total_correctivo_valor_mano_2019_ingenieria }}</label></td>
+                <td align="left"><label>${{ $total_correctivo_valor_mano_2019_ingenieria }}</td>
 
+                <td align="right"><label>Total equipos</label></td>
+                <td align="left"><label>{{ $equipos_correctivo_2019_ingenieria }}</label></td>
+            </tr>
+            <tr>
                 <td align="right"><label>Total</label></td>
-                <td align="left"><label>${{ $total_correctivo_2019_ingenieria }}</label></td>
+                <td colspan="3" align="left"><label>${{ $total_correctivo_2019_ingenieria }}</label></td>
             </tr>
             
         </tbody>
