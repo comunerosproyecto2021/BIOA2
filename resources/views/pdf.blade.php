@@ -71,7 +71,8 @@
             $total_preventivo_repuestos_2016_comuneros=0;  
             $total_preventivo_valor_mano_2016_comuneros=0;
             $total_preventivo_tiempo_2016_comuneros=0;
-            $total_preventivo_2016_comuneros=0;  
+            $total_preventivo_2016_comuneros=0; 
+            $equipos_preventivo_2016_comuneros=0;  
             
             $total_correctivo_herramientas_2016_comuneros=0; 
             $total_correctivo_consumibles_2016_comuneros=0;  
@@ -79,13 +80,15 @@
             $total_correctivo_valor_mano_2016_comuneros=0;
             $total_correctivo_tiempo_2016_comuneros=0;
             $total_correctivo_2016_comuneros=0;
+            $equipos_correctivo_2016_comuneros=0;  
 
             $total_preventivo_herramientas_2017_comuneros=0; 
             $total_preventivo_consumibles_2017_comuneros=0;  
             $total_preventivo_repuestos_2017_comuneros=0;  
             $total_preventivo_valor_mano_2017_comuneros=0;
             $total_preventivo_tiempo_2017_comuneros=0;
-            $total_preventivo_2017_comuneros=0;  
+            $total_preventivo_2017_comuneros=0; 
+            $equipos_preventivo_2017_comuneros=0;  
             
             $total_correctivo_herramientas_2017_comuneros=0; 
             $total_correctivo_consumibles_2017_comuneros=0;  
@@ -93,6 +96,7 @@
             $total_correctivo_valor_mano_2017_comuneros=0;
             $total_correctivo_tiempo_2017_comuneros=0;
             $total_correctivo_2017_comuneros=0;
+            $equipos_correctivo_2017_comuneros=0;  
 
             $total_preventivo_herramientas_2018_comuneros=0; 
             $total_preventivo_consumibles_2018_comuneros=0;  
@@ -100,6 +104,7 @@
             $total_preventivo_valor_mano_2018_comuneros=0;
             $total_preventivo_tiempo_2018_comuneros=0;
             $total_preventivo_2018_comuneros=0;  
+            $equipos_preventivo_2018_comuneros=0;  
             
             $total_correctivo_herramientas_2018_comuneros=0; 
             $total_correctivo_consumibles_2018_comuneros=0;  
@@ -107,13 +112,15 @@
             $total_correctivo_valor_mano_2018_comuneros=0;
             $total_correctivo_tiempo_2018_comuneros=0;
             $total_correctivo_2018_comuneros=0;
+            $equipos_correctivo_2018_comuneros=0;  
 
             $total_preventivo_herramientas_2019_comuneros=0; 
             $total_preventivo_consumibles_2019_comuneros=0;  
             $total_preventivo_repuestos_2019_comuneros=0;  
             $total_preventivo_valor_mano_2019_comuneros=0;
             $total_preventivo_tiempo_2019_comuneros=0;
-            $total_preventivo_2019_comuneros=0;  
+            $total_preventivo_2019_comuneros=0; 
+            $equipos_preventivo_2019_comuneros=0;   
             
             $total_correctivo_herramientas_2019_comuneros=0; 
             $total_correctivo_consumibles_2019_comuneros=0;  
@@ -121,16 +128,16 @@
             $total_correctivo_valor_mano_2019_comuneros=0;
             $total_correctivo_tiempo_2019_comuneros=0;
             $total_correctivo_2019_comuneros=0;
-
+            $equipos_correctivo_2019_comuneros=0;  
 
             //G-barco
-
             $total_preventivo_herramientas_2016_g_barco=0; 
             $total_preventivo_consumibles_2016_g_barco=0;  
             $total_preventivo_repuestos_2016_g_barco=0;  
             $total_preventivo_valor_mano_2016_g_barco=0;
             $total_preventivo_tiempo_2016_g_barco=0;
-            $total_preventivo_2016_g_barco=0;  
+            $total_preventivo_2016_g_barco=0;
+            $equipos_preventivo_2016_g_barco=0;  
             
             $total_correctivo_herramientas_2016_g_barco=0; 
             $total_correctivo_consumibles_2016_g_barco=0;  
@@ -138,13 +145,15 @@
             $total_correctivo_valor_mano_2016_g_barco=0;
             $total_correctivo_tiempo_2016_g_barco=0;
             $total_correctivo_2016_g_barco=0;
+            $equipos_correctivo_2016_g_barco=0; 
 
             $total_preventivo_herramientas_2017_g_barco=0; 
             $total_preventivo_consumibles_2017_g_barco=0;  
             $total_preventivo_repuestos_2017_g_barco=0;  
             $total_preventivo_valor_mano_2017_g_barco=0;
             $total_preventivo_tiempo_2017_g_barco=0;
-            $total_preventivo_2017_g_barco=0;  
+            $total_preventivo_2017_g_barco=0; 
+            $equipos_preventivo_2017_g_barco=0;  
             
             $total_correctivo_herramientas_2017_g_barco=0; 
             $total_correctivo_consumibles_2017_g_barco=0;  
@@ -152,6 +161,7 @@
             $total_correctivo_valor_mano_2017_g_barco=0;
             $total_correctivo_tiempo_2017_g_barco=0;
             $total_correctivo_2017_g_barco=0;
+            $equipos_correctivo_2017_g_barco=0; 
 
             $total_preventivo_herramientas_2018_g_barco=0; 
             $total_preventivo_consumibles_2018_g_barco=0;  
@@ -159,6 +169,7 @@
             $total_preventivo_valor_mano_2018_g_barco=0;
             $total_preventivo_tiempo_2018_g_barco=0;
             $total_preventivo_2018_g_barco=0;  
+            $equipos_preventivo_2018_g_barco=0; 
             
             $total_correctivo_herramientas_2018_g_barco=0; 
             $total_correctivo_consumibles_2018_g_barco=0;  
@@ -166,6 +177,7 @@
             $total_correctivo_valor_mano_2018_g_barco=0;
             $total_correctivo_tiempo_2018_g_barco=0;
             $total_correctivo_2018_g_barco=0;
+            $equipos_correctivo_2018_g_barco=0; 
 
             $total_preventivo_herramientas_2019_g_barco=0; 
             $total_preventivo_consumibles_2019_g_barco=0;  
@@ -173,14 +185,15 @@
             $total_preventivo_valor_mano_2019_g_barco=0;
             $total_preventivo_tiempo_2019_g_barco=0;
             $total_preventivo_2019_g_barco=0;  
-            
+            $equipos_preventivo_2019_g_barco=0;
+
             $total_correctivo_herramientas_2019_g_barco=0; 
             $total_correctivo_consumibles_2019_g_barco=0;  
             $total_correctivo_repuestos_2019_g_barco=0;  
             $total_correctivo_valor_mano_2019_g_barco=0;
             $total_correctivo_tiempo_2019_g_barco=0;
             $total_correctivo_2019_g_barco=0;
-
+            $equipos_correctivo_2019_g_barco=0;
             //Meditec
 
             $total_preventivo_herramientas_2016_meditec=0; 
@@ -188,7 +201,8 @@
             $total_preventivo_repuestos_2016_meditec=0;  
             $total_preventivo_valor_mano_2016_meditec=0;
             $total_preventivo_tiempo_2016_meditec=0;
-            $total_preventivo_2016_meditec=0;  
+            $total_preventivo_2016_meditec=0; 
+            $equipos_preventivo_2016_meditec=0;
             
             $total_correctivo_herramientas_2016_meditec=0; 
             $total_correctivo_consumibles_2016_meditec=0;  
@@ -196,6 +210,7 @@
             $total_correctivo_valor_mano_2016_meditec=0;
             $total_correctivo_tiempo_2016_meditec=0;
             $total_correctivo_2016_meditec=0;
+            $equipos_correctivo_2016_meditec=0;
 
             $total_preventivo_herramientas_2017_meditec=0; 
             $total_preventivo_consumibles_2017_meditec=0;  
@@ -203,6 +218,7 @@
             $total_preventivo_valor_mano_2017_meditec=0;
             $total_preventivo_tiempo_2017_meditec=0;
             $total_preventivo_2017_meditec=0;  
+            $equipos_preventivo_2017_meditec=0;
             
             $total_correctivo_herramientas_2017_meditec=0; 
             $total_correctivo_consumibles_2017_meditec=0;  
@@ -210,13 +226,15 @@
             $total_correctivo_valor_mano_2017_meditec=0;
             $total_correctivo_tiempo_2017_meditec=0;
             $total_correctivo_2017_meditec=0;
+            $equipos_correctivo_2017_meditec=0;
 
             $total_preventivo_herramientas_2018_meditec=0; 
             $total_preventivo_consumibles_2018_meditec=0;  
             $total_preventivo_repuestos_2018_meditec=0;  
             $total_preventivo_valor_mano_2018_meditec=0;
             $total_preventivo_tiempo_2018_meditec=0;
-            $total_preventivo_2018_meditec=0;  
+            $total_preventivo_2018_meditec=0; 
+            $equipos_preventivo_2018_meditec=0; 
             
             $total_correctivo_herramientas_2018_meditec=0; 
             $total_correctivo_consumibles_2018_meditec=0;  
@@ -224,13 +242,15 @@
             $total_correctivo_valor_mano_2018_meditec=0;
             $total_correctivo_tiempo_2018_meditec=0;
             $total_correctivo_2018_meditec=0;
+            $equipos_correctivo_2018_meditec=0;
 
             $total_preventivo_herramientas_2019_meditec=0; 
             $total_preventivo_consumibles_2019_meditec=0;  
             $total_preventivo_repuestos_2019_meditec=0;  
             $total_preventivo_valor_mano_2019_meditec=0;
             $total_preventivo_tiempo_2019_meditec=0;
-            $total_preventivo_2019_meditec=0;  
+            $total_preventivo_2019_meditec=0; 
+            $equipos_preventivo_2019_meditec=0; 
             
             $total_correctivo_herramientas_2019_meditec=0; 
             $total_correctivo_consumibles_2019_meditec=0;  
@@ -238,16 +258,16 @@
             $total_correctivo_valor_mano_2019_meditec=0;
             $total_correctivo_tiempo_2019_meditec=0;
             $total_correctivo_2019_meditec=0;
-
+            $equipos_correctivo_2019_meditec=0;
 
             //Ingenieria 
-
             $total_preventivo_herramientas_2016_ingenieria=0; 
             $total_preventivo_consumibles_2016_ingenieria=0;  
             $total_preventivo_repuestos_2016_ingenieria=0;  
             $total_preventivo_valor_mano_2016_ingenieria=0;
             $total_preventivo_tiempo_2016_ingenieria=0;
-            $total_preventivo_2016_ingenieria=0;  
+            $total_preventivo_2016_ingenieria=0; 
+            $equipos_preventivo_2016_ingenieria=0; 
             
             $total_correctivo_herramientas_2016_ingenieria=0; 
             $total_correctivo_consumibles_2016_ingenieria=0;  
@@ -255,13 +275,15 @@
             $total_correctivo_valor_mano_2016_ingenieria=0;
             $total_correctivo_tiempo_2016_ingenieria=0;
             $total_correctivo_2016_ingenieria=0;
+            $equipos_correctivo_2016_ingenieria=0; 
 
             $total_preventivo_herramientas_2017_ingenieria=0; 
             $total_preventivo_consumibles_2017_ingenieria=0;  
             $total_preventivo_repuestos_2017_ingenieria=0;  
             $total_preventivo_valor_mano_2017_ingenieria=0;
             $total_preventivo_tiempo_2017_ingenieria=0;
-            $total_preventivo_2017_ingenieria=0;  
+            $total_preventivo_2017_ingenieria=0; 
+            $equipos_preventivo_2017_ingenieria=0;  
             
             $total_correctivo_herramientas_2017_ingenieria=0; 
             $total_correctivo_consumibles_2017_ingenieria=0;  
@@ -269,13 +291,15 @@
             $total_correctivo_valor_mano_2017_ingenieria=0;
             $total_correctivo_tiempo_2017_ingenieria=0;
             $total_correctivo_2017_ingenieria=0;
+            $equipos_correctivo_2017_ingenieria=0; 
 
             $total_preventivo_herramientas_2018_ingenieria=0; 
             $total_preventivo_consumibles_2018_ingenieria=0;  
             $total_preventivo_repuestos_2018_ingenieria=0;  
             $total_preventivo_valor_mano_2018_ingenieria=0;
             $total_preventivo_tiempo_2018_ingenieria=0;
-            $total_preventivo_2018_ingenieria=0;  
+            $total_preventivo_2018_ingenieria=0; 
+            $equipos_preventivo_2018_ingenieria=0;  
             
             $total_correctivo_herramientas_2018_ingenieria=0; 
             $total_correctivo_consumibles_2018_ingenieria=0;  
@@ -283,13 +307,15 @@
             $total_correctivo_valor_mano_2018_ingenieria=0;
             $total_correctivo_tiempo_2018_ingenieria=0;
             $total_correctivo_2018_ingenieria=0;
+            $equipos_correctivo_2018_ingenieria=0; 
 
             $total_preventivo_herramientas_2019_ingenieria=0; 
             $total_preventivo_consumibles_2019_ingenieria=0;  
             $total_preventivo_repuestos_2019_ingenieria=0;  
             $total_preventivo_valor_mano_2019_ingenieria=0;
             $total_preventivo_tiempo_2019_ingenieria=0;
-            $total_preventivo_2019_ingenieria=0;  
+            $total_preventivo_2019_ingenieria=0; 
+            $equipos_preventivo_2019_ingenieria=0;  
             
             $total_correctivo_herramientas_2019_ingenieria=0; 
             $total_correctivo_consumibles_2019_ingenieria=0;  
@@ -297,6 +323,7 @@
             $total_correctivo_valor_mano_2019_ingenieria=0;
             $total_correctivo_tiempo_2019_ingenieria=0;
             $total_correctivo_2019_ingenieria=0;
+            $equipos_correctivo_2019_ingenieria=0; 
 
 
         ?>
@@ -312,6 +339,7 @@
                         $total_preventivo_valor_mano_2016_comuneros += $value->valor_mano_ipc;
                         $total_preventivo_tiempo_2016_comuneros += $value->tiempo_mantenimiento;
                         $total_preventivo_2016_comuneros += $value->valor_total;
+                        $equipos_preventivo_2016_comuneros++;
                     }
 
                     if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2016){
@@ -321,6 +349,7 @@
                         $total_correctivo_valor_mano_2016_comuneros += $value->valor_mano_ipc;
                         $total_correctivo_tiempo_2016_comuneros += $value->tiempo_mantenimiento;
                         $total_correctivo_2016_comuneros += $value->valor_total;
+                        $equipos_correctivo_2016_comuneros++;
                     }
 
                     if($value->id_tipo_mantenimiento == 1 && $value->anio_cotizacion == 2017){
@@ -330,6 +359,7 @@
                         $total_preventivo_valor_mano_2017_comuneros += $value->valor_mano_ipc;
                         $total_preventivo_tiempo_2017_comuneros += $value->tiempo_mantenimiento;
                         $total_preventivo_2017_comuneros += $value->valor_total;
+                        $equipos_preventivo_2017_comuneros++;
                     }
 
                     if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2017){
@@ -339,6 +369,7 @@
                         $total_correctivo_valor_mano_2017_comuneros += $value->valor_mano_ipc;
                         $total_correctivo_tiempo_2017_comuneros += $value->tiempo_mantenimiento;
                         $total_correctivo_2017_comuneros += $value->valor_total;
+                        $equipos_correctivo_2017_comuneros++;
                     }
 
                     if($value->id_tipo_mantenimiento == 1 && $value->anio_cotizacion == 2018){
@@ -348,6 +379,7 @@
                         $total_preventivo_valor_mano_2018_comuneros += $value->valor_mano_ipc;
                         $total_preventivo_tiempo_2018_comuneros += $value->tiempo_mantenimiento;
                         $total_preventivo_2018_comuneros += $value->valor_total;
+                        $equipos_preventivo_2018_comuneros++;
                     }
 
                     if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2018){
@@ -357,6 +389,7 @@
                         $total_correctivo_valor_mano_2018_comuneros += $value->valor_mano_ipc;
                         $total_correctivo_tiempo_2018_comuneros += $value->tiempo_mantenimiento;
                         $total_correctivo_2018_comuneros += $value->valor_total;
+                        $equipos_correctivo_2018_comuneros++;
                     }
 
 
@@ -367,6 +400,7 @@
                         $total_preventivo_valor_mano_2019_comuneros += $value->valor_mano_ipc;
                         $total_preventivo_tiempo_2019_comuneros += $value->tiempo_mantenimiento;
                         $total_preventivo_2019_comuneros += $value->valor_total;
+                        $equipos_preventivo_2019_comuneros++;
                     }
 
                     if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2019){
@@ -376,6 +410,7 @@
                         $total_correctivo_valor_mano_2019_comuneros += $value->valor_mano_ipc;
                         $total_correctivo_tiempo_2019_comuneros += $value->tiempo_mantenimiento;
                         $total_correctivo_2019_comuneros += $value->valor_total;
+                        $equipos_correctivo_2019_comuneros++;
                     }
                 }        
 
@@ -388,6 +423,7 @@
                         $total_preventivo_valor_mano_2016_g_barco += $value->valor_mano_ipc;
                         $total_preventivo_tiempo_2016_g_barco += $value->tiempo_mantenimiento;
                         $total_preventivo_2016_g_barco += $value->valor_total;
+                        $equipos_preventivo_2016_g_barco++;
                     }
 
                     if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2016){
@@ -397,6 +433,7 @@
                         $total_correctivo_valor_mano_2016_g_barco += $value->valor_mano_ipc;
                         $total_correctivo_tiempo_2016_g_barco += $value->tiempo_mantenimiento;
                         $total_correctivo_2016_g_barco += $value->valor_total;
+                        $equipos_correctivo_2016_g_barco++;
                     }
 
                     if($value->id_tipo_mantenimiento == 1 && $value->anio_cotizacion == 2017){
@@ -406,6 +443,7 @@
                         $total_preventivo_valor_mano_2017_g_barco += $value->valor_mano_ipc;
                         $total_preventivo_tiempo_2017_g_barco += $value->tiempo_mantenimiento;
                         $total_preventivo_2017_g_barco += $value->valor_total;
+                        $equipos_preventivo_2017_g_barco++;
                     }
 
                     if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2017){
@@ -415,6 +453,7 @@
                         $total_correctivo_valor_mano_2017_g_barco += $value->valor_mano_ipc;
                         $total_correctivo_tiempo_2017_g_barco += $value->tiempo_mantenimiento;
                         $total_correctivo_2017_g_barco += $value->valor_total;
+                        $equipos_correctivo_2017_g_barco++;
                     }
 
                     if($value->id_tipo_mantenimiento == 1 && $value->anio_cotizacion == 2018){
@@ -424,6 +463,8 @@
                         $total_preventivo_valor_mano_2018_g_barco += $value->valor_mano_ipc;
                         $total_preventivo_tiempo_2018_g_barco += $value->tiempo_mantenimiento;
                         $total_preventivo_2018_g_barco += $value->valor_total;
+                        $equipos_preventivo_2018_g_barco++;
+
                     }
 
                     if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2018){
@@ -433,6 +474,7 @@
                         $total_correctivo_valor_mano_2018_g_barco += $value->valor_mano_ipc;
                         $total_correctivo_tiempo_2018_g_barco += $value->tiempo_mantenimiento;
                         $total_correctivo_2018_g_barco += $value->valor_total;
+                        $equipos_correctivo_2018_g_barco++;
                     }
 
 
@@ -443,6 +485,7 @@
                         $total_preventivo_valor_mano_2019_g_barco += $value->valor_mano_ipc;
                         $total_preventivo_tiempo_2019_g_barco += $value->tiempo_mantenimiento;
                         $total_preventivo_2019_g_barco += $value->valor_total;
+                        $equipos_preventivo_2019_g_barco++;
                     }
 
                     if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2019){
@@ -452,6 +495,7 @@
                         $total_correctivo_valor_mano_2019_g_barco += $value->valor_mano_ipc;
                         $total_correctivo_tiempo_2019_g_barco += $value->tiempo_mantenimiento;
                         $total_correctivo_2019_g_barco += $value->valor_total;
+                        $equipos_correctivo_2019_g_barco++;
                     }
                 }        
                 
@@ -464,6 +508,7 @@
                         $total_preventivo_valor_mano_2016_meditec += $value->valor_mano_ipc;
                         $total_preventivo_tiempo_2016_meditec += $value->tiempo_mantenimiento;
                         $total_preventivo_2016_meditec += $value->valor_total;
+                        $equipos_preventivo_2016_meditec++;
                     }
 
                     if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2016){
@@ -473,6 +518,7 @@
                         $total_correctivo_valor_mano_2016_meditec += $value->valor_mano_ipc;
                         $total_correctivo_tiempo_2016_meditec += $value->tiempo_mantenimiento;
                         $total_correctivo_2016_meditec += $value->valor_total;
+                        $equipos_correctivo_2016_meditec++;
                     }
 
                     if($value->id_tipo_mantenimiento == 1 && $value->anio_cotizacion == 2017){
@@ -482,6 +528,7 @@
                         $total_preventivo_valor_mano_2017_meditec += $value->valor_mano_ipc;
                         $total_preventivo_tiempo_2017_meditec += $value->tiempo_mantenimiento;
                         $total_preventivo_2017_meditec += $value->valor_total;
+                        $equipos_preventivo_2017_meditec++;
                     }
 
                     if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2017){
@@ -491,6 +538,7 @@
                         $total_correctivo_valor_mano_2017_meditec += $value->valor_mano_ipc;
                         $total_correctivo_tiempo_2017_meditec += $value->tiempo_mantenimiento;
                         $total_correctivo_2017_meditec += $value->valor_total;
+                        $equipos_correctivo_2017_meditec++;
                     }
 
                     if($value->id_tipo_mantenimiento == 1 && $value->anio_cotizacion == 2018){
@@ -500,6 +548,7 @@
                         $total_preventivo_valor_mano_2018_meditec += $value->valor_mano_ipc;
                         $total_preventivo_tiempo_2018_meditec += $value->tiempo_mantenimiento;
                         $total_preventivo_2018_meditec += $value->valor_total;
+                        $equipos_preventivo_2018_meditec++;
                     }
 
                     if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2018){
@@ -509,6 +558,7 @@
                         $total_correctivo_valor_mano_2018_meditec += $value->valor_mano_ipc;
                         $total_correctivo_tiempo_2018_meditec += $value->tiempo_mantenimiento;
                         $total_correctivo_2018_meditec += $value->valor_total;
+                        $equipos_correctivo_2018_meditec++;
                     }
 
 
@@ -519,6 +569,7 @@
                         $total_preventivo_valor_mano_2019_meditec += $value->valor_mano_ipc;
                         $total_preventivo_tiempo_2019_meditec += $value->tiempo_mantenimiento;
                         $total_preventivo_2019_meditec += $value->valor_total;
+                        $equipos_preventivo_2019_meditec++;
                     }
 
                     if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2019){
@@ -528,6 +579,7 @@
                         $total_correctivo_valor_mano_2019_meditec += $value->valor_mano_ipc;
                         $total_correctivo_tiempo_2019_meditec += $value->tiempo_mantenimiento;
                         $total_correctivo_2019_meditec += $value->valor_total;
+                        $equipos_correctivo_2019_meditec++;
                     }
                 }        
 
@@ -542,6 +594,7 @@
                         $total_preventivo_valor_mano_2016_ingenieria += $value->valor_mano_ipc;
                         $total_preventivo_tiempo_2016_ingenieria += $value->tiempo_mantenimiento;
                         $total_preventivo_2016_ingenieria += $value->valor_total;
+                        $equipos_preventivo_2016_ingenieria++;
                     }
 
                     if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2016){
@@ -551,6 +604,7 @@
                         $total_correctivo_valor_mano_2016_ingenieria += $value->valor_mano_ipc;
                         $total_correctivo_tiempo_2016_ingenieria += $value->tiempo_mantenimiento;
                         $total_correctivo_2016_ingenieria += $value->valor_total;
+                        $equipos_correctivo_2016_ingenieria++;
                     }
 
                     if($value->id_tipo_mantenimiento == 1 && $value->anio_cotizacion == 2017){
@@ -560,6 +614,7 @@
                         $total_preventivo_valor_mano_2017_ingenieria += $value->valor_mano_ipc;
                         $total_preventivo_tiempo_2017_ingenieria += $value->tiempo_mantenimiento;
                         $total_preventivo_2017_ingenieria += $value->valor_total;
+                        $equipos_preventivo_2017_ingenieria++;
                     }
 
                     if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2017){
@@ -569,6 +624,7 @@
                         $total_correctivo_valor_mano_2017_ingenieria += $value->valor_mano_ipc;
                         $total_correctivo_tiempo_2017_ingenieria += $value->tiempo_mantenimiento;
                         $total_correctivo_2017_ingenieria += $value->valor_total;
+                        $equipos_correctivo_2017_ingenieria++;
                     }
 
                     if($value->id_tipo_mantenimiento == 1 && $value->anio_cotizacion == 2018){
@@ -578,6 +634,7 @@
                         $total_preventivo_valor_mano_2018_ingenieria += $value->valor_mano_ipc;
                         $total_preventivo_tiempo_2018_ingenieria += $value->tiempo_mantenimiento;
                         $total_preventivo_2018_ingenieria += $value->valor_total;
+                        $equipos_preventivo_2018_ingenieria++;
                     }
 
                     if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2018){
@@ -587,6 +644,7 @@
                         $total_correctivo_valor_mano_2018_ingenieria += $value->valor_mano_ipc;
                         $total_correctivo_tiempo_2018_ingenieria += $value->tiempo_mantenimiento;
                         $total_correctivo_2018_ingenieria += $value->valor_total;
+                        $equipos_correctivo_2018_ingenieria++;
                     }
 
 
@@ -597,6 +655,7 @@
                         $total_preventivo_valor_mano_2019_ingenieria += $value->valor_mano_ipc;
                         $total_preventivo_tiempo_2019_ingenieria += $value->tiempo_mantenimiento;
                         $total_preventivo_2019_ingenieria += $value->valor_total;
+                        $equipos_preventivo_2019_ingenieria++;
                     }
 
                     if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2019){
@@ -606,6 +665,7 @@
                         $total_correctivo_valor_mano_2019_ingenieria += $value->valor_mano_ipc;
                         $total_correctivo_tiempo_2019_ingenieria += $value->tiempo_mantenimiento;
                         $total_correctivo_2019_ingenieria += $value->valor_total;
+                        $equipos_correctivo_2019_ingenieria++;
                     }
                 }    
             ?>
