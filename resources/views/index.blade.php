@@ -10,11 +10,19 @@
     <input type="hidden" name="hdd_ipc_2018" id="hdd_ipc_2018" value="{{ $ipc_2018[0]->ipc}}">
     <input type="hidden" name="hdd_ipc_2019" id="hdd_ipc_2019" value="{{ $ipc_2019[0]->ipc}}">
 
+    <input type="hidden" name="hdd_valor_contrato" id="hdd_valor_contrato" value="{{ $valor_contrato}}">
+    <input type="hidden" name="hdd_vlr_obra" id="hdd_vlr_obra" value="{{ $vlr_obra}}">
+    <input type="hidden" name="hdd_qty_equipos" id="hdd_qty_equipos" value="{{ $qty_equipos }}">
+    <input type="hidden" name="hdd_vlr_accesorios" id="hdd_vlr_accesorios" value="{{ $vlr_accesorios}}">
+    <input type="hidden" name="hdd_tiempo_contrato" id="hdd_tiempo_contrato" value="{{ $tiempo_contrato}}">
+    <input type="hidden" name="hdd_unidad_tiempo" id="hdd_unidad_tiempo" value="{{ $unidad_tiempo }}">
+    <input type="hidden" name="hdd_caculo_vlr" id="hdd_caculo_vlr" value="{{ $caculo_vlr }}">
+
     <div class="form-row">
         <div class="form-group col-md-6">
             <label>Encargado del mantenimiento</label>
         
-            <select onchange="consultarValorManoObra()" id="slt_perfiles" class="form-control">
+            <select onchange="calcularValores()" id="slt_perfiles" class="form-control">
                 <option selected value="">Seleccione...</option>
                 <?php if(session('id_empresa')=="1"){ ?> 
                     @foreach ($perfiles as $value)
@@ -49,17 +57,17 @@
     <div class="form-row">
         <div class="form-group col-md-6">
             <label>Año</label>
-            <select onchange="calcularValorManoIPC()" id="slt_anios" class="form-control">
+            <select  id="slt_anios" class="form-control">
                 <option selected value="">Seleccione...</option>
                 @foreach ($anios as $value)
                     <option value="{{ $value->anio }}">{{ $value->anio }}</option>
                 @endforeach
             </select>
         </div>
-        <div class="form-group col-md-6">
+        <!--<div class="form-group col-md-6">
             <label>Valor mano de obra con IPC</label>
             <input disabled type="text" class="form-control" id="txt_valor_mano_ipc">
-        </div>
+        </div>-->
     </div>
     <div class="form-row">
         <div class="form-group col-md-6">
@@ -81,11 +89,11 @@
     <div class="form-row">
         <div class="form-group col-md-6">
             <label>Valor herramientas <i>(Pesos colombianos, sin comas ni puntos)</i></label>
-            <input type="number" class="form-control" id="txt_valor_herramientas"  min="0" pattern="^[0-9]+" onpaste="return false;" onDrop="return false;">
+            <input disabled type="number" class="form-control" id="txt_valor_herramientas"  min="0" pattern="^[0-9]+" onpaste="return false;" onDrop="return false;">
         </div>
         <div class="form-group col-md-6">
             <label>Valor consumibles  <i>(Pesos colombianos, sin comas ni puntos)</i></label>
-            <input type="number" class="form-control" id="txt_valor_consumibles"  min="0" pattern="^[0-9]+" onpaste="return false;" onDrop="return false;">
+            <input disabled type="number" class="form-control" id="txt_valor_consumibles"  min="0" pattern="^[0-9]+" onpaste="return false;" onDrop="return false;">
         </div>
     </div>
     <div class="form-row">

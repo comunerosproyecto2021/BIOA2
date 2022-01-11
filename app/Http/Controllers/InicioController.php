@@ -48,11 +48,13 @@ class InicioController extends Controller
             'tipos_mantenimientos' => $tipos_mantenimientos,
             'perfiles' => $perfiles,
             'equipos' => $equipos,
+            
             'ingeniero' => $ingeniero,
             'ipc_2016' => $ipc_2016,
             'ipc_2017' => $ipc_2017,
             'ipc_2018' => $ipc_2018,
             'ipc_2019' => $ipc_2019,
+
             'valor_contrato' => $valor_contrato,
             'vlr_obra' => $vlr_obra,
             'qty_equipos' => $qty_equipos,

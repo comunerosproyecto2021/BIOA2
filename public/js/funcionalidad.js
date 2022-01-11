@@ -339,3 +339,23 @@ const continuarMostrarFormularioMantenimientos = (response) =>{
     $(".container-form").empty(); 
     $(".container-form").append(response); 
 }
+
+const calcularValores = () =>{
+
+   let vlr_contrato = $("#hdd_valor_contrato").val();
+   let vlr_mano = (((vlr_contrato/12)/30)/8);
+   $("#txt_valor_mano_obra").val(vlr_mano);
+
+   if($("#hdd_vlr_accesorios").val()!=""){
+
+        let vlr_accesorios = $("#hdd_vlr_accesorios").val();
+        let vlr_herramienta = ((vlr_accesorios*0.1)/12)/(142*2);
+        $("#txt_valor_herramientas").val(vlr_herramienta);
+        let consumibles = ((vlr_accesorios*0.5)/12)/(142*2);
+        $("#txt_valor_consumibles").val(consumibles);
+
+   }else{
+       $("#txt_valor_herramientas").prop('disabled', false);
+       $("#txt_valor_consumibles").prop('disabled', false);
+   }
+}
