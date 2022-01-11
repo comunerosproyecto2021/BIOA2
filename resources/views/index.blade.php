@@ -157,7 +157,9 @@
     </div>
     <div class="form-group col-md-12">
         <button type="button" onclick="calcularCosto()" class="btn btn-primary calcular">Calcular costo</button>
-        
+        <button type="button" onclick="generarCotizacionComuneros()" class="btn btn-primary guardar">Generar cotización con comuneros</button>
+
         <!--<button type="button" onclick="guardarInformacion()" class="btn btn-primary guardar">Guardar</button>-->
     </div>
 </form>
+@include('./formulario_comuneros')

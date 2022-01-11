@@ -474,3 +474,7 @@ const agregarRepuesto = () =>{
 
     }
 }
+
+const generarCotizacionComuneros = () =>{
+    $(".form-comuneros").css("display","block");
+}
