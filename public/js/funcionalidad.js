@@ -282,6 +282,7 @@ const calcularCostoContrato = () =>{
         $("#div_contrato").css("display","block");
         valor = (parseInt($("#txt_valor_contrato").val().trim())/parseInt($("#txt_qty_equipos").val().trim()));
         $("#txt_caculo_vlr").val("$"+valor);
+        $(".siguiente").css("display","block"); 
 
     }else{
 
@@ -311,4 +312,30 @@ const validarFormularioContratos = () =>{
     }
     
     return validacion;
+}
+
+
+const mostrarFormularioMantenimientos = () => {
+
+    datos = {
+        valor_contrato: $("#txt_valor_contrato").val().trim(),
+        vlr_obra: $("#txt_valor_mano_obra").val().trim(),
+        qty_equipos: $("#txt_qty_equipos").val().trim(),
+        vlr_accesorios: $("#txt_vlr_accesorios").val().trim(),
+        tiempo_contrato: $("#txt_tiempo_contrato").val().trim(),
+        unidad_tiempo: $("#slt_unidad_tiempo").val().trim(),
+        caculo_vlr: $("#txt_caculo_vlr").val().trim(),
+
+    };
+    setAjax(
+        $("#hdd_formulario_mantenimientos").val(),
+        datos,
+        "continuarMostrarFormularioMantenimientos"
+    );
+}
+
+const continuarMostrarFormularioMantenimientos = (response) =>{
+
+    $(".container-form").empty(); 
+    $(".container-form").append(response); 
 }

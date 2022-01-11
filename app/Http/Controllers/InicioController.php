@@ -22,14 +22,12 @@ class InicioController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function mostrarFormulario()
+    public function mostrarFormulario(Request $request)
     {   
         $anios = Anio::consultarAniosActivos();
         $tipos_mantenimientos = TipoMantenimiento::consultarTiposMantenimientosActivos();
         $perfiles = Perfil::consultarPerfilesActivos();
         $equipos = Equipo::consultarEquiposActivos();
-
-        
         $ingeniero = Perfil::consultarIngeniero();
         $anios = Anio::consultarAniosActivos();
         $ipc_2016 = Anio::consultarIPC(2016);
@@ -37,7 +35,36 @@ class InicioController extends Controller
         $ipc_2018 = Anio::consultarIPC(2018);
         $ipc_2019 = Anio::consultarIPC(2019);
         
-        return view(
+        $valor_contrato = $request->input('valor_contrato');
+        $vlr_obra = $request->input('vlr_obra');
+        $qty_equipos = $request->input('qty_equipos');
+        $vlr_accesorios = $request->input('vlr_accesorios');
+        $tiempo_contrato = $request->input('tiempo_contrato');
+        $unidad_tiempo = $request->input('unidad_tiempo');
+        $caculo_vlr = $request->input('caculo_vlr');
+        
+        $data = [
+            'anios' => $anios,
+            'tipos_mantenimientos' => $tipos_mantenimientos,
+            'perfiles' => $perfiles,
+            'equipos' => $equipos,
+            'ingeniero' => $ingeniero,
+            'ipc_2016' => $ipc_2016,
+            'ipc_2017' => $ipc_2017,
+            'ipc_2018' => $ipc_2018,
+            'ipc_2019' => $ipc_2019,
+            'valor_contrato' => $valor_contrato,
+            'vlr_obra' => $vlr_obra,
+            'qty_equipos' => $qty_equipos,
+            'vlr_accesorios' => $vlr_accesorios,
+            'tiempo_contrato' => $tiempo_contrato,
+            'unidad_tiempo' => $unidad_tiempo,
+            'caculo_vlr' => $caculo_vlr,
+        ];
+        $type = 'Subject';
+        $options = view('index',$data)->render();
+        return $options;
+        /*return view(
             'index',
             [
                 'anios' => $anios,
@@ -50,8 +77,16 @@ class InicioController extends Controller
                 'ipc_2017' => $ipc_2017,
                 'ipc_2018' => $ipc_2018,
                 'ipc_2019' => $ipc_2019,
+
+                'valor_contrato' => $valor_contrato,
+                'vlr_obra' => $vlr_obra,
+                'qty_equipos' => $qty_equipos,
+                'vlr_accesorios' => $vlr_accesorios,
+                'tiempo_contrato' => $tiempo_contrato,
+                'unidad_tiempo' => $unidad_tiempo,
+                'caculo_vlr' => $caculo_vlr,
             ]
-        );
+        );*/
     }
 
     public function mostrarFormularioContrato(Request $request){
