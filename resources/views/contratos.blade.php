@@ -47,7 +47,7 @@
             <div id="div_contrato" style="display:none" class="form-row">
                 <div class="form-group col-md-6">
                     <label>Costo estimado por equipo</label>
-                    <input disabled type="text" class="form-control" id="txt_caculo_vlr">
+                    <input disabled type="text" class="form-control" id="txt_calculo_vlr">
                 </div>
             </div>
         

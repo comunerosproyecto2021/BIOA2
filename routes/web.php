@@ -23,6 +23,7 @@ Route::post('/formulario_mantenimientos', [InicioController::class, 'mostrarForm
 Route::post('/ipc', [InicioController::class, 'consultarIPC']);
 Route::post('/vlr_hora', [InicioController::class, 'consultarValorManoObra']);
 Route::post('/guardar_datos', [InicioController::class, 'guardarDatos']);
+Route::post('/consultar_repuesto', [InicioController::class, 'consultarRepuesto']);
 
 Route::get('/formulario_registro', [RegistroController::class, 'mostrarFormulario']);
 Route::post('/registro', [RegistroController::class, 'registrar']);

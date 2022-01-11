@@ -8,6 +8,7 @@ use App\Models\TipoMantenimiento;
 use App\Models\Perfil;
 use App\Models\CotizacionMantenimiento;
 use App\Models\Equipo;
+use App\Models\Repuesto;
 
 class InicioController extends Controller
 {
@@ -28,12 +29,15 @@ class InicioController extends Controller
         $tipos_mantenimientos = TipoMantenimiento::consultarTiposMantenimientosActivos();
         $perfiles = Perfil::consultarPerfilesActivos();
         $equipos = Equipo::consultarEquiposActivos();
+        $repuestos = Repuesto::consultarRepuestosActivos();
+
         $ingeniero = Perfil::consultarIngeniero();
         $anios = Anio::consultarAniosActivos();
         $ipc_2016 = Anio::consultarIPC(2016);
         $ipc_2017 = Anio::consultarIPC(2017);
         $ipc_2018 = Anio::consultarIPC(2018);
         $ipc_2019 = Anio::consultarIPC(2019);
+        $ipc_2020 = Anio::consultarIPC(2020);
         
         $valor_contrato = $request->input('valor_contrato');
         $vlr_obra = $request->input('vlr_obra');
@@ -41,7 +45,7 @@ class InicioController extends Controller
         $vlr_accesorios = $request->input('vlr_accesorios');
         $tiempo_contrato = $request->input('tiempo_contrato');
         $unidad_tiempo = $request->input('unidad_tiempo');
-        $caculo_vlr = $request->input('caculo_vlr');
+        $calculo_vlr = $request->input('calculo_vlr');
         
         $data = [
             'anios' => $anios,
@@ -54,6 +58,7 @@ class InicioController extends Controller
             'ipc_2017' => $ipc_2017,
             'ipc_2018' => $ipc_2018,
             'ipc_2019' => $ipc_2019,
+            'ipc_2020' => $ipc_2020,
 
             'valor_contrato' => $valor_contrato,
             'vlr_obra' => $vlr_obra,
@@ -61,34 +66,14 @@ class InicioController extends Controller
             'vlr_accesorios' => $vlr_accesorios,
             'tiempo_contrato' => $tiempo_contrato,
             'unidad_tiempo' => $unidad_tiempo,
-            'caculo_vlr' => $caculo_vlr,
+            'calculo_vlr' => $calculo_vlr,
+            'repuestos' => $repuestos,
+
         ];
         $type = 'Subject';
         $options = view('index',$data)->render();
         return $options;
-        /*return view(
-            'index',
-            [
-                'anios' => $anios,
-                'tipos_mantenimientos' => $tipos_mantenimientos,
-                'perfiles' => $perfiles,
-                'equipos' => $equipos,
-                'ingeniero' => $ingeniero,
 
-                'ipc_2016' => $ipc_2016,
-                'ipc_2017' => $ipc_2017,
-                'ipc_2018' => $ipc_2018,
-                'ipc_2019' => $ipc_2019,
-
-                'valor_contrato' => $valor_contrato,
-                'vlr_obra' => $vlr_obra,
-                'qty_equipos' => $qty_equipos,
-                'vlr_accesorios' => $vlr_accesorios,
-                'tiempo_contrato' => $tiempo_contrato,
-                'unidad_tiempo' => $unidad_tiempo,
-                'caculo_vlr' => $caculo_vlr,
-            ]
-        );*/
     }
 
     public function mostrarFormularioContrato(Request $request){
@@ -156,4 +141,18 @@ class InicioController extends Controller
             }
         }
     } 
+
+
+    public function consultarRepuesto(Request $request){
+        if ($request->ajax()) {
+            try {
+                $repuesto = Repuesto::consultarRepuestoPorId($request->input('repuesto'));
+                return response()->json(['success' => true, 'message' => $repuesto, 'ruta' => url('/')]);
+               
+            } catch (\Illuminate\Database\QueryException $ex) {
+
+                return response()->json(['success' => false, 'message' => $ex->getMessage()]);
+            }
+        }
+    }
 }

@@ -184,6 +184,22 @@ footer {
         padding: 0;
         margin-bottom: 0;
     }
+ 
+    .container-repuestos{
+        display:none !important;
+    }
+    .container-repuestos-responsive{
+        display: inline !important;
+    }
+    .btn-agregar {
+        position: relative !important;
+        top: 0 !important;
+        margin-top: 10px !important;
+        margin-left: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        border-radius: 1% !important;
+    }
 }
 .guardar {
     display: none;
@@ -201,4 +217,20 @@ footer {
     background-color: #00bfa6;
     border-color: #00bfa6;
     border-width: 2px;
+}
+.btn-agregar {
+    position: absolute;
+    top: 50%;
+    margin-top: -9px;
+    margin-left: 5px;
+    width: 35px;
+    height: 35px;
+    border-radius: 35%;
+}
+
+.container-repuestos{
+    display:flex;
+}
+.container-repuestos-responsive{
+    display: none;
 }
