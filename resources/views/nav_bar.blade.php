@@ -18,13 +18,6 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ url('/cerrar_sesion') }}">Cerrar sesión</a>
             </li>
-
-            <li style="float:right" class="nav-item">
-                <img width="120rem" height="50rem"src="{{ asset('images/g_barco.jpeg') }}" alt="">
-            </li>
-            <li style="float:right" class="nav-item">
-                <img width="120rem" height="50rem"src="{{ asset('images/comuneros.jpeg') }}" alt="">
-            </li> 
         </ul>
         </div>
         

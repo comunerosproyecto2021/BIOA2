@@ -32,7 +32,7 @@
             </div>
             <div class="form-row">
                 <div class="form-group col-md-12">
-                    <label for="empresa" class="col-md-4 col-form-label text-md-right">Empresas</label>
+                    <label for="empresa" class="col-md-4 col-form-label text-md-right">Terceros</label>
                     <select  id="empresa" name="empresa" class="form-control @error('empresa') is-invalid @enderror">
                         <option selected value="">Seleccione...</option>
                         @foreach($empresas as $value)

@@ -54,6 +54,12 @@ class InicioController extends Controller
         );
     }
 
+    public function mostrarFormularioContrato(Request $request){
+        return view(
+            'contratos'
+        );
+    }
+
     public function consultarIPC(Request $request){
 
         if ($request->ajax()) {

@@ -4,7 +4,7 @@
     <div class="container-form">
         
         <form>
-            <h2 class="text-center">Formulario de cálculo de mantenimientos</h2>
+            <h2 class="text-center">Formulario de cotización de mantenimientos</h2>
             <input type="hidden" name="hdd_ruta_consultar_ipc" id="hdd_ruta_consultar_ipc" value="{{ url('/ipc') }}">
             <input type="hidden" name="hdd_ruta_consultar_mano_obra" id="hdd_ruta_consultar_mano_obra" value="{{ url('/vlr_hora') }}">
             <input type="hidden" name="hdd_guardar_datos" id="hdd_guardar_datos" value="{{ url('/guardar_datos') }}">

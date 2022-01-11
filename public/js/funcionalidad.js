@@ -1,3 +1,5 @@
+//const { parseInt } = require("lodash");
+
 const calcularCosto = () => {
     if (validarFormulario()) {
         let valor_total = sumatoriaCostos();
@@ -271,3 +273,42 @@ const mostrarAlerta = (respuesta) => {
         });
     }
 };
+
+
+const calcularCostoContrato = () =>{
+    if(validarFormularioContratos()){ 
+        let valor=0;
+        $("#txt_caculo_vlr").val("");
+        $("#div_contrato").css("display","block");
+        valor = (parseInt($("#txt_valor_contrato").val().trim())/parseInt($("#txt_qty_equipos").val().trim()));
+        $("#txt_caculo_vlr").val("$"+valor);
+
+    }else{
+
+    }
+}
+
+const validarFormularioContratos = () =>{
+    let validacion = true; 
+    if ($("#txt_valor_contrato").val().trim() == "") {
+        validacion = false;
+        agregarClaseError("txt_valor_contrato");
+    } else {
+        quitarClaseError("txt_valor_contrato");
+    }
+
+    if ($("#txt_valor_mano_obra").val().trim() == "") {
+        validacion = false;
+        agregarClaseError("txt_valor_mano_obra");
+    } else {
+        quitarClaseError("txt_valor_mano_obra");
+    }
+    if ($("#txt_qty_equipos").val().trim() == "") {
+        validacion = false;
+        agregarClaseError("txt_qty_equipos");
+    } else {
+        quitarClaseError("txt_qty_equipos");
+    }
+    
+    return validacion;
+}

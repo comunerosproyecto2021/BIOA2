@@ -17,6 +17,7 @@ use App\Http\Controllers\MantenimientosController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/a', [InicioController::class, 'mostrarFormularioContrato']);
 Route::get('/', [InicioController::class, 'mostrarFormulario']);
 Route::post('/ipc', [InicioController::class, 'consultarIPC']);
 Route::post('/vlr_hora', [InicioController::class, 'consultarValorManoObra']);
