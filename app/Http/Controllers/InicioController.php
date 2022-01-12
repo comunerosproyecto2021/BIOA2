@@ -124,7 +124,6 @@ class InicioController extends Controller
                 $cotizacion->valor_consumibles=$request->input('valor_consumibles');
                 $cotizacion->valor_repuestos=$request->input('valor_repuestos');
                 $cotizacion->valor_mano_ipc=$request->input('valor_mano_ipc');
-                
                 $cotizacion->valor_total=$request->input('valor_total');
                 $cotizacion->tiempo_mantenimiento=$request->input('tiempo_mantenimiento');
                 $cotizacion->descripcion_repuestos=$request->input('descripcion_repuestos');
@@ -132,8 +131,33 @@ class InicioController extends Controller
                 $cotizacion->id_empresa=$request->input('id_empresa');
                 $cotizacion->fecha_crea= date("Y-m-d H:i:s");
                 $respuesta = $cotizacion->save();
+                
                 if($respuesta){
-                    return response()->json(['success' => true, 'message' => 'Lo datos se han guardado correctamente', 'ruta' => url('/')]);
+
+                    $cotizacion = new CotizacionMantenimiento();
+                    $cotizacion->id_encargado=$request->input('encargado_com');
+                    $cotizacion->id_tipo_mantenimiento=$request->input('tipo_mant_com'); 
+                    $cotizacion->anio_cotizacion =$request->input('anio_com');
+                    $cotizacion->nombre_equipo =$request->input('nombre_equipo_com');
+                    $cotizacion->serial=$request->input('serial_com');
+                    $cotizacion->valor_herramienta=$request->input('valor_herramientas_com');
+                    $cotizacion->valor_consumibles=$request->input('valor_consumibles_com');
+                    $cotizacion->valor_repuestos=$request->input('valor_repuestos_com');
+                    $cotizacion->valor_mano_ipc=$request->input('valor_mano_ipc_com');
+                    $cotizacion->valor_total=$request->input('valor_total_com');
+                    $cotizacion->tiempo_mantenimiento=$request->input('tiempo_mantenimiento_com');
+                    $cotizacion->descripcion_repuestos=$request->input('descripcion_repuestos_com');
+                    $cotizacion->id_usuario_crea=$request->input('id_usuario');
+                    $cotizacion->id_empresa=$request->input('id_empresa_com');
+                    $cotizacion->fecha_crea= date("Y-m-d H:i:s");
+                    $respuesta_com = $cotizacion->save();
+                    
+                    if($respuesta && $respuesta_com){
+                        return response()->json(['success' => true, 'message' => 'Lo datos se han guardado correctamente.', 'ruta' => url('/')]);    
+                    }else{
+                        return response()->json(['success' => false, 'message' => 'Ha ocurrido un error al intentar guardar los datos.', 'ruta' => url('/')]);    
+                    }
+                   
                 }
             } catch (\Illuminate\Database\QueryException $ex) {
 

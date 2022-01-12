@@ -15,6 +15,12 @@ class Empresa extends Model
         $empresas = DB::select('SELECT * FROM empresas WHERE ind_estado = 1');
         return $empresas;
     }
+
+    public static function consultarEmpresasReporte()
+    {
+        $empresas = DB::select('SELECT * FROM empresas');
+        return $empresas;
+    }
     public static function consultarDatosEmpresa($id_empresa){
         $empresa = DB::select('SELECT * FROM empresas WHERE id_empresa = ?', [$id_empresa]);
         return $empresa;

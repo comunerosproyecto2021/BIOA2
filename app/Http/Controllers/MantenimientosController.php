@@ -13,7 +13,7 @@ class MantenimientosController extends Controller
     public function listarMantenimientos(){
        
         $anios = Anio::consultarAniosActivos();
-        $empresas = Empresa::consultarEmpresasActivos(); 
+        $empresas = Empresa::consultarEmpresasReporte(); 
         $equipos = Equipo::consultarEquiposActivos();
         
         return view('mantenimientos',

@@ -36,6 +36,7 @@ class CotizacionMantenimiento extends Model
         $anio_2 = $request->input('anio_2');
         $anio_3 = $request->input('anio_3');
         $anio_4 = $request->input('anio_4');
+        $anio_5 = $request->input('anio_5');
 
         $equipo = $request->input('equipo');
         
@@ -48,11 +49,12 @@ class CotizacionMantenimiento extends Model
         $anio_2 == "" ? "NULL" :  $anio_2;
         $anio_3 == "" ? "NULL" :  $anio_3;
         $anio_4 == "" ? "NULL" :  $anio_4;
+        $anio_5 == "" ? "NULL" :  $anio_5;
         
         $equipo == "" ? "" :  $equipo;
         
         $sql_empresas="( C.id_empresa='$empresa_1' OR C.id_empresa='$empresa_2' OR C.id_empresa='$empresa_3' OR C.id_empresa='$empresa_4' )";
-        $sql_anios="( C.anio_cotizacion='$anio_1' OR C.anio_cotizacion='$anio_2' OR C.anio_cotizacion='$anio_3' OR C.anio_cotizacion='$anio_4' )";
+        $sql_anios="( C.anio_cotizacion='$anio_1' OR C.anio_cotizacion='$anio_2' OR C.anio_cotizacion='$anio_3' OR C.anio_cotizacion='$anio_4'  OR C.anio_cotizacion='$anio_5' )";
         $sql_equipos = "";
         if($equipo <> ""){
             $sql_equipos = " AND (C.nombre_equipo LIKE '%$equipo%') ";
@@ -65,7 +67,7 @@ class CotizacionMantenimiento extends Model
         INNER JOIN users U ON U.id = C.id_usuario_crea
         INNER JOIN empresas E ON E.id_empresa = C.id_empresa
         WHERE C.id_cotizacion IS NOT NULL AND $sql_empresas AND $sql_anios $sql_equipos
-        ORDER BY C.fecha_crea;");
+        ORDER BY C.anio_cotizacion;");
 
         return $mantenimientos;
     }

@@ -113,7 +113,7 @@
                     <option value="{{ $value->id_repuesto }}">{{ $value->nombre }}</option>
                 @endforeach
             </select>
-
+            <input type="hidden" class="form-control" id="hdd_valor_repuestos">
         </div>
         <div class="form-group col-md-6 container-repuestos">
             <div style="width:95%;">

@@ -54,9 +54,9 @@ const continuarConsultarMantenimientos = (respuesta) => {
                             <th style='width:10%' scope="col">Vlr herramientas</th>
                             <th style='width:10%' scope="col">Vlr consumibles</th>
                             <th style='width:10%' scope="col">Vlr repuestos</th>
-                            <th style='width:10%' scope="col">Vlr hora</th>
                             <th style='width:10%' scope="col">Tiempo</th>
                             <th style='width:10%' scope="col">Total</th>
+                            <th style='width:10%' scope="col">Anio</th>
                             <th style='width:10%' scope="col">Empresa</th>
                         </tr>
                     </thead>
@@ -67,9 +67,9 @@ const continuarConsultarMantenimientos = (respuesta) => {
                             <td style='width:10%'>${element.valor_herramienta}</td>
                             <td style='width:10%'>${element.valor_consumibles}</td>
                             <td style='width:10%'>${element.valor_repuestos}</td>
-                            <td style='width:10%'>200000</td>
                             <td style='width:10%'>${element.tiempo_mantenimiento}</td>
                             <td style='width:10%'>${element.valor_total}</td>
+                            <td style='width:10%'>${element.anio_cotizacion}</td>
                             <td style='width:10%'>${element.empresa}</td>
                         </tr>`;
         });
@@ -110,12 +110,15 @@ const validarFormularioFiltros = () => {
         !$("#chk_anio_1").prop("checked") &&
         !$("#chk_anio_2").prop("checked") &&
         !$("#chk_anio_3").prop("checked") &&
-        !$("#chk_anio_4").prop("checked")
+        !$("#chk_anio_4").prop("checked") &&
+        !$("#chk_anio_5").prop("checked")
     ) {
         agregarClaseError("chk_anio_1");
         agregarClaseError("chk_anio_2");
         agregarClaseError("chk_anio_3");
         agregarClaseError("chk_anio_4");
+        agregarClaseError("chk_anio_5");
+
 
         validar = false;
     } else {
@@ -123,6 +126,7 @@ const validarFormularioFiltros = () => {
         quitarClaseError("chk_anio_2");
         quitarClaseError("chk_anio_3");
         quitarClaseError("chk_anio_4");
+        quitarClaseError("chk_anio_5");
     }
 
     return validar;

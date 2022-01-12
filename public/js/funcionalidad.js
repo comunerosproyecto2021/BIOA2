@@ -16,112 +16,102 @@ const calcularCosto = () => {
 };
 
 const calcularValoresIPC = () => {
-    let valor_mano = $("#txt_valor_mano_obra").val();
-   
+    let valor_mano = $("#txt_valor_mano_obra_com").val();
+
     let ipc_2016 = $("#hdd_ipc_2016").val() / 100;
     let ipc_2017 = $("#hdd_ipc_2017").val() / 100;
     let ipc_2018 = $("#hdd_ipc_2018").val() / 100;
     let ipc_2019 = $("#hdd_ipc_2019").val() / 100;
     let ipc_2020 = $("#hdd_ipc_2020").val() / 100;
-    
-    
+
     let valor_mano_ipc = 0;
     let calculo = 0;
 
-    switch (parseInt($("#slt_anios").val())) {
+    switch (parseInt($("#slt_anios_com").val())) {
         case 2016:
             calculo =
                 valor_mano * ipc_2016 +
                 valor_mano * ipc_2017 +
                 valor_mano * ipc_2018 +
-                valor_mano * ipc_2019 + 
+                valor_mano * ipc_2019 +
                 valor_mano * ipc_2020;
             valor_mano_ipc = valor_mano - calculo;
-        break;
+            break;
         case 2017:
             calculo =
                 valor_mano * ipc_2017 +
                 valor_mano * ipc_2018 +
-                valor_mano * ipc_2019 + 
+                valor_mano * ipc_2019 +
                 valor_mano * ipc_2020;
             valor_mano_ipc = valor_mano - calculo;
-        break;
+            break;
         case 2018:
             calculo =
                 valor_mano * ipc_2018 +
-                valor_mano * ipc_2019 + 
+                valor_mano * ipc_2019 +
                 valor_mano * ipc_2020;
             valor_mano_ipc = valor_mano - calculo;
-        break;
+            break;
         case 2019:
-            calculo =
-                valor_mano * ipc_2019 + 
-                valor_mano * ipc_2020;
+            calculo = valor_mano * ipc_2019 + valor_mano * ipc_2020;
             valor_mano_ipc = valor_mano - calculo;
-        break;
+            break;
         case 2020:
-            calculo =
-                valor_mano * ipc_2020;
+            calculo = valor_mano * ipc_2020;
             valor_mano_ipc = valor_mano - calculo;
-        break;
+            break;
     }
-  
-    return valor_mano_ipc;
-} 
 
+    return valor_mano_ipc;
+};
 
 const calcularValoresIPCRepuestos = (valor_repuesto) => {
-  
     let ipc_2016 = $("#hdd_ipc_2016").val() / 100;
     let ipc_2017 = $("#hdd_ipc_2017").val() / 100;
     let ipc_2018 = $("#hdd_ipc_2018").val() / 100;
     let ipc_2019 = $("#hdd_ipc_2019").val() / 100;
     let ipc_2020 = $("#hdd_ipc_2020").val() / 100;
-  
+
     let valor_repuesto_ipc = 0;
     let calculo = 0;
 
     switch (parseInt($("#slt_anios").val())) {
         case 2016:
             calculo =
-            valor_repuesto * ipc_2016 +
-            valor_repuesto * ipc_2017 +
-            valor_repuesto * ipc_2018 +
-            valor_repuesto * ipc_2019 +
-            valor_repuesto * ipc_2020;
+                valor_repuesto * ipc_2016 +
+                valor_repuesto * ipc_2017 +
+                valor_repuesto * ipc_2018 +
+                valor_repuesto * ipc_2019 +
+                valor_repuesto * ipc_2020;
             valor_repuesto_ipc = valor_repuesto - calculo;
-        break;
+            break;
         case 2017:
             calculo =
-            valor_repuesto * ipc_2017 +
-            valor_repuesto * ipc_2018 +
-            valor_repuesto * ipc_2019 +
-            valor_repuesto * ipc_2020;
+                valor_repuesto * ipc_2017 +
+                valor_repuesto * ipc_2018 +
+                valor_repuesto * ipc_2019 +
+                valor_repuesto * ipc_2020;
             valor_repuesto_ipc = valor_repuesto - calculo;
-        break;
+            break;
         case 2018:
             calculo =
-            valor_repuesto * ipc_2018 +
-            valor_repuesto * ipc_2019 +
-            valor_repuesto * ipc_2020;
+                valor_repuesto * ipc_2018 +
+                valor_repuesto * ipc_2019 +
+                valor_repuesto * ipc_2020;
             valor_repuesto_ipc = valor_repuesto - calculo;
-        break;
+            break;
         case 2019:
-            calculo =
-            valor_repuesto * ipc_2019 +
-            valor_repuesto * ipc_2020;
+            calculo = valor_repuesto * ipc_2019 + valor_repuesto * ipc_2020;
             valor_repuesto_ipc = valor_repuesto - calculo;
-        break;
+            break;
         case 2020:
-            calculo =
-            valor_repuesto * ipc_2020;
+            calculo = valor_repuesto * ipc_2020;
             valor_repuesto_ipc = valor_repuesto - calculo;
-        break;
+            break;
     }
-  
-    return valor_repuesto_ipc;
-} 
 
+    return valor_repuesto_ipc;
+};
 
 const sumatoriaCostos = () => {
     let valorManoObra = parseInt($("#txt_valor_mano_obra").val().trim());
@@ -131,23 +121,24 @@ const sumatoriaCostos = () => {
     );
     let valor_consumibles = parseInt($("#txt_valor_consumibles").val().trim());
     let valor_total =
-        valorManoObra * horas +
-        valor_herramientas +
-        valor_consumibles;
+        valorManoObra * horas + valor_herramientas + valor_consumibles;
     let valor_repuestos = 0;
     let cantidad_repuestos = $("#hdd_cantidad_repuestos").val();
 
-    for (let e=0;e<=cantidad_repuestos; e++){
-        valor_repuestos += parseInt($("#hdd_vlr_repuesto_"+e).val());
-       
+    for (let e = 0; e <= cantidad_repuestos; e++) {
+        valor_repuestos += parseInt($("#hdd_vlr_repuesto_" + e).val());
     }
-    
+    if(isNaN(valor_repuestos)) {
+        valor_repuestos = 0;
+    }
+    $("#hdd_valor_repuestos").val(valor_repuestos);
     return valor_total + valor_repuestos;
 };
 
 const guardarInformacion = () => {
     if (validarFormulario()) {
         datos = {
+            //Datos formulario principal
             encargado: $("#slt_perfiles").val(),
             vlr_obra: $("#txt_valor_mano_obra").val().trim(),
             tipo_mant: $("#slt_tipos_mantenimientos").val(),
@@ -157,12 +148,35 @@ const guardarInformacion = () => {
             serial: $("#txt_serial").val().trim(),
             valor_herramientas: $("#txt_valor_herramientas").val().trim(),
             valor_consumibles: $("#txt_valor_consumibles").val().trim(),
-            valor_repuestos: $("#txt_valor_repuestos").val().trim(),
+            valor_repuestos: $("#hdd_valor_repuestos").val().trim(),
             /*valor_mano_ipc: $("#txt_valor_mano_ipc").val(),*/
             descripcion_repuestos: $("#txt_descripcion_repuestos").val().trim(),
             valor_total: $("#txt_valor_total").val().trim(),
             id_usuario: $("#hdd_id_usuario").val(),
             id_empresa: $("#hdd_id_empresa").val(),
+
+            //Datos del formulario comuneros
+            encargado_com: $("#slt_perfiles_com").val(),
+            vlr_obra_com: $("#txt_valor_mano_obra_com").val().trim(),
+            tipo_mant_com: $("#hdd_tipos_mantenimientos_com").val(),
+            tiempo_mantenimiento_com: $("#txt_tiempo_mantenimiento_com")
+                .val()
+                .trim(),
+            anio_com: $("#slt_anios_com").val(),
+            nombre_equipo_com: $("#txt_equipo_com").val().trim(),
+            serial_com: $("#txt_serial_com").val().trim(),
+            valor_herramientas_com: $("#txt_valor_herramientas_com")
+                .val()
+                .trim(),
+            valor_consumibles_com: $("#txt_valor_consumibles_com").val().trim(),
+            valor_repuestos_com: $("#txt_valor_repuestos_com").val().trim(),
+            valor_mano_ipc_com: $("#txt_valor_mano_ipc_com").val(),
+            descripcion_repuestos_com: $("#txt_descripcion_repuestos_com")
+                .val()
+                .trim(),
+            valor_total_com: $("#txt_valor_total_com").val().trim(),
+            id_usuario_com: $("#hdd_id_usuario").val(),
+            id_empresa_com: 1,
         };
         setAjax(
             $("#hdd_guardar_datos").val(),
@@ -205,7 +219,7 @@ const validarFormulario = () => {
     } else {
         quitarClaseError("slt_anios");
     }
-   /* if ($("#txt_valor_mano_ipc").val().trim() == "") {
+    /* if ($("#txt_valor_mano_ipc").val().trim() == "") {
         validacion = false;
         agregarClaseError("txt_valor_mano_ipc");
     } else {
@@ -282,9 +296,8 @@ const quitarClaseError = (elemento) => {
 };
 
 const calcularValorManoIPC = () => {
-    $("#txt_valor_mano_ipc").val("");
-    $("#txt_valor_mano_ipc").val(calcularValoresIPC());
-   
+    $("#txt_valor_mano_ipc_com").val("");
+    $("#txt_valor_mano_ipc_com").val(calcularValoresIPC());
 };
 
 const seleccionarTipoMantenimiento = () => {
@@ -300,8 +313,8 @@ const seleccionarTipoMantenimiento = () => {
 };
 
 const consultarValorManoObra = () => {
-    if ($("#slt_perfiles").val() != "") {
-        let datos = { perfil: $("#slt_perfiles").val() };
+    if ($("#slt_perfiles_com").val() != "") {
+        let datos = { perfil: $("#slt_perfiles_com").val() };
         setAjax(
             $("#hdd_ruta_consultar_mano_obra").val(),
             datos,
@@ -310,8 +323,8 @@ const consultarValorManoObra = () => {
     }
 };
 const continuarconsultarValorManoObra = (response) => {
-    $("#txt_valor_mano_obra").val("");
-    $("#txt_valor_mano_obra").val(response.message[0]["precio_hora"]);  
+    $("#txt_valor_mano_obra_com").val("");
+    $("#txt_valor_mano_obra_com").val(response.message[0]["precio_hora"]);
 };
 
 const mostrarAlerta = (respuesta) => {
@@ -342,23 +355,22 @@ const mostrarAlerta = (respuesta) => {
     }
 };
 
-
-const calcularCostoContrato = () =>{
-    if(validarFormularioContratos()){ 
-        let valor=0;
+const calcularCostoContrato = () => {
+    if (validarFormularioContratos()) {
+        let valor = 0;
         $("#txt_calculo_vlr").val("");
-        $("#div_contrato").css("display","block");
-        valor = (parseInt($("#txt_valor_contrato").val().trim())/parseInt($("#txt_qty_equipos").val().trim()));
-        $("#txt_calculo_vlr").val("$"+valor);
-        $(".siguiente").css("display","block"); 
-
-    }else{
-
+        $("#div_contrato").css("display", "block");
+        valor =
+            parseInt($("#txt_valor_contrato").val().trim()) /
+            parseInt($("#txt_qty_equipos").val().trim());
+        $("#txt_calculo_vlr").val("$" + valor);
+        $(".siguiente").css("display", "block");
+    } else {
     }
-}
+};
 
-const validarFormularioContratos = () =>{
-    let validacion = true; 
+const validarFormularioContratos = () => {
+    let validacion = true;
     if ($("#txt_valor_contrato").val().trim() == "") {
         validacion = false;
         agregarClaseError("txt_valor_contrato");
@@ -378,13 +390,11 @@ const validarFormularioContratos = () =>{
     } else {
         quitarClaseError("txt_qty_equipos");
     }
-    
-    return validacion;
-}
 
+    return validacion;
+};
 
 const mostrarFormularioMantenimientos = () => {
-
     datos = {
         valor_contrato: $("#txt_valor_contrato").val().trim(),
         vlr_obra: $("#txt_valor_mano_obra").val().trim(),
@@ -393,88 +403,216 @@ const mostrarFormularioMantenimientos = () => {
         tiempo_contrato: $("#txt_tiempo_contrato").val().trim(),
         unidad_tiempo: $("#slt_unidad_tiempo").val().trim(),
         calculo_vlr: $("#txt_calculo_vlr").val().trim(),
-
     };
     setAjax(
         $("#hdd_formulario_mantenimientos").val(),
         datos,
         "continuarMostrarFormularioMantenimientos"
     );
-}
+};
 
-const continuarMostrarFormularioMantenimientos = (response) =>{
+const continuarMostrarFormularioMantenimientos = (response) => {
+    $(".container-form").empty();
+    $(".container-form").append(response);
+};
 
-    $(".container-form").empty(); 
-    $(".container-form").append(response); 
-}
+const calcularValores = () => {
+    let vlr_contrato = $("#hdd_valor_contrato").val();
+    let vlr_mano = vlr_contrato / 12 / 30 / 8;
+    $("#txt_valor_mano_obra").val(vlr_mano);
 
-const calcularValores = () =>{
-
-   let vlr_contrato = $("#hdd_valor_contrato").val();
-   let vlr_mano = (((vlr_contrato/12)/30)/8);
-   $("#txt_valor_mano_obra").val(vlr_mano);
-
-   if($("#hdd_vlr_accesorios").val()!=""){
-
+    if ($("#hdd_vlr_accesorios").val() != "") {
         let vlr_accesorios = $("#hdd_vlr_accesorios").val();
-        let vlr_herramienta = ((vlr_accesorios*0.1)/12)/(142*2);
+        let vlr_herramienta = (vlr_accesorios * 0.1) / 12 / (142 * 2);
         $("#txt_valor_herramientas").val(vlr_herramienta);
-        let consumibles = ((vlr_accesorios*0.5)/12)/(142*2);
+        let consumibles = (vlr_accesorios * 0.5) / 12 / (142 * 2);
         $("#txt_valor_consumibles").val(consumibles);
+    } else {
+        $("#txt_valor_herramientas").prop("disabled", false);
+        $("#txt_valor_consumibles").prop("disabled", false);
+    }
+};
 
-   }else{
-       $("#txt_valor_herramientas").prop('disabled', false);
-       $("#txt_valor_consumibles").prop('disabled', false);
-   }
-}
-
-const seleccionarRepuesto = () =>{
-  
+const seleccionarRepuesto = () => {
     datos = {
         repuesto: $("#slt_repuesto").val(),
-    
     };
-    setAjax(
-        $("#hdd_ruta_consultar_repuesto").val(),
-        datos,
-        "continuarSeleccionarRepuesto"
-    );
-    
-}
-const continuarSeleccionarRepuesto = (respuesta) =>{
-   
-    if(respuesta.message.length>0){
+    if ($("#slt_repuesto").val() == 0) {
+
+        $('#txt_valor_repuestos').prop("disabled", false);
+        $('#txt_valor_repuestos_r').prop("disabled", false);
+        
+    } else {
+        $('#txt_valor_repuestos').prop("disabled", true);
+        $('#txt_valor_repuestos_r').prop("disabled", true);
+        setAjax(
+            $("#hdd_ruta_consultar_repuesto").val(),
+            datos,
+            "continuarSeleccionarRepuesto"
+        );
+    }
+};
+const continuarSeleccionarRepuesto = (respuesta) => {
+    if (respuesta.message.length > 0) {
         let precio_repuesto = respuesta.message[0].precio;
         precio_repuesto = calcularValoresIPCRepuestos(precio_repuesto);
         $("#txt_valor_repuestos").val(precio_repuesto);
         $("#txt_valor_repuestos_r").val(precio_repuesto);
     }
-    
-}
-
+};
 
 let aux = 0;
-const agregarRepuesto = () =>{
-   
-    if($("#txt_valor_repuestos").val() !="" || $("#txt_valor_repuestos_r").val() !=""){
-        let vlr_repuesto = $("#txt_valor_repuestos").val() == "" ? $("#txt_valor_repuestos_r").val() : $("#txt_valor_repuestos").val();
+const agregarRepuesto = () => {
+    if (
+        $("#txt_valor_repuestos").val() != "" ||
+        $("#txt_valor_repuestos_r").val() != ""
+    ) {
+        let vlr_repuesto =
+            $("#txt_valor_repuestos").val() == ""
+                ? $("#txt_valor_repuestos_r").val()
+                : $("#txt_valor_repuestos").val();
         let nombre = $("#slt_repuesto option:selected").html();
-        
+
         let html = `
             <input disabled type="number" class="form-control" id="txt_repuesto_agregado_${aux}" placeholder="${nombre} - $${vlr_repuesto}" value="${nombre}">
             <input type="hidden" id="hdd_vlr_repuesto_${aux}" value="${vlr_repuesto}">
         `;
         $(".container-repuestos-agregados").append(html);
         $("#hdd_cantidad_repuestos").val(aux);
-        
+
         aux++;
         $("#txt_valor_repuestos").val("");
         $("#txt_valor_repuestos_r").val("");
         $("#slt_repuesto").val("");
-
     }
-}
+};
 
-const generarCotizacionComuneros = () =>{
-    $(".form-comuneros").css("display","block");
-}
+const generarCotizacionComuneros = () => {
+    $(".form-comuneros").css("display", "block");
+
+    //Se replican los datos
+    $("#hdd_tipos_mantenimientos_com").val(
+        $("#slt_tipos_mantenimientos").val()
+    );
+    $("#slt_tipos_mantenimientos_com").attr(
+        "placeholder",
+        $("#slt_tipos_mantenimientos option:selected").html()
+    );
+    $("#txt_tiempo_mantenimiento_com").val(
+        $("#txt_tiempo_mantenimiento").val()
+    );
+    $("#txt_equipo_com").val($("#txt_equipo").val());
+    $("#txt_serial_com").val($("#txt_serial").val());
+    $("#txt_descripcion_repuestos_com").val(
+        $("#txt_descripcion_repuestos").val()
+    );
+};
+
+const calcularCostoCom = () => {
+    if (validarFormularioComuneros()) {
+        let valor_total = sumatoriaCostosComuneros();
+        $(".guardar-datos").css("display", "block");
+        $("#txt_valor_total_com").val(valor_total);
+    } else {
+        Swal.fire({
+            title: "Error!",
+            text: "Debe rellenar todos los campos del formulario, antes de calcular los costos",
+            icon: "error",
+            confirmButtonText: "Aceptar",
+
+            confirmButtonColor: "#f27474",
+        });
+    }
+};
+
+const validarFormularioComuneros = () => {
+    let validacion = true;
+
+    if ($("#slt_perfiles_com").val() == "") {
+        validacion = false;
+        agregarClaseError("slt_perfiles_com");
+    } else {
+        quitarClaseError("slt_perfiles_com");
+    }
+    /*if ($("#slt_tipos_mantenimientos_com").val() == "") {
+        validacion = false;
+        agregarClaseError("slt_tipos_mantenimientos_com");
+    } else {
+        quitarClaseError("slt_tipos_mantenimientos_com");
+    }*/
+    if ($("#slt_anios_com").val() == "") {
+        validacion = false;
+        agregarClaseError("slt_anios_com");
+    } else {
+        quitarClaseError("slt_anios_com");
+    }
+    if ($("#txt_valor_mano_ipc_com").val().trim() == "") {
+        validacion = false;
+        agregarClaseError("txt_valor_mano_ipc_com");
+    } else {
+        quitarClaseError("txt_valor_mano_ipc_com");
+    }
+    if ($("#txt_equipo_com").val().trim() == "") {
+        validacion = false;
+        agregarClaseError("txt_equipo_com");
+    } else {
+        quitarClaseError("txt_equipo_com");
+    }
+    if ($("#txt_serial_com").val().trim() == "") {
+        validacion = false;
+        agregarClaseError("txt_serial_com");
+    } else {
+        quitarClaseError("txt_serial_com");
+    }
+    if ($("#txt_valor_mano_obra_com").val().trim() == "") {
+        validacion = false;
+        agregarClaseError("txt_valor_mano_obra_com");
+    } else {
+        quitarClaseError("txt_valor_mano_obra_com");
+    }
+    if ($("#txt_tiempo_mantenimiento_com").val().trim() == "") {
+        validacion = false;
+        agregarClaseError("txt_tiempo_mantenimiento_com");
+    } else {
+        quitarClaseError("txt_tiempo_mantenimiento_com");
+    }
+    if ($("#txt_valor_herramientas_com").val().trim() == "") {
+        validacion = false;
+        agregarClaseError("txt_valor_herramientas_com");
+    } else {
+        quitarClaseError("txt_valor_herramientas_com");
+    }
+    if ($("#txt_valor_consumibles_com").val().trim() == "") {
+        validacion = false;
+        agregarClaseError("txt_valor_consumibles_com");
+    } else {
+        quitarClaseError("txt_valor_consumibles_com");
+    }
+    if ($("#txt_valor_repuestos_com").val().trim() == "") {
+        validacion = false;
+        agregarClaseError("txt_valor_repuestos_com");
+    } else {
+        quitarClaseError("txt_valor_repuestos_com");
+    }
+
+    return validacion;
+};
+
+const sumatoriaCostosComuneros = () => {
+    let valorManoObra = parseInt($("#txt_valor_mano_ipc_com").val().trim());
+    let horas = parseInt($("#txt_tiempo_mantenimiento_com").val().trim());
+    let valor_herramientas = parseInt(
+        $("#txt_valor_herramientas_com").val().trim()
+    );
+    let valor_consumibles = parseInt(
+        $("#txt_valor_consumibles_com").val().trim()
+    );
+    let valor_repuestos = parseInt($("#txt_valor_repuestos_com").val().trim());
+    let valor_total =
+        valorManoObra * horas +
+        valor_herramientas +
+        valor_consumibles +
+        valor_repuestos;
+
+    return valor_total;
+};

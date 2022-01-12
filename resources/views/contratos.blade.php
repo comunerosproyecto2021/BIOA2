@@ -10,28 +10,28 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label>Valor del contrato<i>*</i></label>
-                    <input type="number" class="form-control" id="txt_valor_contrato"  min="0" pattern="^[0-9]+" onpaste="return false;" onDrop="return false;">
+                    <input type="number" class="form-control" id="txt_valor_contrato"  min="0" pattern="^[0-9]+"  onDrop="return false;">
                    
                 </div>
                 <div class="form-group col-md-6">
                     <label>Valor mano de obra<i>*</i></label>
-                    <input type="number" class="form-control" id="txt_valor_mano_obra"  min="0" pattern="^[0-9]+" onpaste="return false;" onDrop="return false;">
+                    <input type="number" class="form-control" id="txt_valor_mano_obra"  min="0" pattern="^[0-9]+"  onDrop="return false;">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label>Cantidad de equipos<i>*</i></label>
-                    <input type="number" class="form-control" id="txt_qty_equipos"  min="0" pattern="^[0-9]+" onpaste="return false;" onDrop="return false;">
+                    <input type="number" class="form-control" id="txt_qty_equipos"  min="0" pattern="^[0-9]+" onDrop="return false;">
                 </div>
                 <div class="form-group col-md-6">
                     <label>Valor accesorios y repuestos</label>
-                    <input type="number" class="form-control" id="txt_vlr_accesorios"  min="0" pattern="^[0-9]+" onpaste="return false;" onDrop="return false;">
+                    <input type="number" class="form-control" id="txt_vlr_accesorios"  min="0" pattern="^[0-9]+" onDrop="return false;">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label>Tiempo de Contrato</label>
-                    <input type="number" class="form-control" id="txt_tiempo_contrato"  min="0" pattern="^[0-9]+" onpaste="return false;" onDrop="return false;"> 
+                    <input type="number" class="form-control" id="txt_tiempo_contrato"  min="0" pattern="^[0-9]+"  onDrop="return false;"> 
                 </div>
                 <div class="form-group col-md-6">
                     <label>Unidad de tiempo</label>
