@@ -149,7 +149,7 @@ const guardarInformacion = () => {
             valor_herramientas: $("#txt_valor_herramientas").val().trim(),
             valor_consumibles: $("#txt_valor_consumibles").val().trim(),
             valor_repuestos: $("#hdd_valor_repuestos").val().trim(),
-            /*valor_mano_ipc: $("#txt_valor_mano_ipc").val(),*/
+            valor_mano_ipc: $("#txt_valor_mano_obra").val(),
             descripcion_repuestos: $("#txt_descripcion_repuestos").val().trim(),
             valor_total: $("#txt_valor_total").val().trim(),
             id_usuario: $("#hdd_id_usuario").val(),

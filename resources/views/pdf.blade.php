@@ -130,6 +130,22 @@
             $total_correctivo_2019_comuneros=0;
             $equipos_correctivo_2019_comuneros=0;  
 
+            $total_preventivo_herramientas_2020_comuneros=0; 
+            $total_preventivo_consumibles_2020_comuneros=0;  
+            $total_preventivo_repuestos_2020_comuneros=0;  
+            $total_preventivo_valor_mano_2020_comuneros=0;
+            $total_preventivo_tiempo_2020_comuneros=0;
+            $total_preventivo_2020_comuneros=0; 
+            $equipos_preventivo_2020_comuneros=0;   
+            
+            $total_correctivo_herramientas_2020_comuneros=0; 
+            $total_correctivo_consumibles_2020_comuneros=0;  
+            $total_correctivo_repuestos_2020_comuneros=0;  
+            $total_correctivo_valor_mano_2020_comuneros=0;
+            $total_correctivo_tiempo_2020_comuneros=0;
+            $total_correctivo_2020_comuneros=0;
+            $equipos_correctivo_2020_comuneros=0; 
+
             //G-barco
             $total_preventivo_herramientas_2016_g_barco=0; 
             $total_preventivo_consumibles_2016_g_barco=0;  
@@ -194,8 +210,27 @@
             $total_correctivo_tiempo_2019_g_barco=0;
             $total_correctivo_2019_g_barco=0;
             $equipos_correctivo_2019_g_barco=0;
-            //Meditec
 
+            $total_preventivo_herramientas_2020_g_barco=0; 
+            $total_preventivo_consumibles_2020_g_barco=0;  
+            $total_preventivo_repuestos_2020_g_barco=0;  
+            $total_preventivo_valor_mano_2020_g_barco=0;
+            $total_preventivo_tiempo_2020_g_barco=0;
+            $total_preventivo_2020_g_barco=0;  
+            $equipos_preventivo_2020_g_barco=0;
+
+            $total_correctivo_herramientas_2020_g_barco=0; 
+            $total_correctivo_consumibles_2020_g_barco=0;  
+            $total_correctivo_repuestos_2020_g_barco=0;  
+            $total_correctivo_valor_mano_2020_g_barco=0;
+            $total_correctivo_tiempo_2020_g_barco=0;
+            $total_correctivo_2020_g_barco=0;
+            $equipos_correctivo_2020_g_barco=0;
+
+
+
+
+            //Meditec
             $total_preventivo_herramientas_2016_meditec=0; 
             $total_preventivo_consumibles_2016_meditec=0;  
             $total_preventivo_repuestos_2016_meditec=0;  
@@ -259,6 +294,25 @@
             $total_correctivo_tiempo_2019_meditec=0;
             $total_correctivo_2019_meditec=0;
             $equipos_correctivo_2019_meditec=0;
+
+            $total_preventivo_herramientas_2020_meditec=0; 
+            $total_preventivo_consumibles_2020_meditec=0;  
+            $total_preventivo_repuestos_2020_meditec=0;  
+            $total_preventivo_valor_mano_2020_meditec=0;
+            $total_preventivo_tiempo_2020_meditec=0;
+            $total_preventivo_2020_meditec=0; 
+            $equipos_preventivo_2020_meditec=0; 
+            
+            $total_correctivo_herramientas_2020_meditec=0; 
+            $total_correctivo_consumibles_2020_meditec=0;  
+            $total_correctivo_repuestos_2020_meditec=0;  
+            $total_correctivo_valor_mano_2020_meditec=0;
+            $total_correctivo_tiempo_2020_meditec=0;
+            $total_correctivo_2020_meditec=0;
+            $equipos_correctivo_2020_meditec=0;
+
+
+
 
             //Ingenieria 
             $total_preventivo_herramientas_2016_ingenieria=0; 
@@ -324,6 +378,22 @@
             $total_correctivo_tiempo_2019_ingenieria=0;
             $total_correctivo_2019_ingenieria=0;
             $equipos_correctivo_2019_ingenieria=0; 
+
+            $total_preventivo_herramientas_2020_ingenieria=0; 
+            $total_preventivo_consumibles_2020_ingenieria=0;  
+            $total_preventivo_repuestos_2020_ingenieria=0;  
+            $total_preventivo_valor_mano_2020_ingenieria=0;
+            $total_preventivo_tiempo_2020_ingenieria=0;
+            $total_preventivo_2020_ingenieria=0; 
+            $equipos_preventivo_2020_ingenieria=0;  
+            
+            $total_correctivo_herramientas_2020_ingenieria=0; 
+            $total_correctivo_consumibles_2020_ingenieria=0;  
+            $total_correctivo_repuestos_2020_ingenieria=0;  
+            $total_correctivo_valor_mano_2020_ingenieria=0;
+            $total_correctivo_tiempo_2020_ingenieria=0;
+            $total_correctivo_2020_ingenieria=0;
+            $equipos_correctivo_2020_ingenieria=0; 
 
 
         ?>
@@ -412,6 +482,25 @@
                         $total_correctivo_2019_comuneros += $value->valor_total;
                         $equipos_correctivo_2019_comuneros++;
                     }
+                    if($value->id_tipo_mantenimiento == 1 && $value->anio_cotizacion == 2020){
+                        $total_preventivo_herramientas_2020_comuneros += $value->valor_herramienta;
+                        $total_preventivo_consumibles_2020_comuneros +=  $value->valor_consumibles;
+                        $total_preventivo_repuestos_2020_comuneros +=  $value->valor_repuestos;
+                        $total_preventivo_valor_mano_2020_comuneros += $value->valor_mano_ipc;
+                        $total_preventivo_tiempo_2020_comuneros += $value->tiempo_mantenimiento;
+                        $total_preventivo_2020_comuneros += $value->valor_total;
+                        $equipos_preventivo_2020_comuneros++;
+                    }
+
+                    if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2020){
+                        $total_correctivo_herramientas_2020_comuneros += $value->valor_herramienta;
+                        $total_correctivo_consumibles_2020_comuneros +=  $value->valor_consumibles;
+                        $total_correctivo_repuestos_2020_comuneros +=  $value->valor_repuestos;
+                        $total_correctivo_valor_mano_2020_comuneros += $value->valor_mano_ipc;
+                        $total_correctivo_tiempo_2020_comuneros += $value->tiempo_mantenimiento;
+                        $total_correctivo_2020_comuneros += $value->valor_total;
+                        $equipos_correctivo_2020_comuneros++;
+                    }
                 }        
 
                 //G_BARCO
@@ -497,6 +586,26 @@
                         $total_correctivo_2019_g_barco += $value->valor_total;
                         $equipos_correctivo_2019_g_barco++;
                     }
+
+                    if($value->id_tipo_mantenimiento == 1 && $value->anio_cotizacion == 2020){
+                        $total_preventivo_herramientas_2020_g_barco += $value->valor_herramienta;
+                        $total_preventivo_consumibles_2020_g_barco +=  $value->valor_consumibles;
+                        $total_preventivo_repuestos_2020_g_barco +=  $value->valor_repuestos;
+                        $total_preventivo_valor_mano_2020_g_barco += $value->valor_mano_ipc;
+                        $total_preventivo_tiempo_2020_g_barco += $value->tiempo_mantenimiento;
+                        $total_preventivo_2020_g_barco += $value->valor_total;
+                        $equipos_preventivo_2020_g_barco++;
+                    }
+
+                    if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2020){
+                        $total_correctivo_herramientas_2020_g_barco += $value->valor_herramienta;
+                        $total_correctivo_consumibles_2020_g_barco +=  $value->valor_consumibles;
+                        $total_correctivo_repuestos_2020_g_barco +=  $value->valor_repuestos;
+                        $total_correctivo_valor_mano_2020_g_barco += $value->valor_mano_ipc;
+                        $total_correctivo_tiempo_2020_g_barco += $value->tiempo_mantenimiento;
+                        $total_correctivo_2020_g_barco += $value->valor_total;
+                        $equipos_correctivo_2020_g_barco++;
+                    }
                 }        
                 
                 //MEDITEC
@@ -580,6 +689,26 @@
                         $total_correctivo_tiempo_2019_meditec += $value->tiempo_mantenimiento;
                         $total_correctivo_2019_meditec += $value->valor_total;
                         $equipos_correctivo_2019_meditec++;
+                    }
+
+                    if($value->id_tipo_mantenimiento == 1 && $value->anio_cotizacion == 2020){
+                        $total_preventivo_herramientas_2020_meditec += $value->valor_herramienta;
+                        $total_preventivo_consumibles_2020_meditec +=  $value->valor_consumibles;
+                        $total_preventivo_repuestos_2020_meditec +=  $value->valor_repuestos;
+                        $total_preventivo_valor_mano_2020_meditec += $value->valor_mano_ipc;
+                        $total_preventivo_tiempo_2020_meditec += $value->tiempo_mantenimiento;
+                        $total_preventivo_2020_meditec += $value->valor_total;
+                        $equipos_preventivo_2020_meditec++;
+                    }
+
+                    if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2020){
+                        $total_correctivo_herramientas_2020_meditec += $value->valor_herramienta;
+                        $total_correctivo_consumibles_2020_meditec +=  $value->valor_consumibles;
+                        $total_correctivo_repuestos_2020_meditec +=  $value->valor_repuestos;
+                        $total_correctivo_valor_mano_2020_meditec += $value->valor_mano_ipc;
+                        $total_correctivo_tiempo_2020_meditec += $value->tiempo_mantenimiento;
+                        $total_correctivo_2020_meditec += $value->valor_total;
+                        $equipos_correctivo_2020_meditec++;
                     }
                 }        
 
@@ -667,6 +796,26 @@
                         $total_correctivo_2019_ingenieria += $value->valor_total;
                         $equipos_correctivo_2019_ingenieria++;
                     }
+
+                    if($value->id_tipo_mantenimiento == 1 && $value->anio_cotizacion == 2020){
+                        $total_preventivo_herramientas_2020_ingenieria += $value->valor_herramienta;
+                        $total_preventivo_consumibles_2020_ingenieria +=  $value->valor_consumibles;
+                        $total_preventivo_repuestos_2020_ingenieria +=  $value->valor_repuestos;
+                        $total_preventivo_valor_mano_2020_ingenieria += $value->valor_mano_ipc;
+                        $total_preventivo_tiempo_2020_ingenieria += $value->tiempo_mantenimiento;
+                        $total_preventivo_2020_ingenieria += $value->valor_total;
+                        $equipos_preventivo_2020_ingenieria++;
+                    }
+
+                    if($value->id_tipo_mantenimiento == 2 && $value->anio_cotizacion == 2020){
+                        $total_correctivo_herramientas_2020_ingenieria += $value->valor_herramienta;
+                        $total_correctivo_consumibles_2020_ingenieria +=  $value->valor_consumibles;
+                        $total_correctivo_repuestos_2020_ingenieria +=  $value->valor_repuestos;
+                        $total_correctivo_valor_mano_2020_ingenieria += $value->valor_mano_ipc;
+                        $total_correctivo_tiempo_2020_ingenieria += $value->tiempo_mantenimiento;
+                        $total_correctivo_2020_ingenieria += $value->valor_total;
+                        $equipos_correctivo_2020_ingenieria++;
+                    }
                 }    
             ?>
             
@@ -688,8 +837,8 @@
                         <td align="right"><label>Equipo</label></td>
                         <td align="left"><label>{{ ucfirst(mb_strtolower($value->nombre_equipo)) }}</label></td>
 
-                        <td align="right"><label>Año<label></td>
-                        <td align="left"><label>{{ $value->anio_cotizacion }}</label></td>
+                        <td align="right"><label>Serie<label></td>
+                        <td align="left"><label>{{ $value->serial }}</label></td>
                     </tr>
                     <tr>
                         <td align="right"><label>Empresa<label></td>
@@ -720,6 +869,9 @@
                         <td align="left"><label>${{ $value->valor_mano_ipc }}</label></td>
                     </tr>
                     <tr>
+                        <td align="right"><label>Año cotización</label></td>
+                        <td align="left"><label>{{ $value->anio_cotizacion }}</label></td>
+
                         <td align="right"><label>Total</label></td>
                         <td align="left"><label>${{ $value->valor_total }}</label></td>
                     </tr>
