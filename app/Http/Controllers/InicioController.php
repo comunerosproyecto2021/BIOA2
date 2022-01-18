@@ -70,7 +70,7 @@ class InicioController extends Controller
             'repuestos' => $repuestos,
 
         ];
-        $type = 'Subject';
+    
         $options = view('index',$data)->render();
         return $options;
 
